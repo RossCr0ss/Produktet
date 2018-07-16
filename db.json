@@ -1,0 +1,26 @@
+{
+  "configuration": {
+    "pageId": 1274,
+    "layout": {
+      "template": "plain-layout"
+    },
+    "menu": {
+      "template": "plain-menu"
+    },
+    "menuItem": {
+      "template": "plain-menu-item"
+    },
+    "content": {
+      "template": "plain-content"
+    },
+    "footer": {
+      "template": "plain-footer"
+    },
+    "scripts": [
+     "https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    ],
+    "styles": [
+      "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    ]
+  }
+}
