@@ -10,9 +10,7 @@ export class AppComponent implements OnInit {
 
   configuration: any;
 
-  constructor(private siteConfigurationService: SiteConfigurationService) {
-
-  }
+  constructor(private siteConfigurationService: SiteConfigurationService) {}
 
   ngOnInit(): void {
     this.configuration = this.siteConfigurationService.configuration;

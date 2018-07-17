@@ -16,7 +16,7 @@ import {SharedModule} from './shared/shared.module';
     SharedModule
   ],
   providers: [
-    {provide: 'BACKEND_API_URL', useValue: environment.backendApi},
+    {provide: 'BACKEND_API_URL', useValue: environment.backendApi}
   ],
   bootstrap: [AppComponent]
 })

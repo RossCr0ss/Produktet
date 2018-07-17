@@ -1,3 +1,4 @@
 <scriptLoader *ngFor="let script of configuration.scripts" [url]="script"></scriptLoader>
 <styleLoader *ngFor="let style of configuration.styles" [url]="style"></styleLoader>
-{{configuration | json}}
+
+<dynamic-loader [moduleName]="configuration.layout.template"></dynamic-loader>
