@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {CoreModule} from './core/core.module';
 import {environment} from '../environments/environment';
 import {SharedModule} from './shared/shared.module';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import {SharedModule} from './shared/shared.module';
   imports: [
     BrowserModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    RouterModule.forRoot([])
   ],
   providers: [
     {provide: 'BACKEND_API_URL', useValue: environment.backendApi}

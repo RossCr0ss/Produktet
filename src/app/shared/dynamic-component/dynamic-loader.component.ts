@@ -22,6 +22,14 @@ export class DynamicLoaderComponent implements OnInit {
         break;
       }
 
+      // header
+      case 'basic-header': {
+        import('../../header/basic-header/basic-header.module').then((module) => {
+          this.compileAndCreateModule(module);
+        });
+        break;
+      }
+
       // footers
       case 'basic-footer': {
         import('../../footer/basic-footer/basic-footer.module').then((module) => {
