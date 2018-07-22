@@ -27,3 +27,30 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# How it works
+
+Before Angular app is started http request to get json configuration will be triggered. Request will be triggered from `core.module.ts` see `APP_INITIALIZER` provider.
+
+TODO restructure `db.json` to get json configuration depending on domain name.
+
+Configuration example:
+
+"layout": {
+  "template": "basic-layout"
+},
+"header": {
+  "template": "basic-header"
+},
+"footer": {
+  "template": "basic-footer"
+}
+
+`layout` is type of template that will be used. Different layouts can have different positions of child elements. `layout` is mandatory for every page.
+See `basic-layout.component.html`.
+
+`header, footer, menu` and other components are elements that will be rendered inside one layout.
+
+`dynamic-loader` is main component in the application. Component is responsible for loading all dynamic modules.
+
+
