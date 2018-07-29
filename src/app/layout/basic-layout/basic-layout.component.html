@@ -2,6 +2,10 @@
   basic-layout works!
 </p>
 
-<dynamic-loader [moduleName]="configuration.header.template"></dynamic-loader>
+<dynamic-loader [moduleName]="configuration.component.header"></dynamic-loader>
 
-<dynamic-loader [moduleName]="configuration.footer.template"></dynamic-loader>
+<dynamic-loader [moduleName]="configuration.component.menu"></dynamic-loader>
+
+<router-outlet></router-outlet>
+
+<dynamic-loader [moduleName]="configuration.component.footer"></dynamic-loader>

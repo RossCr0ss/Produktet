@@ -15,7 +15,7 @@ import {RouterModule} from '@angular/router';
     BrowserModule,
     CoreModule,
     SharedModule,
-    RouterModule.forRoot([])
+    RouterModule.forRoot([], {initialNavigation: false})
   ],
   providers: [
     {provide: 'BACKEND_API_URL', useValue: environment.backendApi}

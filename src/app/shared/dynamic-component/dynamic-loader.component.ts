@@ -1,4 +1,5 @@
 import {Compiler, Component, Injector, Input, NgModuleRef, OnInit, ViewContainerRef} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'dynamic-loader',
@@ -9,10 +10,19 @@ export class DynamicLoaderComponent implements OnInit {
   @Input()
   moduleName: string;
 
-  constructor(private compiler: Compiler, private viewRef: ViewContainerRef, private injector: Injector) {
+  constructor(private compiler: Compiler, private viewRef: ViewContainerRef, private injector: Injector, private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
+    const moduleNameFromRoute = this.route.snapshot.data['moduleName'];
+
+    if (moduleNameFromRoute) {
+      this.moduleName = moduleNameFromRoute;
+    }
+    this.loadModule();
+  }
+
+  private loadModule() {
     switch (this.moduleName) {
       // layouts
       case 'basic-layout': {
@@ -22,9 +32,25 @@ export class DynamicLoaderComponent implements OnInit {
         break;
       }
 
+      // layouts
+      case 'basic-content': {
+        import('../../content/basic-content/basic-content.module').then((module) => {
+          this.compileAndCreateModule(module);
+        });
+        break;
+      }
+
       // header
       case 'basic-header': {
         import('../../header/basic-header/basic-header.module').then((module) => {
+          this.compileAndCreateModule(module);
+        });
+        break;
+      }
+
+      // menu
+      case 'basic-menu': {
+        import('../../menu/basic-menu/basic-menu.module').then((module) => {
           this.compileAndCreateModule(module);
         });
         break;
@@ -42,7 +68,6 @@ export class DynamicLoaderComponent implements OnInit {
         console.error(`Module with name: "${this.moduleName}" does not exists!`)
       }
     }
-
   }
 
   private compileAndCreateModule(module: any) {

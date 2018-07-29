@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {ScriptLoaderDirective} from './script-loader.directive';
 import {StyleLoaderDirective} from './style-loader.directive';
 import {DynamicLoaderComponent} from './dynamic-component/dynamic-loader.component';
+import {ErrorLayoutComponent} from './error-layout/error-layout.component';
 
 @NgModule({
   imports: [
@@ -11,11 +12,17 @@ import {DynamicLoaderComponent} from './dynamic-component/dynamic-loader.compone
   declarations: [
     ScriptLoaderDirective,
     StyleLoaderDirective,
-    DynamicLoaderComponent
+    DynamicLoaderComponent,
+    ErrorLayoutComponent
   ],
   exports: [
     ScriptLoaderDirective,
     StyleLoaderDirective,
+    DynamicLoaderComponent,
+    ErrorLayoutComponent
+  ],
+  entryComponents: [
+    ErrorLayoutComponent,
     DynamicLoaderComponent
   ]
 })

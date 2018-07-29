@@ -1,0 +1,15 @@
+<ul>
+  <li *ngFor="let menu of menus">
+    <a [routerLink]="menu.path" *ngIf="!menu.navigationHide">{{menu.name}}</a>
+    <ul *ngIf="menu.subMenu">
+      <li *ngFor="let secondMenuLayer of menu.subMenu">
+        <a [routerLink]="[menu.path, secondMenuLayer.path]" *ngIf="!secondMenuLayer.navigationHide">{{secondMenuLayer.name}}</a>
+        <ul *ngIf="secondMenuLayer.subMenu">
+          <li *ngFor="let thirdMenuLayer of secondMenuLayer.subMenu">
+            <a [routerLink]="[menu.path, secondMenuLayer.path, thirdMenuLayer.path]" *ngIf="!thirdMenuLayer.navigationHide">{{thirdMenuLayer.name}}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>

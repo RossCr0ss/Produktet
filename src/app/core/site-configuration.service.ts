@@ -13,7 +13,7 @@ export class SiteConfigurationService {
 
   getConfiguration(): Promise<any> {
     return new Promise(((resolve) => {
-      this.http.get(`${this.backendApiUrl}configuration`)
+      this.http.get(`${this.backendApiUrl}${window.location.hostname}`)
         .toPromise()
         .then(res => {
           this.siteConfiguration = res;
