@@ -13,7 +13,7 @@ export class MenuService {
   }
 
   getMenu(pageId: number): Observable<Array<Menu>> {
-    return this.http.get(`${this.backendApiUrl}menus`, {params: {id: pageId.toString()}})
-      .pipe(map(r => r as Array<Menu>));
+    return this.http.get(`${this.backendApiUrl}menus`, {params: {pageId: pageId.toString()}})
+      .pipe(map(r => r['menus'] as Array<Menu>));
   }
 }

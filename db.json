@@ -78,41 +78,44 @@
       "broedtekst": "<p>- Fælles kalender vil indeholde</p>\r\n<p>(Fødselsdage, Events, Delte begivenheder fra den enkelte medarbejder osv.)</p>\r\n<p> </p>"
     }
   },
-  "menus": [
-    {
-      "id": "1274",
-      "name": "First level item",
-      "path": "example",
-      "navigationHide": false,
-      "menuIcon": "mdi-account-minus",
-      "subMenu": [
-        {
-          "id": "1278",
-          "name": "Second level item",
-          "path": "example1",
-          "navigationHide": false,
-          "menuIcon": "mdi-account-minus",
-          "subMenu": [
-            {
-              "id": "1279",
-              "name": "Third level item",
-              "path": "example2",
-              "navigationHide": false,
-              "menuIcon": "mdi-account-minus",
-              "subMenu": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1280",
-      "name": "First level another item",
-      "path": "anotheritem",
-      "navigationHide": false,
-      "menuIcon": "mdi-account-minus",
-      "subMenu": []
-    }
-  ]
+  "menus": {
+    "pageId": "1274",
+    "menus": [
+      {
+        "id": "1274",
+        "name": "First level item",
+        "path": "example",
+        "navigationHide": false,
+        "menuIcon": "mdi-account-minus",
+        "subMenu": [
+          {
+            "id": "1278",
+            "name": "Second level item",
+            "path": "example1",
+            "navigationHide": false,
+            "menuIcon": "mdi-account-minus",
+            "subMenu": [
+              {
+                "id": "1279",
+                "name": "Third level item",
+                "path": "example2",
+                "navigationHide": false,
+                "menuIcon": "mdi-account-minus",
+                "subMenu": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1280",
+        "name": "First level another item",
+        "path": "anotheritem",
+        "navigationHide": false,
+        "menuIcon": "mdi-account-minus",
+        "subMenu": []
+      }
+    ]
+  }
 }
 
