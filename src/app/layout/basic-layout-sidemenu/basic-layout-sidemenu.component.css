@@ -1,0 +1,24 @@
+.header-and-menu {
+    background: red;
+    width: 25%;
+    height: 100%;
+    overflow: auto;
+    float: left;
+    position: fixed;
+    top:0;
+}
+
+.wrapper {
+    min-height: 100%;
+    background: silver;
+    margin-left: 25%;
+}
+
+.content {
+    min-height: calc(100% - 15px);
+}
+
+footer {
+    
+    background: yellow;
+}

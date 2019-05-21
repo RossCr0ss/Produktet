@@ -12,13 +12,9 @@
       "https://code.jquery.com/jquery-3.2.1.slim.min.js"
     ],
     "styles": [
-      "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css?v=1"
+      "../assets/css/basic.css"
     ]
   },
-
-
-
-
 
 
 

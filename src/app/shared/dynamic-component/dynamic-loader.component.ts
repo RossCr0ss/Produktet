@@ -30,6 +30,15 @@ export class DynamicLoaderComponent implements OnInit {
           this.compileAndCreateModule(module);
         });
         break;
+      
+      }
+
+      case 'basic-layout-sidemenu': {
+        import('../../layout/basic-layout-sidemenu/basic-layout-sidemenu.module').then((module) => {
+          this.compileAndCreateModule(module);
+        });
+        break;
+      
       }
 
       // layouts

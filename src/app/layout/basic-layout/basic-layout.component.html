@@ -1,11 +1,15 @@
-<p>
-  basic-layout works!
-</p>
 
-<dynamic-loader [moduleName]="configuration.component.header"></dynamic-loader>
 
-<dynamic-loader [moduleName]="configuration.component.menu"></dynamic-loader>
 
-<router-outlet></router-outlet>
+<header class="header-and-menu">
+  <dynamic-loader [moduleName]="configuration.component.header"></dynamic-loader>
+  <dynamic-loader [moduleName]="configuration.component.menu"></dynamic-loader>
+</header>
 
-<dynamic-loader [moduleName]="configuration.component.footer"></dynamic-loader>
+<main class="content">
+  <router-outlet></router-outlet>
+</main>
+
+<footer>
+  <dynamic-loader [moduleName]="configuration.component.footer"></dynamic-loader>
+</footer>
