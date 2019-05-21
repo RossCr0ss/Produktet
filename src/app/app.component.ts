@@ -21,9 +21,17 @@ export class AppComponent implements OnInit {
 
     this.dataService.getGeneralData().subscribe((generalData: GeneralData) => {
       const generalDataDetails: GeneralDataDetails = generalData.data[0];
-      this.seoService.setBeforeHead(generalDataDetails.ScriptHead);
-      this.seoService.setBeforeBody(generalDataDetails.ScriptBodyTop);
-      this.seoService.setAfterBody(generalDataDetails.ScriptBodyBottom);
+      
+      if(generalDataDetails.ScriptHead != null){
+        this.seoService.setBeforeHead(generalDataDetails.ScriptHead);
+      }
+      if(generalDataDetails.ScriptBodyTop != null){
+        this.seoService.setBeforeBody(generalDataDetails.ScriptBodyTop);
+      }
+      if(generalDataDetails.ScriptBodyBottom != null){
+        this.seoService.setAfterBody(generalDataDetails.ScriptBodyBottom);
+      }     
+      
     });
 
   }

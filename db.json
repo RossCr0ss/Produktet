@@ -3,7 +3,6 @@
     "pageId": 1274,
     "component": {
       "layout": "basic-layout",
-      "content": "basic-content",
       "menu": "basic-menu",
       "header": "basic-header",
       "footer": "basic-footer",
@@ -13,15 +12,21 @@
       "https://code.jquery.com/jquery-3.2.1.slim.min.js"
     ],
     "styles": [
-      "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css?v=1"
     ]
   },
+
+
+
+
+
+
+
   "someOtherDomain": {
     "pageId": 1274,
     "component": {
       "layout": "basic-layout",
       "menu": "basic-menu",
-      "content": "basic-content",
       "header": "basic-header",
       "footer": "basic-footer",
       "content": "basic-content"
@@ -33,6 +38,9 @@
       "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     ]
   },
+
+
+
   "getgeneralData": {
     "meta": {
       "code": 200
@@ -52,7 +60,7 @@
         "statmentBund": "Lorem ipsum dolor sit amet, et parturient eros, at tempus odio sed sed ut et, aliquid habitasse amet, scelerisque eget enim eget in quis. Nec arcu et in luctus et, lorem penatibus ipsum. Sodales in. Id adipiscing ac sapien a sed eget, nulla ullamcorper nihil et vivamus euismod nec, pulvinar praesent",
         "ScriptHead": null,
         "ScriptBodyTop": null,
-        "ScriptBodyBottom": null
+        "ScriptBodyBottom": "console.log('test bottom script loading')"
       }
     ]
   },
