@@ -26,6 +26,9 @@ export class BasicLayoutComponent implements OnInit {
       this.seoService.setMetaElement('metaDescription', this.pageData.data.metaDescription);
       this.seoService.setMetaElement('metaKeywords', this.pageData.data.metaKeywords);
       this.seoService.setTitle(this.pageData.data.title);
+      
+
+
     });
 
   }

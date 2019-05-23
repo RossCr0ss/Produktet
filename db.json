@@ -1,8 +1,8 @@
 {
-  "localhost": {
+  "localhost_basic": {
     "pageId": 1274,
     "component": {
-      "layout": "basic-layout",
+      "layout": "m-box-layout",
       "menu": "basic-menu",
       "header": "basic-header",
       "footer": "basic-footer",
@@ -15,7 +15,23 @@
       "../assets/css/basic.css"
     ]
   },
-
+  "localhost": {
+    "pageId": 1274,
+    "component": {
+      "layout": "m-box-layout",
+      "menu": "m-box-menu",
+      "header": "basic-header",
+      "footer": "basic-footer",
+      "content": "basic-content"
+    },
+    "scripts": [
+      "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js",
+      "../assets/js/m-box.js"
+    ],
+    "styles": [
+      "../assets/css/m-box.css"
+    ]
+  },
 
 
   "someOtherDomain": {
@@ -91,20 +107,29 @@
         "path": "example",
         "navigationHide": false,
         "menuIcon": "mdi-account-minus",
+        "menuImg": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg",
+        "menuMp4": "",
+        "menuWebm": "",
         "subMenu": [
           {
             "id": "1278",
             "name": "Second level item",
             "path": "example1",
             "navigationHide": false,
-            "menuIcon": "mdi-account-minus",
+            "menuIcon": "",
+            "menuImg": "",
+            "menuMp4": "",
+            "menuWebm": "",
             "subMenu": [
               {
                 "id": "1279",
                 "name": "Third level item",
                 "path": "example2",
                 "navigationHide": false,
-                "menuIcon": "mdi-account-minus",
+                "menuIcon": "",
+                "menuImg": "",
+                "menuMp4": "",
+                "menuWebm": "",
                 "subMenu": []
               }
             ]
@@ -116,7 +141,43 @@
         "name": "First level another item",
         "path": "anotheritem",
         "navigationHide": false,
-        "menuIcon": "mdi-account-minus",
+        "menuIcon": "",
+        "menuImg": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg",
+        "menuMp4": "../../../assets/dummyimages/h264_1080_best.mp4",
+        "menuWebm": "http://thenewcode.com/assets/videos/polina.webm",
+        "subMenu": []
+      },
+      {
+        "id": "1280",
+        "name": "3",
+        "path": "3",
+        "navigationHide": false,
+        "menuIcon": "",
+        "menuImg": "",
+        "menuMp4": "",
+        "menuWebm": "",
+        "subMenu": []
+      },
+      {
+        "id": "1280",
+        "name": "4",
+        "path": "4",
+        "navigationHide": false,
+        "menuIcon": "",
+        "menuImg": "",
+        "menuMp4": "",
+        "menuWebm": "",
+        "subMenu": []
+      },
+      {
+        "id": "1280",
+        "name": "5",
+        "path": "5",
+        "navigationHide": false,
+        "menuIcon": "",
+        "menuImg": "",
+        "menuMp4": "",
+        "menuWebm": "",
         "subMenu": []
       }
     ]

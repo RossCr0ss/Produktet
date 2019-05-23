@@ -29,19 +29,24 @@ export class DynamicLoaderComponent implements OnInit {
         import('../../layout/basic-layout/basic-layout.module').then((module) => {
           this.compileAndCreateModule(module);
         });
-        break;
-      
+        break;    
       }
 
       case 'basic-layout-sidemenu': {
         import('../../layout/basic-layout-sidemenu/basic-layout-sidemenu.module').then((module) => {
           this.compileAndCreateModule(module);
         });
-        break;
-      
+        break;   
       }
 
-      // layouts
+      case 'm-box-layout': {
+        import('../../layout/m-box-layout/m-box-layout.module').then((module) => {
+          this.compileAndCreateModule(module);
+        });
+        break;
+      }
+
+      // content
       case 'basic-content': {
         import('../../content/basic-content/basic-content.module').then((module) => {
           this.compileAndCreateModule(module);
@@ -60,6 +65,13 @@ export class DynamicLoaderComponent implements OnInit {
       // menu
       case 'basic-menu': {
         import('../../menu/basic-menu/basic-menu.module').then((module) => {
+          this.compileAndCreateModule(module);
+        });
+        break;
+      }
+
+      case 'm-box-menu': {
+        import('../../menu/m-box-menu/m-box-menu.module').then((module) => {
           this.compileAndCreateModule(module);
         });
         break;
