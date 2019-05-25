@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BasicHeaderComponent } from './basic-header.component';
+import {SharedModule} from "../../shared/shared.module";
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   declarations: [BasicHeaderComponent],
   entryComponents: [BasicHeaderComponent]

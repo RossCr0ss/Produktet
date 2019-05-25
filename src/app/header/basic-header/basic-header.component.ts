@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Site} from "../../shared/model/site.model";
+import {SiteConfigurationService} from "../../core/site-configuration.service";
 
 @Component({
   selector: 'app-basic-header',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicHeaderComponent implements OnInit {
 
-  constructor() { }
+  configuration: Site;
+
+  constructor(private siteConfigurationService: SiteConfigurationService) {
+  }
 
   ngOnInit() {
+    this.configuration = this.siteConfigurationService.configuration;
   }
 
 }

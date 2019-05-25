@@ -4,6 +4,7 @@ import {GeneralDataDetails} from './shared/model/general-data-details.model';
 import {GeneralData} from './shared/model/general-data.model';
 import {DataService} from './core/data.service';
 import {SeoService} from './core/seo.service';
+import {Site} from "./shared/model/site.model";
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ import {SeoService} from './core/seo.service';
 })
 export class AppComponent implements OnInit {
 
-  configuration: any;
+  configuration: Site;
 
   constructor(private siteConfigurationService: SiteConfigurationService, private dataService: DataService, private seoService: SeoService) {}
 

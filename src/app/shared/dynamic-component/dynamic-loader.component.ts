@@ -85,6 +85,14 @@ export class DynamicLoaderComponent implements OnInit {
         break;
       }
 
+      // additional content
+      case 'banner': {
+        import('../../additional-content/banner/banner.module').then((module) => {
+          this.compileAndCreateModule(module);
+        });
+        break;
+      }
+
       default: {
         console.error(`Module with name: "${this.moduleName}" does not exists!`)
       }

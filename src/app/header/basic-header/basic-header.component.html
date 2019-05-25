@@ -2,3 +2,7 @@
   basic-header works!
 </p>
 
+This is header child component
+<ng-container *ngFor="let contentComponent of configuration.header.content">
+  <dynamic-loader [moduleName]="contentComponent.name"></dynamic-loader>
+</ng-container>
