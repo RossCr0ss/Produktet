@@ -11,17 +11,21 @@
     },
     "header": {
       "name": "basic-header",
-      "content": [{
-        "name": "banner"
-      }]
+      "content": [
+        {
+          "name": "banner"
+        },
+        {
+          "name": "basic-gallery"
+        }
+      ]
     },
     "footer": {
       "name": "basic-footer",
       "content": []
     },
     "content": {
-      "name": "basic-content",
-      "content": []
+      "name": "basic-content"
     },
     "scripts": [
       "https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -30,7 +34,6 @@
       "../assets/css/basic.css"
     ]
   },
-
   "localhost_m-box": {
     "pageId": 1274,
     "layout": {

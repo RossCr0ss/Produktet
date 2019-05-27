@@ -93,6 +93,13 @@ export class DynamicLoaderComponent implements OnInit {
         break;
       }
 
+      case 'basic-gallery': {
+        import('../../additional-content/basic-gallery/basic-gallery.module').then((module) => {
+          this.compileAndCreateModule(module);
+        });
+        break;
+      }
+
       default: {
         console.error(`Module with name: "${this.moduleName}" does not exists!`)
       }
