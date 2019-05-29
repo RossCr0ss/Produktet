@@ -1,12 +1,31 @@
 {
-  "localhost_basic": {
+  "localhost": {
     "pageId": 1274,
-    "component": {
-      "layout": "m-box-layout",
-      "menu": "basic-menu",
-      "header": "basic-header",
-      "footer": "basic-footer",
-      "content": "basic-content"
+    "layout": {
+      "name": "basic-layout",
+      "content": []
+    },
+    "menu": {
+      "name": "basic-menu",
+      "content": []
+    },
+    "header": {
+      "name": "basic-header",
+      "content": [
+        {
+          "name": "banner"
+        },
+        {
+          "name": "basic-gallery"
+        }
+      ]
+    },
+    "footer": {
+      "name": "basic-footer",
+      "content": []
+    },
+    "content": {
+      "name": "basic-content"
     },
     "scripts": [
       "https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -15,14 +34,22 @@
       "../assets/css/basic.css"
     ]
   },
-  "localhost": {
+  "localhost_m-box": {
     "pageId": 1274,
-    "component": {
-      "layout": "m-box-layout",
-      "menu": "m-box-menu",
-      "header": "basic-header",
-      "footer": "basic-footer",
-      "content": "basic-content"
+    "layout": {
+      "name": "m-box-layout"
+    },
+    "menu": {
+      "name": "m-box-menu"
+    },
+    "header": {
+      "name": "basic-header"
+    },
+    "footer": {
+      "name": "basic-footer"
+    },
+    "content": {
+      "name": "basic-content"
     },
     "scripts": [
       "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js",
@@ -32,8 +59,6 @@
       "../assets/css/m-box.css"
     ]
   },
-
-
   "someOtherDomain": {
     "pageId": 1274,
     "component": {
@@ -50,9 +75,6 @@
       "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     ]
   },
-
-
-
   "getgeneralData": {
     "meta": {
       "code": 200

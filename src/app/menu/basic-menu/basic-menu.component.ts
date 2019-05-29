@@ -4,6 +4,7 @@ import {RouteService} from '../../core/route.service';
 import {SiteConfigurationService} from '../../core/site-configuration.service';
 import {Menu} from '../../shared/model/menu.model';
 import {Router} from '@angular/router';
+import {Site} from "../../shared/model/site.model";
 
 @Component({
   selector: 'app-basic-menu',
@@ -13,14 +14,17 @@ import {Router} from '@angular/router';
 export class BasicMenuComponent implements OnInit {
 
   menus: Array<Menu>;
+  configuration: Site;
 
   constructor(private menuService: MenuService, private routeService: RouteService, private siteConfiguration: SiteConfigurationService, private router: Router) { }
 
   ngOnInit() {
+    this.configuration = this.siteConfiguration.configuration;
+
     this.menuService.getMenu(this.siteConfiguration.configuration.pageId)
       .subscribe((menus: Array<Menu>) => {
         this.menus = menus;
-        this.routeService.setRoutes(menus, this.siteConfiguration.configuration.component.content);
+        this.routeService.setRoutes(menus, this.siteConfiguration.configuration.content.name);
         if (this.menus) {
           if (window.location.pathname === '/') {
             // Assume that first element is home page

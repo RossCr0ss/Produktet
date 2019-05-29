@@ -1,10 +1,12 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {BasicContentComponent} from './basic-content.component';
+import {SharedModule} from "../../shared/shared.module";
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   declarations: [BasicContentComponent],
   entryComponents: [BasicContentComponent]

@@ -20,7 +20,7 @@ export class BasicMenuComponent implements OnInit {
     this.menuService.getMenu(this.siteConfiguration.configuration.pageId)
       .subscribe((menus: Array<Menu>) => {
         this.menus = menus;
-        this.routeService.setRoutes(menus, this.siteConfiguration.configuration.component.content);
+        this.routeService.setRoutes(menus, this.siteConfiguration.configuration.content.name);
         if (this.menus) {
           if (window.location.pathname === '/') {
             // Assume that first element is home page

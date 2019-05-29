@@ -1,12 +1,13 @@
 import {Inject, Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {Site} from "../shared/model/site.model";
 
 @Injectable({
   providedIn: 'root'
 })
 export class SiteConfigurationService {
 
-  siteConfiguration: any;
+  siteConfiguration: Site;
 
   constructor(private http: HttpClient, @Inject('BACKEND_API_URL') private backendApiUrl: string) {
   }
@@ -16,7 +17,7 @@ export class SiteConfigurationService {
       this.http.get(`${this.backendApiUrl}${window.location.hostname}`)
         .toPromise()
         .then(res => {
-          this.siteConfiguration = res;
+          this.siteConfiguration = res as Site;
           resolve();
         })
         .catch(() => {
@@ -25,7 +26,7 @@ export class SiteConfigurationService {
     }));
   }
 
-  get configuration(): any {
+  get configuration(): Site {
     return this.siteConfiguration;
   }
 }

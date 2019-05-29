@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-basic-content',
@@ -9,10 +9,11 @@ export class BasicContentComponent implements OnInit {
 
   componentPath: string;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
-    this.componentPath = window.location.pathname
+    this.componentPath = window.location.pathname;
   }
 
 }
