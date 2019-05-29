@@ -27,7 +27,7 @@ body, html {
   margin:0;
   overflow: hidden;
   background: pink;
-  color: black;
+  color: #333;
 }
 
 .loading {
@@ -150,7 +150,7 @@ a, a:hover, a:active, a:visited {
 /* Item 1 */
 .pageready .menuitem.item1 {
   z-index:10;
-  background: green;
+  background: #587E8C;
   width:100%;
   height:100%;
   animation: slidein1 0.6s forwards 0.4s;
@@ -181,7 +181,7 @@ a, a:hover, a:active, a:visited {
 /*item 2*/
 .pageready .menuitem.item2{
   z-index:9;
-  background:#EC407A;
+  background:#1E4E59;
   right:0;
   width:50%;
   height:100%;
@@ -216,7 +216,7 @@ a, a:hover, a:active, a:visited {
   z-index:8;
   left:50%;
   bottom:0;
-  background:#AB47BC;
+  background:#F2F2F2;
   width:50%;
   height:50%;
   animation: slidein3 0.6s forwards 0.8s;
@@ -250,7 +250,7 @@ a, a:hover, a:active, a:visited {
   z-index:7;
   right:0;
   top:50%;
-  background:#5C6BC0;
+  background:#587E8C;
   width:25%;
   height:50%;
   animation: slidein4 0.6s forwards 1s;
@@ -284,7 +284,7 @@ a, a:hover, a:active, a:visited {
   z-index:6;
   right:0;
   top:75%;
-  background: rosybrown;
+  background:#011F26;
   width:25%;
   height:50%;
   animation: slidein5 0.6s forwards 1.2s;
