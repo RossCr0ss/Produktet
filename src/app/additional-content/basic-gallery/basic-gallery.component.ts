@@ -18,8 +18,10 @@ export class BasicGalleryComponent implements OnInit, AfterViewInit {
     const script = this.document.createElement('script');
     script.type = 'text/javascript';
     script.text = `
-       $("#galleryId").append("this is appended by jquery code");
-       $( "#galleryId" ).css( "border", "3px solid black" );
+      $( document ).ready(function() {
+        $("#galleryId").append("this is appended by jquery code");
+       $( "#galleryId" ).css( "border", "3px solid black" );    
+      });
       `;
     this.document.head.appendChild(script);
   }
