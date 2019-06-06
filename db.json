@@ -1,5 +1,5 @@
 {
-  "localhost": {
+  "localhost_test": {
     "pageId": 1274,
     "layout": {
       "name": "basic-layout",
@@ -34,7 +34,7 @@
       "../assets/css/basic.css"
     ]
   },
-  "localhost_m-box": {
+  "localhost": {
     "pageId": 1274,
     "layout": {
       "name": "m-box-layout"
