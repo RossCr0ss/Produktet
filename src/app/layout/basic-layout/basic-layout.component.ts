@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {SiteConfigurationService} from '../../core/site-configuration.service';
+import {SiteConfigurationService} from '../../shared/services/site-configuration.service';
 import {Router} from '@angular/router';
-import {DataService} from '../../core/data.service';
-import {SeoService} from '../../core/seo.service';
+import {DataService} from '../../shared/services/data.service';
+import {SeoService} from '../../shared/services/seo.service';
 import {Site} from "../../shared/model/site.model";
 
 @Component({
@@ -27,7 +27,7 @@ export class BasicLayoutComponent implements OnInit {
       this.seoService.setMetaElement('metaDescription', this.pageData.data.metaDescription);
       this.seoService.setMetaElement('metaKeywords', this.pageData.data.metaKeywords);
       this.seoService.setTitle(this.pageData.data.title);
-      
+
 
 
     });

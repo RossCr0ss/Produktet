@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {SiteConfigurationService} from './core/site-configuration.service';
+import {SiteConfigurationService} from './shared/services/site-configuration.service';
 import {GeneralDataDetails} from './shared/model/general-data-details.model';
 import {GeneralData} from './shared/model/general-data.model';
-import {DataService} from './core/data.service';
-import {SeoService} from './core/seo.service';
-import {Site} from "./shared/model/site.model";
+import {DataService} from './shared/services/data.service';
+import {SeoService} from './shared/services/seo.service';
+import {Site} from './shared/model/site.model';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
 
     this.dataService.getGeneralData().subscribe((generalData: GeneralData) => {
       const generalDataDetails: GeneralDataDetails = generalData.data[0];
-      
+
       if(generalDataDetails.ScriptHead != null){
         this.seoService.setBeforeHead(generalDataDetails.ScriptHead);
       }
@@ -31,8 +31,8 @@ export class AppComponent implements OnInit {
       }
       if(generalDataDetails.ScriptBodyBottom != null){
         this.seoService.setAfterBody(generalDataDetails.ScriptBodyBottom);
-      }     
-      
+      }
+
     });
 
   }

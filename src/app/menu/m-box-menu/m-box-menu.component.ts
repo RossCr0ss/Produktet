@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {MenuService} from '../../core/menu.service';
-import {RouteService} from '../../core/route.service';
-import {SiteConfigurationService} from '../../core/site-configuration.service';
+import {MenuService} from '../../shared/services/menu.service';
+import {RouteService} from '../../shared/services/route.service';
+import {SiteConfigurationService} from '../../shared/services/site-configuration.service';
 import {Menu} from '../../shared/model/menu.model';
 import {Router} from '@angular/router';
 

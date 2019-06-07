@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
-import {Menu} from '../shared/model/menu.model';
-import {ErrorLayoutComponent} from '../shared/error-layout/error-layout.component';
-import {DynamicLoaderComponent} from '../shared/dynamic-component/dynamic-loader.component';
+import {Menu} from '../model/menu.model';
+import {ErrorLayoutComponent} from '../error-layout/error-layout.component';
+import {DynamicLoaderComponent} from '../dynamic-component/dynamic-loader.component';
 
 @Injectable({
   providedIn: 'root'

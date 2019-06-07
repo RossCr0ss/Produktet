@@ -1,7 +1,7 @@
 import {Inject, Injectable} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 import {DOCUMENT} from '@angular/common';
-import {MetaTag} from '../shared/model/meta-tag.model';
+import {MetaTag} from '../model/meta-tag.model';
 
 
 @Injectable({
@@ -36,15 +36,15 @@ export class SeoService {
   }
 
   public setBeforeHead(content: string): void {
-    this.htmlElement.insertBefore(this.createScript(content), this.headElement)
+    this.htmlElement.insertBefore(this.createScript(content), this.headElement);
   }
 
   public setBeforeBody(content: string): void {
-    this.htmlElement.insertBefore(this.createScript(content), this.bodyElement)
+    this.htmlElement.insertBefore(this.createScript(content), this.bodyElement);
   }
 
   public setAfterBody(content: string): void {
-    this.htmlElement.insertBefore(this.createScript(content), this.bodyElement.nextSibling)
+    this.htmlElement.insertBefore(this.createScript(content), this.bodyElement.nextSibling);
   }
 
   public setMetaElement(name: string, content: string): void {
@@ -54,7 +54,7 @@ export class SeoService {
   }
 
   public getMetaElement(name: string): void {
-    this.getMetaElementByName(name).getAttribute('content')
+    this.getMetaElementByName(name).getAttribute('content');
   }
 
   public removeMetaElement(name: string): void {
@@ -62,16 +62,16 @@ export class SeoService {
   }
 
   public removeAllMetaTags(): void {
-    for (let tag of this.tags) {
-      this.removeMetaElement(tag.name)
+    for (const tag of this.tags) {
+      this.removeMetaElement(tag.name);
     }
     this.tags = [];
   }
 
   public setMetaTags(tags: Array<MetaTag> = []): void {
     this.removeAllMetaTags();
-    for (let tag of this.tags) {
-      this.setMetaElement(tag.name, tag.content)
+    for (const tag of this.tags) {
+      this.setMetaElement(tag.name, tag.content);
     }
   }
 
@@ -86,14 +86,14 @@ export class SeoService {
   }
 
   private getMetaElementByName(name: string): HTMLElement {
-    return <HTMLElement>this.document.querySelector(`meta[name=${name}]`)
+    return <HTMLElement>this.document.querySelector(`meta[name=${name}]`);
   }
 
   private createScript(src: string): HTMLElement {
     const script = this.document.createElement('script');
     script.type = 'text/javascript';
     script.text = src;
-    return script
+    return script;
   }
 
 }
