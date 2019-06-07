@@ -3,7 +3,7 @@ import {SiteConfigurationService} from '../../shared/services/site-configuration
 import {Router} from '@angular/router';
 import {DataService} from '../../shared/services/data.service';
 import {SeoService} from '../../shared/services/seo.service';
-import {Site} from "../../shared/model/site.model";
+import {Site} from "../../shared/models/site.model";
 
 @Component({
   selector: 'app-basic-layout-sidemenu',

@@ -1,7 +1,7 @@
 import {Inject, Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Menu} from '../model/menu.model';
+import {Menu} from '../models/menu.model';
 import { map } from 'rxjs/operators';
 
 @Injectable({

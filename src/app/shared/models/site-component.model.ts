@@ -1,4 +1,4 @@
-import {ComponentContent} from "./component-content.model";
+import {ComponentContent} from './component-content.model';
 
 export interface SiteComponent {
   name: string;

@@ -1,4 +1,4 @@
-import {SiteComponent} from "./site-component.model";
+import {SiteComponent} from './site-component.model';
 
 export interface Site {
   pageId: number;

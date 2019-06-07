@@ -1,7 +1,7 @@
 import {Inject, Injectable} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 import {DOCUMENT} from '@angular/common';
-import {MetaTag} from '../model/meta-tag.model';
+import {MetaTag} from '../models/meta-tag.model';
 
 
 @Injectable({

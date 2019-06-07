@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
-import {Menu} from '../model/menu.model';
+import {Menu} from '../models/menu.model';
 import {ErrorLayoutComponent} from '../error-layout/error-layout.component';
 import {DynamicLoaderComponent} from '../dynamic-component/dynamic-loader.component';
 

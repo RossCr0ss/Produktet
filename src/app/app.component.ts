@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {SiteConfigurationService} from './shared/services/site-configuration.service';
-import {GeneralDataDetails} from './shared/model/general-data-details.model';
-import {GeneralData} from './shared/model/general-data.model';
+import {GeneralDataDetails} from './shared/models/general-data-details.model';
+import {GeneralData} from './shared/models/general-data.model';
 import {DataService} from './shared/services/data.service';
 import {SeoService} from './shared/services/seo.service';
-import {Site} from './shared/model/site.model';
+import {Site} from './shared/models/site.model';
 
 @Component({
   selector: 'app-root',

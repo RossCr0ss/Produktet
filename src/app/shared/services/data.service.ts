@@ -2,7 +2,7 @@ import {Inject, Injectable} from '@angular/core';
 import {SiteConfigurationService} from './site-configuration.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import {GeneralData} from '../model/general-data.model';
+import {GeneralData} from '../models/general-data.model';
 import {HttpClient} from '@angular/common/http';
 
 @Injectable({
