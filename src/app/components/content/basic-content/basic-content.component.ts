@@ -1,4 +1,10 @@
 import {Component, OnInit} from '@angular/core';
+import {
+  SiteConfigurationService
+} from '../../../shared/services/site-configuration.service';
+import {
+  Site
+} from '../../..//shared/models/site.model';
 
 @Component({
   selector: 'app-basic-content',
@@ -8,12 +14,16 @@ import {Component, OnInit} from '@angular/core';
 export class BasicContentComponent implements OnInit {
 
   componentPath: string;
+  configuration: Site;
 
-  constructor() {
+  constructor(
+    private siteConfigurationService: SiteConfigurationService,
+  ) {
   }
 
   ngOnInit() {
     this.componentPath = window.location.pathname;
+    this.configuration = this.siteConfigurationService.configuration;
   }
 
 }
