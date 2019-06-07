@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Site} from "../../shared/models/site.model";
-import {SiteConfigurationService} from "../../shared/services/site-configuration.service";
+import {Site} from "../../../shared/models/site.model";
+import {SiteConfigurationService} from "../../../shared/services/site-configuration.service";
 
 @Component({
   selector: 'app-basic-header',

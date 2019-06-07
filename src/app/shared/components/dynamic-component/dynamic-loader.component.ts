@@ -26,21 +26,21 @@ export class DynamicLoaderComponent implements OnInit {
     switch (this.moduleName) {
       // layouts
       case 'basic-layout': {
-        import('../../../layout/basic-layout/basic-layout.module').then((module) => {
+        import('../../../components/layout/basic-layout/basic-layout.module').then((module) => {
           this.compileAndCreateModule(module);
         });
         break;
       }
 
       case 'basic-layout-sidemenu': {
-        import('../../../layout/basic-layout-sidemenu/basic-layout-sidemenu.module').then((module) => {
+        import('../../../components/layout/basic-layout-sidemenu/basic-layout-sidemenu.module').then((module) => {
           this.compileAndCreateModule(module);
         });
         break;
       }
 
       case 'm-box-layout': {
-        import('../../../layout/m-box-layout/m-box-layout.module').then((module) => {
+        import('../../../components/layout/m-box-layout/m-box-layout.module').then((module) => {
           this.compileAndCreateModule(module);
         });
         break;
@@ -48,7 +48,7 @@ export class DynamicLoaderComponent implements OnInit {
 
       // content
       case 'basic-content': {
-        import('../../../content/basic-content/basic-content.module').then((module) => {
+        import('../../../components/content/basic-content/basic-content.module').then((module) => {
           this.compileAndCreateModule(module);
         });
         break;
@@ -56,7 +56,7 @@ export class DynamicLoaderComponent implements OnInit {
 
       // header
       case 'basic-header': {
-        import('../../../header/basic-header/basic-header.module').then((module) => {
+        import('../../../components/header/basic-header/basic-header.module').then((module) => {
           this.compileAndCreateModule(module);
         });
         break;
@@ -64,14 +64,14 @@ export class DynamicLoaderComponent implements OnInit {
 
       // menu
       case 'basic-menu': {
-        import('../../../menu/basic-menu/basic-menu.module').then((module) => {
+        import('../../../components/menu/basic-menu/basic-menu.module').then((module) => {
           this.compileAndCreateModule(module);
         });
         break;
       }
 
       case 'm-box-menu': {
-        import('../../../menu/m-box-menu/m-box-menu.module').then((module) => {
+        import('../../../components/menu/m-box-menu/m-box-menu.module').then((module) => {
           this.compileAndCreateModule(module);
         });
         break;
@@ -79,7 +79,7 @@ export class DynamicLoaderComponent implements OnInit {
 
       // footers
       case 'basic-footer': {
-        import('../../../footer/basic-footer/basic-footer.module').then((module) => {
+        import('../../../components/footer/basic-footer/basic-footer.module').then((module) => {
           this.compileAndCreateModule(module);
         });
         break;
@@ -87,14 +87,14 @@ export class DynamicLoaderComponent implements OnInit {
 
       // additional content
       case 'banner': {
-        import('../../../additional-content/banner/banner.module').then((module) => {
+        import('../../../components/additional-content/banner/banner.module').then((module) => {
           this.compileAndCreateModule(module);
         });
         break;
       }
 
       case 'basic-gallery': {
-        import('../../../additional-content/basic-gallery/basic-gallery.module').then((module) => {
+        import('../../../components/additional-content/basic-gallery/basic-gallery.module').then((module) => {
           this.compileAndCreateModule(module);
         });
         break;

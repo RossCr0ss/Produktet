@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {BasicMenuComponent} from './basic-menu.component';
 import {RouterModule} from '@angular/router';
-import {SharedModule} from "../../shared/shared.module";
+import {SharedModule} from "../../../shared/shared.module";
 
 @NgModule({
   imports: [

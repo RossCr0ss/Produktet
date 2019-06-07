@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BasicLayoutComponent } from './basic-layout-sidemenu.component';
-import {SharedModule} from '../../shared/shared.module';
+import { BasicLayoutComponent } from './m-box-layout.component';
+import {SharedModule} from '../../../shared/shared.module';
 import {RouterModule} from '@angular/router';
 
 @NgModule({
