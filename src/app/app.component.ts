@@ -1,6 +1,7 @@
 import {
   Component,
-  OnInit
+  OnInit,
+  OnDestroy
 } from '@angular/core';
 import {
   SiteConfigurationService
@@ -20,15 +21,19 @@ import {
 import {
   Site
 } from './shared/models/site.model';
+import { takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
 
   configuration: Site;
+  public cancelSubscription$: Subject<void> = new Subject<void>();
 
   constructor(private siteConfigurationService: SiteConfigurationService,
     private dataService: DataService,
@@ -37,21 +42,26 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.configuration = this.siteConfigurationService.configuration;
 
-    this.dataService.getGeneralData().subscribe((generalData: GeneralData) => {
-      const generalDataDetails: GeneralDataDetails = generalData.data[0];
+    this.dataService.getGeneralData()
+      .pipe(takeUntil(this.cancelSubscription$))
+      .subscribe((generalData: GeneralData) => {
+        const generalDataDetails: GeneralDataDetails = generalData.data[0];
 
-      if (generalDataDetails.ScriptHead != null) {
-        this.seoService.setBeforeHead(generalDataDetails.ScriptHead);
-      }
-      if (generalDataDetails.ScriptBodyTop != null) {
-        this.seoService.setBeforeBody(generalDataDetails.ScriptBodyTop);
-      }
-      if (generalDataDetails.ScriptBodyBottom != null) {
-        this.seoService.setAfterBody(generalDataDetails.ScriptBodyBottom);
-      }
-
+        if (generalDataDetails.ScriptHead != null) {
+          this.seoService.setBeforeHead(generalDataDetails.ScriptHead);
+        }
+        if (generalDataDetails.ScriptBodyTop != null) {
+          this.seoService.setBeforeBody(generalDataDetails.ScriptBodyTop);
+        }
+        if (generalDataDetails.ScriptBodyBottom != null) {
+          this.seoService.setAfterBody(generalDataDetails.ScriptBodyBottom);
+        }
     });
 
+  }
+
+  ngOnDestroy(): void {
+    this.cancelSubscription$.next();
   }
 
 }
