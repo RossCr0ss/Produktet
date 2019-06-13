@@ -11,7 +11,8 @@
         
         <img [src]="menu.menuImg" alt="imagetest" *ngIf="menu.menuImg && !menu.menuMp4" />
       
-        <p *ngIf="menu.name">{{menu.name}}</p>
+        <p *ngIf="menu.name" class="menu-item-heading">{{menu.name}}</p>
+        <p class="menu-item-sub-heading">{{menu.subname}}</p>
         
       </div>
       <div class="border1"></div>

@@ -56,6 +56,7 @@
       "../assets/js/m-box.js"
     ],
     "styles": [
+      "https://fonts.googleapis.com/css?family=Work+Sans:200,400,600,900",
       "../assets/css/m-box.css"
     ]
   },
@@ -72,7 +73,7 @@
       "https://code.jquery.com/jquery-3.2.1.slim.min.js"
     ],
     "styles": [
-      "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      ""
     ]
   },
   "getgeneralData": {
@@ -124,19 +125,19 @@
     "pageId": "1274",
     "menus": [
       {
-        "id": "1274",
-        "name": "First level item",
+        "name": "DYNAMIKFABRIKKEN",
+        "subname": "",
         "path": "example",
         "navigationHide": false,
         "menuIcon": "mdi-account-minus",
-        "menuImg": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg",
+        "menuImg": "", 
         "menuMp4": "",
         "menuWebm": "",
         "subMenu": [
           {
-            "id": "1278",
-            "name": "Second level item",
-            "path": "example1",
+            "name": "2",
+            "subname": "",
+            "path": "",
             "navigationHide": false,
             "menuIcon": "",
             "menuImg": "",
@@ -144,8 +145,8 @@
             "menuWebm": "",
             "subMenu": [
               {
-                "id": "1279",
                 "name": "Third level item",
+                "subname": "",
                 "path": "example2",
                 "navigationHide": false,
                 "menuIcon": "",
@@ -159,19 +160,19 @@
         ]
       },
       {
-        "id": "1280",
-        "name": "First level another item",
+        "name": "2",
+        "subname": "",
         "path": "anotheritem",
         "navigationHide": false,
         "menuIcon": "",
-        "menuImg": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg",
-        "menuMp4": "../../../assets/dummyimages/h264_1080_best.mp4",
-        "menuWebm": "http://thenewcode.com/assets/videos/polina.webm",
+        "menuImg": "",
+        "menuMp4": "",
+        "menuWebm": "",
         "subMenu": []
       },
       {
-        "id": "1280",
-        "name": "3",
+        "name": "THE MOVIE",
+        "subname": "",
         "path": "3",
         "navigationHide": false,
         "menuIcon": "",
@@ -181,19 +182,18 @@
         "subMenu": []
       },
       {
-        "id": "1280",
         "name": "4",
+        "subname": "",
         "path": "4",
         "navigationHide": false,
-        "menuIcon": "",
         "menuImg": "",
         "menuMp4": "",
         "menuWebm": "",
         "subMenu": []
       },
       {
-        "id": "1280",
         "name": "5",
+        "subname": "",
         "path": "5",
         "navigationHide": false,
         "menuIcon": "",

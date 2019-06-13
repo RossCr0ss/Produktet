@@ -1,6 +1,6 @@
 export class Menu {
-  id: string;
   name: string;
+  subname: string;
   path: string;
   navigationHide: boolean;
   menuIcon: string;
@@ -10,8 +10,8 @@ export class Menu {
   subMenu: Array<Menu>;
 
   constructor(menu?: any) {
-    this.id = menu && menu.id || '';
     this.name = menu && menu.name || '';
+    this.subname = menu && menu.subname || '';
     this.path = menu && menu.path || '';
     this.navigationHide = menu && menu.navigationHide || false;
     this.menuIcon = menu && menu.menuIcon || '';

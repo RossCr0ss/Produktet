@@ -19,6 +19,8 @@ time, mark, audio, video, .h1, .h2, .h3, .h4, .h5, .h6, .p {
 	vertical-align: baseline;
 	line-height: 1;
   font-weight: normal;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
 }
 
 body, html {
@@ -26,8 +28,8 @@ body, html {
   width:100%;
   margin:0;
   overflow: hidden;
-  background: pink;
-  color: #333;
+  background: #F2F2F2;
+  color: #FFF;
 }
 
 .loading {
@@ -45,10 +47,10 @@ body, html {
 
 #item-close-btn {
   position: fixed;
-  width: 60px;
-  height: 60px;
-  top: 15px;
-  right: 25px;
+  width: 40px;
+  height: 40px;
+  top: 30px;
+  right: 55px;
   z-index: 30;
   opacity: 0;
   z-index: 0;
@@ -57,6 +59,11 @@ body, html {
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
+
+#item-close-btn svg {
+  fill: #fff;
+}
+
 
 #item-close-btn svg{
   width: 100%;
@@ -102,6 +109,8 @@ body, html {
   top: 0; left: 0; bottom: 0; right: 0;
   opacity:0;  
   display: table;
+  padding: 25px;
+  box-sizing: border-box;
 }
 
 .content-open .inner  {
@@ -133,11 +142,11 @@ a, a:hover, a:active, a:visited {
   vertical-align: middle;
   width:100%;
   text-align:center;
-  font-size: 4rem;
+  font-size: 2.6rem;
 }
 
 .border1, .border2, .border3, .border4 { 
-  background:#333;
+  background:#fff;
   position:absolute;
   transition:all 0.4s ease;
 }
@@ -145,12 +154,25 @@ a, a:hover, a:active, a:visited {
 .content-open .border1, .content-open .border2, .content-open .border3, .content-open .border4 {
   display: none;
 }
+
+
+p.menu-item-heading, 
+p.menu-item-sub-heading {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  font-weight: 900;
+}
+
+p.menu-item-sub-heading {
+  font-size: 1.8rem;
+}
   
 /* Items */
 /* Item 1 */
 .pageready .menuitem.item1 {
   z-index:10;
-  background: #587E8C;
+  background: #065264;
   width:100%;
   height:100%;
   animation: slidein1 0.6s forwards 0.4s;
@@ -181,7 +203,7 @@ a, a:hover, a:active, a:visited {
 /*item 2*/
 .pageready .menuitem.item2{
   z-index:9;
-  background:#1E4E59;
+  background:#073a46;
   right:0;
   width:50%;
   height:100%;
@@ -216,7 +238,7 @@ a, a:hover, a:active, a:visited {
   z-index:8;
   left:50%;
   bottom:0;
-  background:#F2F2F2;
+  background:#011f26;
   width:50%;
   height:50%;
   animation: slidein3 0.6s forwards 0.8s;
@@ -250,7 +272,7 @@ a, a:hover, a:active, a:visited {
   z-index:7;
   right:0;
   top:50%;
-  background:#587E8C;
+  background:#07667c;
   width:25%;
   height:50%;
   animation: slidein4 0.6s forwards 1s;
@@ -284,7 +306,7 @@ a, a:hover, a:active, a:visited {
   z-index:6;
   right:0;
   top:75%;
-  background:#011F26;
+  background:#25515b;
   width:25%;
   height:50%;
   animation: slidein5 0.6s forwards 1.2s;
@@ -334,26 +356,26 @@ a, a:hover, a:active, a:visited {
   
 /* Borders */
 .menuitem a > .border1 {
-  width:15px;
+  width:10px;
   height:100%;
-  left:-15px;
+  left:-10px;
   top: 0;
 }
 .menuitem a > .border2 {
-  width:15px;
+  width:10px;
   height:100%;
-  right:-15px;
+  right:-10px;
   top: 0;
 }
 .menuitem a > .border3{
   width:100%;
-  height:15px;
-  top:-15px;
+  height:10px;
+  top:-10px;
 }
 .menuitem a > .border4 {
   width:100%;
-  height:15px;
-  bottom:-15px;
+  height:10px;
+  bottom:-10px;
 }
   
 /* Border Animation */
@@ -405,5 +427,79 @@ a, a:hover, a:active, a:visited {
   /*background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;*/
   background-size: cover;
   transition: 1s opacity;
+}
+
+/* The paper */
+
+
+
+.paper article{
+  text-align: left;
+}
+
+.paper article{
+  max-width: 100%;
+  max-width: 800px;
+  background: #fff;
+  min-height: 100%;
+  color: #011f26;
+  padding: 40px 20px;
+  margin: 0 0 0 80px;
+}
+
+.paper h1 {
+  font-size: 2.6rem;
+  font-weight: 900;
+}
+
+.paper p {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.paper .img-deco {
+  position: relative;
+}
+
+.paper .img-overlay {
+  width: 100%;
+  height: 100%;
+  width: 50%;
+  height: 50%;
+  background-color: #e66a37;
+  mix-blend-mode: multiply;
+  z-index: 1;
+  position: absolute;
+  bottom: -8%;
+  left: 25%;
+  display: none;
+}
+
+.paper img, .paper video {
+  width: 100%;
+}
+
+
+
+
+/* media qureies*/
+
+@media only screen and (max-width: 768px) {
+  #item-close-btn {
+      width: 25px;
+      height: 25px;
+      top: 14px;
+      right: 16px;
+  }
+
+  .paper h1 {
+      font-size: 1.6rem;
+  }
+
+  .paper article{
+      margin: 50px 10px;;
+  }
 }
   
