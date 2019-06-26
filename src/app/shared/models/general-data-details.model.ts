@@ -10,7 +10,14 @@ export class GeneralDataDetails {
   CompanyInstagram: string;
   CompanyTwitter: string;
   CompanyDescription: string;
+  FooterLinks : Linklist;
   ScriptHead: any;
   ScriptBodyTop: any;
   ScriptBodyBottom: any;
+}
+
+export class Linklist {
+  Name: string;
+  Url: string;
+  Target: string;
 }

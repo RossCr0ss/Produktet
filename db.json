@@ -88,6 +88,17 @@
         "CompanyInstagram": "https://instagram",
         "CompanyTwitter": "https://twitter.com",
         "CompanyDescription": "Lorem ipsum dolor sit amet, et parturient eros, at tempus odio sed sed ut et, aliquid habitasse amet, scelerisque eget enim eget in quis. Nec arcu et in luctus et, lorem penatibus ipsum. Sodales in. Id adipiscing ac sapien a sed eget, nulla ullamcorper nihil et vivamus euismod nec, pulvinar praesent",
+        "FooterLinks": [
+          {
+            "Name": "Link1",
+            "Url": "/link1",
+            "Target": "_blank"},
+          {
+            "Name": "Link2",
+            "Url": "/link3",
+            "Target": ""
+          }
+            ],
         "ScriptHead": null,
         "ScriptBodyTop": null,
         "ScriptBodyBottom": "console.log('test bottom script loading')"
