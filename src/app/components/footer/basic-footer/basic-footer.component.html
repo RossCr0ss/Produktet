@@ -1,3 +1,41 @@
-<p>
-  basic-footer works!
-</p>
+<footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">{{CompanyName}}</h5>
+          <p class="grey-text text-lighten-4">
+            {{CompanyDescription}}
+          </p>
+  
+  
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Sociale medier</h5>
+          <ul> 
+            <li></li>
+            <li *ngIf="CompanyFacebook"><a class="white-text" [href]="CompanyFacebook" target="_blank">Facebook</a></li>
+            <li *ngIf="CompanyLinkedin"><a class="white-text" [href]="CompanyLinkedin" target="_blank">Linkedin</a></li>
+            <li *ngIf="CompanyInstagram"><a class="white-text" [href]="CompanyInstagram" target="_blank">Instagram</a></li>
+            <li *ngIf="CompanyTwitter"><a class="white-text" [href]="CompanyTwitter" target="_blank">Twitter</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-copyright">
+      <div class="container">
+
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+
+  </footer>

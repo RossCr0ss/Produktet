@@ -9,6 +9,7 @@ export class GeneralDataDetails {
   CompanyLinkedin: string;
   CompanyInstagram: string;
   CompanyTwitter: string;
+  CompanyDescription: string;
   ScriptHead: any;
   ScriptBodyTop: any;
   ScriptBodyBottom: any;

@@ -1,5 +1,5 @@
 {
-  "localhost_test": {
+  "localhost": {
     "pageId": 1274,
     "layout": {
       "name": "basic-layout",
@@ -11,14 +11,7 @@
     },
     "header": {
       "name": "basic-header",
-      "content": [
-        {
-          "name": "banner"
-        },
-        {
-          "name": "basic-gallery"
-        }
-      ]
+      "content": []
     },
     "footer": {
       "name": "basic-footer",
@@ -28,13 +21,15 @@
       "name": "basic-content"
     },
     "scripts": [
-      "https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      "../assets/js/materialize.js"
     ],
     "styles": [
+      "https://fonts.googleapis.com/icon?family=Material+Icons",
+      "../assets/css/materialize.css",
       "../assets/css/basic.css"
     ]
   },
-  "localhost": {
+  "localhost_test": {
     "pageId": 1274,
     "layout": {
       "name": "m-box-layout"
@@ -88,11 +83,11 @@
         "CompanyPhone": "+45 21332323",
         "CompanyEmail": "info@q-c.dk",
         "MainLogo": "http://produktetapi.dynamikfabrikken.com:80/media/1065/q-construction-logo.png",
-        "CompanyFacebook": "https://facebook.com",
+        "CompanyFacebook": "",
         "CompanyLinkedin": "https://linkeding.com",
         "CompanyInstagram": "https://instagram",
         "CompanyTwitter": "https://twitter.com",
-        "statmentBund": "Lorem ipsum dolor sit amet, et parturient eros, at tempus odio sed sed ut et, aliquid habitasse amet, scelerisque eget enim eget in quis. Nec arcu et in luctus et, lorem penatibus ipsum. Sodales in. Id adipiscing ac sapien a sed eget, nulla ullamcorper nihil et vivamus euismod nec, pulvinar praesent",
+        "CompanyDescription": "Lorem ipsum dolor sit amet, et parturient eros, at tempus odio sed sed ut et, aliquid habitasse amet, scelerisque eget enim eget in quis. Nec arcu et in luctus et, lorem penatibus ipsum. Sodales in. Id adipiscing ac sapien a sed eget, nulla ullamcorper nihil et vivamus euismod nec, pulvinar praesent",
         "ScriptHead": null,
         "ScriptBodyTop": null,
         "ScriptBodyBottom": "console.log('test bottom script loading')"
@@ -160,9 +155,9 @@
         ]
       },
       {
-        "name": "2",
+        "name": "ANBEFALINGER",
         "subname": "",
-        "path": "anotheritem",
+        "path": "anbefalinger",
         "navigationHide": false,
         "menuIcon": "",
         "menuImg": "",
@@ -173,7 +168,7 @@
       {
         "name": "THE MOVIE",
         "subname": "",
-        "path": "3",
+        "path": "the-movie",
         "navigationHide": false,
         "menuIcon": "",
         "menuImg": "",
@@ -182,9 +177,9 @@
         "subMenu": []
       },
       {
-        "name": "4",
+        "name": "KONTAKT",
         "subname": "",
-        "path": "4",
+        "path": "kontakt",
         "navigationHide": false,
         "menuImg": "",
         "menuMp4": "",
@@ -192,7 +187,7 @@
         "subMenu": []
       },
       {
-        "name": "5",
+        "name": "",
         "subname": "",
         "path": "5",
         "navigationHide": false,
