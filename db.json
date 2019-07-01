@@ -13,12 +13,6 @@
       "name": "basic-header",
       "content": [
         {
-          "name": "banner"
-        },
-        {
-          "name": "text"
-        },
-        {
           "name": "basicgallery"
         }
       ]
@@ -32,7 +26,8 @@
     },
     "scripts": [
       "https://code.jquery.com/jquery-latest.min.js",
-      "../assets/js/materialize.js"
+      "../assets/js/materialize.js",
+      "../assets/js/basic-menu.js"
     ],
     "styles": [
       "https://fonts.googleapis.com/icon?family=Material+Icons",

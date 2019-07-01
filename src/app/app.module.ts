@@ -7,6 +7,8 @@ import {environment} from '../environments/environment';
 import {SharedModule} from './shared/shared.module';
 import {RouterModule} from '@angular/router';
 
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -15,7 +17,8 @@ import {RouterModule} from '@angular/router';
     BrowserModule,
     CoreModule,
     SharedModule,
-    RouterModule.forRoot([], {initialNavigation: false})
+    RouterModule.forRoot([], {initialNavigation: false}),
+    SlickCarouselModule
   ],
   providers: [
     {provide: 'BACKEND_API_URL', useValue: environment.backendApi}
