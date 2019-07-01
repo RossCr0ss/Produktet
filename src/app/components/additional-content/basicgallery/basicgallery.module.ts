@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {BasicGalleryComponent} from "./basic-gallery.component";
+import {BasicGalleryComponent} from "./basicgallery.component";
 
 @NgModule({
   imports: [

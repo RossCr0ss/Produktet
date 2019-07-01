@@ -11,7 +11,17 @@
     },
     "header": {
       "name": "basic-header",
-      "content": []
+      "content": [
+        {
+          "name": "banner"
+        },
+        {
+          "name": "text"
+        },
+        {
+          "name": "basicgallery"
+        }
+      ]
     },
     "footer": {
       "name": "basic-footer",
@@ -21,6 +31,7 @@
       "name": "basic-content"
     },
     "scripts": [
+      "https://code.jquery.com/jquery-latest.min.js",
       "../assets/js/materialize.js"
     ],
     "styles": [
@@ -101,7 +112,7 @@
             ],
         "ScriptHead": null,
         "ScriptBodyTop": null,
-        "ScriptBodyBottom": "console.log('test bottom script loading')"
+        "ScriptBodyBottom": null
       }
     ]
   },

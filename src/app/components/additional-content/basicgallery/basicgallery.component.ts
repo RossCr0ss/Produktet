@@ -3,8 +3,8 @@ import {DOCUMENT} from "@angular/common";
 
 @Component({
   selector: 'app-basic-gallery',
-  templateUrl: './basic-gallery.component.html',
-  styleUrls: ['./basic-gallery.component.css']
+  templateUrl: './basicgallery.component.html',
+  styleUrls: ['./basicgallery.component.css']
 })
 export class BasicGalleryComponent implements OnInit, AfterViewInit {
 
@@ -15,6 +15,9 @@ export class BasicGalleryComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+
+
+
     const script = this.document.createElement('script');
     script.type = 'text/javascript';
     script.text = `
@@ -24,6 +27,9 @@ export class BasicGalleryComponent implements OnInit, AfterViewInit {
       });
       `;
     this.document.head.appendChild(script);
+
+
+    
   }
 
 }

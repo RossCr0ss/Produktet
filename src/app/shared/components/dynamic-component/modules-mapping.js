@@ -8,5 +8,6 @@ export default {
   'm-box-menu': 'menu/m-box-menu/m-box-menu.module',
   'basic-footer': 'footer/basic-footer/basic-footer.module',
   'banner': 'additional-content/banner/banner.module',
-  'basic-gallery': 'basic-gallery/basic-gallery.module',
+  'text': 'additional-content/text/text.module',
+  'basicgallery': 'additional-content/basicgallery/basicgallery.module',
 }
