@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import {sampleJson} from '../../../../../imageData';
+import { sampleJson } from '../../../../assets/mockData/imageData';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-image',
@@ -7,15 +8,18 @@ import {sampleJson} from '../../../../../imageData';
   styleUrls: ['./image.component.css']
 })
 export class ImageComponent implements OnInit {
-  defaultImage: String;
-  image: String;
-  alt: String;
+  defaultImage: string;
+  image: string;
+  alt: string;
   imageSize: {};
-  currentScreenSize: String; // Desktop, Tablet, Mobile
-  constructor() {
+  currentScreenSize: string; // Desktop, Tablet, Mobile
+  sampleJson: {};
+  constructor(private http: HttpClient) {
   }
 
   ngOnInit() {
+    this.sampleJson = sampleJson;
+    // this.fetchJson('https://jsonplaceholder.typicode.com/todos/1');
     this.imageSize = {
       mobile: {
         height: 100,
@@ -30,11 +34,10 @@ export class ImageComponent implements OnInit {
         width: 600,
       }
     };
+    this.defaultImage = this.sampleJson['defaultImage'];
     this.assignScreenState(window.innerWidth, window.innerHeight);
-
-    this.defaultImage = sampleJson.defaultImage;
-    this.image = sampleJson.imageURL;
-    this.alt = sampleJson.alt;
+    this.appendScreenSize();
+    this.alt = this.sampleJson['alt'];
   }
   @HostListener('window:resize', ['$event'])
   onResize(event) {
@@ -42,21 +45,39 @@ export class ImageComponent implements OnInit {
   }
 
   assignScreenState(width, height) {
-    if (width < 768) {
+    if (width < 768 && this.currentScreenSize !== 'mobile') {
       // Mobile
       this.currentScreenSize = 'mobile';
+      this.appendScreenSize();
     }
-    if (width >= 768) {
+    if (width >= 768 && this.currentScreenSize !== 'tablet') {
       // Tablet
       this.currentScreenSize = 'tablet';
+      this.appendScreenSize();
     }
-    if (width >= 992) {
+    if (width >= 992 && this.currentScreenSize !== 'tablet') {
       // Small Laptop
       this.currentScreenSize = 'tablet';
+      this.appendScreenSize();
     }
-    if (width >= 1200) {
+    if (width >= 1200 && this.currentScreenSize !== 'desktop') {
       // laptops and desktops
       this.currentScreenSize = 'desktop';
+      this.appendScreenSize();
     }
+
+  }
+
+  appendScreenSize() {
+    // this.defaultImage = `${sampleJson.defaultImage}?width=${this.imageSize[this.currentScreenSize].width}
+    // &height=${this.imageSize[this.currentScreenSize].height}`;
+    this.image = `${this.sampleJson['imageURL']}?width=${this.imageSize[this.currentScreenSize].width}&height=${this.imageSize[this.currentScreenSize].height}`;
+
+  }
+  fetchJson(url) {
+    this.http.get(url).subscribe(res => {
+      this.sampleJson = res;
+    });
+
   }
 }
