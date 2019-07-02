@@ -26,7 +26,7 @@ setTimeout(function(){
       
           $('.menu-inner').on('mouseleave', function(){
               menuExpanded = false;
-              //$(this).parent().removeClass('expanded');
+              $(this).parent().removeClass('expanded');
           });
       
           function easeOutExpo(currentIteration, startValue, changeInValue, totalIterations) {

@@ -22,7 +22,8 @@
       "content": []
     },
     "content": {
-      "name": "basic-content"
+      "name": "basic-content",
+      "content": []
     },
     "scripts": [
       "https://code.jquery.com/jquery-latest.min.js",
