@@ -13,9 +13,38 @@
       "name": "basic-header",
       "content": [
         {
-          "name": "banner"
+          "name": "image"
         },
         {
+          "name": "image"
+        },
+        {
+          "name": "image"
+        },        {
+          "name": "image"
+        },
+        {
+          "name": "image"
+        },
+        {
+          "name": "image"
+        },        {
+          "name": "image"
+        },
+        {
+          "name": "image"
+        },
+        {
+          "name": "image"
+        },        {
+          "name": "image"
+        },
+        {
+          "name": "image"
+        },
+        {
+          "name": "image"
+        },        {
           "name": "image"
         }
       ]
@@ -26,7 +55,9 @@
     },
     "content": {
       "name": "basic-content",
-      "content": []
+      "content": [        {
+        "name": "image"
+      }]
     },
     "scripts": [
       "https://code.jquery.com/jquery-latest.min.js",
