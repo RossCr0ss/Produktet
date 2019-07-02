@@ -15,8 +15,8 @@ setTimeout(function(){
           hamburger = $('.burger-menu-btn');
       
           $(this).on('mousemove', function(e){
-              x = e.pageX;      
-              y = e.pageY;
+            x = e.originalEvent.clientX - 100;      
+            y = e.originalEvent.clientY;
           });
       
           $('.burger-menu-btn, .menu-inner').on('mouseenter', function(){
