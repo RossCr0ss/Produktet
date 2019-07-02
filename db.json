@@ -16,10 +16,7 @@
           "name": "banner"
         },
         {
-          "name": "text"
-        },
-        {
-          "name": "basicgallery"
+          "name": "image"
         }
       ]
     },
@@ -147,7 +144,7 @@
         "path": "example",
         "navigationHide": false,
         "menuIcon": "mdi-account-minus",
-        "menuImg": "", 
+        "menuImg": "",
         "menuMp4": "",
         "menuWebm": "",
         "subMenu": [
