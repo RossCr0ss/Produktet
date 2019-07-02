@@ -25,11 +25,13 @@
       "content": []
     },
     "content": {
-      "name": "basic-content"
+      "name": "basic-content",
+      "content": []
     },
     "scripts": [
       "https://code.jquery.com/jquery-latest.min.js",
-      "../assets/js/materialize.js"
+      "../assets/js/materialize.js",
+      "../assets/js/basic-menu.js"
     ],
     "styles": [
       "https://fonts.googleapis.com/icon?family=Material+Icons",

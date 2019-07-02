@@ -8,6 +8,9 @@ import {DOCUMENT} from "@angular/common";
 })
 export class BasicGalleryComponent implements OnInit, AfterViewInit {
 
+
+  
+
   constructor(@Inject(DOCUMENT) private document: any) {
   }
 
@@ -29,7 +32,7 @@ export class BasicGalleryComponent implements OnInit, AfterViewInit {
     this.document.head.appendChild(script);
 
 
-    
+
   }
 
 }

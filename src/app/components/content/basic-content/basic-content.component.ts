@@ -24,6 +24,9 @@ export class BasicContentComponent implements OnInit {
   ngOnInit() {
     this.componentPath = window.location.pathname;
     this.configuration = this.siteConfigurationService.configuration;
+
+
+    //console.log(this.configuration.content.content);
   }
 
 }

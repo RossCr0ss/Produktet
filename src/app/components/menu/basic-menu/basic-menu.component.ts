@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import {AfterViewInit, Component, OnInit, OnDestroy } from '@angular/core';
 import {MenuService} from '../../../shared/services/menu.service';
 import {RouteService} from '../../../shared/services/route.service';
 import {SiteConfigurationService} from '../../../shared/services/site-configuration.service';
@@ -17,6 +17,9 @@ export class BasicMenuComponent implements OnInit, OnDestroy {
   public cancelSubscription$: Subject<void> = new Subject<void>();
   menus: Array<Menu>;
   configuration: Site;
+
+  FontColor: string;
+  BgColor: string;    
 
   constructor(
       private menuService: MenuService,
@@ -40,6 +43,13 @@ export class BasicMenuComponent implements OnInit, OnDestroy {
           }
         }
       });
+
+      this.FontColor = " blue-grey-text text-lighten-5";
+      this.BgColor = " blue-grey darken-3";   
+  }
+
+
+  ngAfterViewInit(): void {
   }
 
   ngOnDestroy(): void {

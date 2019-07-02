@@ -1,3 +1,11 @@
+
+<!--
+<header>
+  The header will be added here!
+</header>
+-->
+
+<!--Adding additional componenets here is for testing. Currently it gives issues to add on content component!</p>-->
 <ng-container *ngFor="let contentComponent of configuration.header.content">
   <dynamic-loader [moduleName]="contentComponent.name"></dynamic-loader>
 </ng-container>
