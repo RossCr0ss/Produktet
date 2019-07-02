@@ -48,18 +48,22 @@ export class ImageComponent implements OnInit {
     if (width < 768 && this.currentScreenSize !== 'mobile') {
       // Mobile
       this.currentScreenSize = 'mobile';
+      this.appendScreenSize();
     }
     if (width >= 768 && this.currentScreenSize !== 'tablet') {
       // Tablet
       this.currentScreenSize = 'tablet';
+      this.appendScreenSize();
     }
     if (width >= 992 && this.currentScreenSize !== 'tablet') {
       // Small Laptop
       this.currentScreenSize = 'tablet';
+      this.appendScreenSize();
     }
     if (width >= 1200 && this.currentScreenSize !== 'desktop') {
       // laptops and desktops
       this.currentScreenSize = 'desktop';
+      this.appendScreenSize();
     }
 
   }
