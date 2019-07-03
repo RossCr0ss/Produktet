@@ -4,3 +4,12 @@ a.link-inherit {
 }
 
 /* colors: https://materializecss.com/color.html */
+
+
+/* component special combination rules.... */
+.menu-basic-menu main, 
+.menu-basic-menu app-image > div,
+.menu-basic-menu app-text > div,
+.menu-basic-menu app-basic-footer > div  {
+    padding-left: 60px;
+}

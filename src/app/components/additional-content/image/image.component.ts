@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { sampleJson } from '../../../../assets/mockData/imageData';
+import { imageJson } from '../../../../assets/mockData/testData';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -13,12 +13,12 @@ export class ImageComponent implements OnInit {
   alt: string;
   imageSize: {};
   currentScreenSize: string; // Desktop, Tablet, Mobile
-  sampleJson: {};
+  imageJson: {};
   constructor(private http: HttpClient) {
   }
 
   ngOnInit() {
-    this.sampleJson = sampleJson;
+    this.imageJson = imageJson;
     // this.fetchJson('https://jsonplaceholder.typicode.com/todos/1');
     this.imageSize = {
       mobile: {
@@ -34,10 +34,10 @@ export class ImageComponent implements OnInit {
         width: 600,
       }
     };
-    this.defaultImage = this.sampleJson['defaultImage'];
+    this.defaultImage = this.imageJson['defaultImage'];
     this.assignScreenState(window.innerWidth, window.innerHeight);
     this.appendScreenSize();
-    this.alt = this.sampleJson['alt'];
+    this.alt = this.imageJson['alt'];
   }
   @HostListener('window:resize', ['$event'])
   onResize(event) {
@@ -65,14 +65,12 @@ export class ImageComponent implements OnInit {
   }
 
   appendScreenSize() {
-    // this.defaultImage = `${sampleJson.defaultImage}?width=${this.imageSize[this.currentScreenSize].width}
-    // &height=${this.imageSize[this.currentScreenSize].height}`;
-    this.image = `${this.sampleJson['imageURL']}?width=${this.imageSize[this.currentScreenSize].width}&height=${this.imageSize[this.currentScreenSize].height}`;
-
+    this.image = `${this.imageJson['imageURL']}?width=${this.imageSize[this.currentScreenSize].width}&height=${this.imageSize[this.currentScreenSize].height}`;
   }
+  
   fetchJson(url) {
     this.http.get(url).subscribe(res => {
-      this.sampleJson = res;
+      this.imageJson = res;
     });
 
   }
