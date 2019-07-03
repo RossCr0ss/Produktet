@@ -5,6 +5,7 @@
     transition: 1000ms all cubic-bezier(0.19, 1, 0.22, 1);
     transform: translateX(-100%);
     left: 60px;
+    top: 0;
 }
 
 #menu.expanded {

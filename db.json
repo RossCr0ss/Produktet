@@ -14,38 +14,6 @@
       "content": [
         {
           "name": "image"
-        },
-        {
-          "name": "image"
-        },
-        {
-          "name": "image"
-        },        {
-          "name": "image"
-        },
-        {
-          "name": "image"
-        },
-        {
-          "name": "image"
-        },        {
-          "name": "image"
-        },
-        {
-          "name": "image"
-        },
-        {
-          "name": "image"
-        },        {
-          "name": "image"
-        },
-        {
-          "name": "image"
-        },
-        {
-          "name": "image"
-        },        {
-          "name": "image"
         }
       ]
     },
@@ -61,7 +29,6 @@
     },
     "scripts": [
       "https://code.jquery.com/jquery-latest.min.js",
-      "../assets/js/materialize.js",
       "../assets/js/basic-menu.js"
     ],
     "styles": [

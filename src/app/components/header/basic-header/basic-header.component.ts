@@ -16,7 +16,6 @@ export class BasicHeaderComponent implements OnInit {
 
   ngOnInit() {
     this.configuration = this.siteConfigurationService.configuration;
-    console.log(this.configuration.content.content);
   }
 
 }
