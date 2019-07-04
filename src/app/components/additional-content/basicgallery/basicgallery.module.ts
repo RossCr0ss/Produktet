@@ -2,9 +2,12 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {BasicGalleryComponent} from "./basicgallery.component";
 
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    SlickCarouselModule
   ],
   declarations: [BasicGalleryComponent],
   entryComponents: [BasicGalleryComponent]

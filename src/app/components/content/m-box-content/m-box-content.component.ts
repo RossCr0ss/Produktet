@@ -3,11 +3,12 @@ import {SiteConfigurationService} from '../../../shared/services/site-configurat
 import {Site} from '../../..//shared/models/site.model';
 
 @Component({
-  selector: 'app-basic-content',
-  templateUrl: './basic-content.component.html',
-  styleUrls: ['./basic-content.component.css']
+  selector: 'app-m-box-content',
+  templateUrl: './m-box-content.component.html',
+  styleUrls: ['./m-box-content.component.css']
 })
-export class BasicContentComponent implements OnInit {
+
+export class MBoxContentComponent implements OnInit {
 
   componentPath: string;
   configuration: Site;

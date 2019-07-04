@@ -1,12 +1,22 @@
 import {AfterViewInit, Component, Inject, OnInit} from '@angular/core';
 import {DOCUMENT} from "@angular/common";
 
+
 @Component({
   selector: 'app-basic-gallery',
   templateUrl: './basicgallery.component.html',
   styleUrls: ['./basicgallery.component.css']
 })
 export class BasicGalleryComponent implements OnInit, AfterViewInit {
+
+  slides = [
+    {img: "http://placehold.it/350x150/000000"},
+    {img: "http://placehold.it/350x150/111111"},
+    {img: "http://placehold.it/350x150/333333"},
+    {img: "http://placehold.it/350x150/666666"}
+  ];
+  slideConfig = {"slidesToShow": 4, "slidesToScroll": 4};
+
 
   constructor(@Inject(DOCUMENT) private document: any) {
   }
@@ -31,5 +41,7 @@ export class BasicGalleryComponent implements OnInit, AfterViewInit {
 
 
   }
+
+
 
 }

@@ -34,7 +34,7 @@ export class DynamicLoaderComponent implements OnInit {
 
   private compileAndCreateModule(module: any) {
     // https://stackoverflow.com/questions/45503497/how-to-load-dynamic-external-components-into-angular-application
-
+    
     this.compiler.compileModuleAndAllComponentsAsync(module[module.moduleName()])
       .then((compiled) => {
         const moduleRef: NgModuleRef<any> = compiled.ngModuleFactory.create(this.injector);

@@ -1,5 +1,5 @@
 {
-  "localhost": {
+  "localhost_test": {
     "pageId": 1274,
     "layout": {
       "name": "basic-layout",
@@ -11,12 +11,15 @@
     },
     "header": {
       "name": "basic-header",
-      "content": [
+      "additional": [
         {
           "name": "image"
         },
         {
           "name": "text"
+        },
+        {
+          "name": "basicgallery"
         }
       ]
     },
@@ -26,9 +29,7 @@
     },
     "content": {
       "name": "basic-content",
-      "content": [        {
-        "name": "image"
-      }]
+      "additional": []
     },
     "scripts": [
       "https://code.jquery.com/jquery-latest.min.js",
@@ -40,7 +41,7 @@
       "../assets/css/basic.css"
     ]
   },
-  "localhost_test": {
+  "localhost": {
     "pageId": 1274,
     "layout": {
       "name": "m-box-layout"
@@ -49,37 +50,48 @@
       "name": "m-box-menu"
     },
     "header": {
-      "name": "basic-header"
+      "name": "basic-header",
+      "additional": [
+        {
+          "name": "youtubevideo"
+        },
+        {
+          "name": "image"
+        },
+        {
+          "name": "text"
+        },
+        {
+          "name": "basicgallery"
+        }
+      ]
     },
     "footer": {
       "name": "basic-footer"
     },
     "content": {
-      "name": "basic-content"
+      "name": "m-box-content",
+      "additional": [
+        {
+          "name": "youtubevideo"
+        },
+        {
+          "name": "image"
+        },
+        {
+          "name": "text"
+        },
+        {
+          "name": "basicgallery"
+        }
+      ]
     },
     "scripts": [
-      "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js",
-      "../assets/js/m-box.js"
+      "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"
     ],
     "styles": [
       "https://fonts.googleapis.com/css?family=Work+Sans:200,400,600,900",
       "../assets/css/m-box.css"
-    ]
-  },
-  "someOtherDomain": {
-    "pageId": 1274,
-    "component": {
-      "layout": "basic-layout",
-      "menu": "basic-menu",
-      "header": "basic-header",
-      "footer": "basic-footer",
-      "content": "basic-content"
-    },
-    "scripts": [
-      "https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    ],
-    "styles": [
-      ""
     ]
   },
   "getgeneralData": {
@@ -209,7 +221,7 @@
         "subMenu": []
       },
       {
-        "name": "",
+        "name": "THE MOVIE",
         "subname": "",
         "path": "5",
         "navigationHide": false,

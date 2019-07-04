@@ -1,11 +1,11 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import {Component, Inject, OnInit, OnDestroy } from '@angular/core';
 import {MenuService} from '../../../shared/services/menu.service';
 import {RouteService} from '../../../shared/services/route.service';
 import {SiteConfigurationService} from '../../../shared/services/site-configuration.service';
 import {Menu} from '../../../shared/models/menu.model';
 import {Router} from '@angular/router';
-import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import {DOCUMENT} from "@angular/common";
 
 @Component({
   selector: 'app-m-box-menu',
@@ -17,6 +17,7 @@ export class BasicMenuComponent implements OnInit, OnDestroy {
   menus: Array<Menu>;
 
   constructor(
+    @Inject(DOCUMENT) private document: any,
     private menuService: MenuService,
     private routeService: RouteService,
     private siteConfiguration: SiteConfigurationService,
@@ -36,6 +37,13 @@ export class BasicMenuComponent implements OnInit, OnDestroy {
           }
         }
       });
+  }
+
+  ngAfterViewInit(): void {
+    const script = this.document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = `../assets/js/m-box-menu.js`;
+    this.document.head.appendChild(script);
   }
 
   ngOnDestroy(): void {

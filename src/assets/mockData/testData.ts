@@ -7,3 +7,8 @@ export const imageJson = {
 export const textJson = {
   'markup': '<p>Here we will add content made from RTE in Umbraco CMS</p>'
 };
+
+export const youtubevideoJson = {
+  'videoUrl': '<p>Here we will add content made from RTE in Umbraco CMS</p>'
+};
+

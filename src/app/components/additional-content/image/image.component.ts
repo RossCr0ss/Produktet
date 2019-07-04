@@ -61,13 +61,13 @@ export class ImageComponent implements OnInit {
       // laptops and desktops
       this.currentScreenSize = 'desktop';
     }
-
   }
 
   appendScreenSize() {
+    // this.defaultImage = `${imageJson.defaultImage}?width=${this.imageSize[this.currentScreenSize].width}
+    // &height=${this.imageSize[this.currentScreenSize].height}`;
     this.image = `${this.imageJson['imageURL']}?width=${this.imageSize[this.currentScreenSize].width}&height=${this.imageSize[this.currentScreenSize].height}`;
   }
-  
   fetchJson(url) {
     this.http.get(url).subscribe(res => {
       this.imageJson = res;
