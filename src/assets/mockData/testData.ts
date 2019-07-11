@@ -12,3 +12,8 @@ export const youtubevideoJson = {
   'videoUrl': '<p>Here we will add content made from RTE in Umbraco CMS</p>'
 };
 
+export const videoJson = {
+  'mp4Url': '../assets/dummyimages/h264_1080_best.mp4',
+  'oggUrl': null,
+  'posterimg': 'https://images.unsplash.com/photo-1443890923422-7819ed4101c0?fm=jpg',
+};

@@ -11,6 +11,7 @@ a.link-inherit {
 .menu-basic-menu app-image > div,
 .menu-basic-menu app-text > div,
 .menu-basic-menu app-basic-footer > div,
+.menu-basic-menu app-video > div,
 .menu-basic-menu app-basic-gallery > div  {
     padding-left: 60px;
 }

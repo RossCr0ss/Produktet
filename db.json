@@ -1,5 +1,5 @@
 {
-  "localhost_test": {
+  "localhost": {
     "pageId": 1274,
     "layout": {
       "name": "basic-layout",
@@ -13,13 +13,13 @@
       "name": "basic-header",
       "additional": [
         {
+          "name": "video"
+        },
+        {
           "name": "image"
         },
         {
           "name": "text"
-        },
-        {
-          "name": "basicgallery"
         }
       ]
     },
@@ -41,7 +41,7 @@
       "../assets/css/basic.css"
     ]
   },
-  "localhost": {
+  "localhost_test": {
     "pageId": 1274,
     "layout": {
       "name": "m-box-layout"
@@ -53,16 +53,7 @@
       "name": "basic-header",
       "additional": [
         {
-          "name": "youtubevideo"
-        },
-        {
-          "name": "image"
-        },
-        {
-          "name": "text"
-        },
-        {
-          "name": "basicgallery"
+          "name": "video"
         }
       ]
     },
@@ -221,7 +212,7 @@
         "subMenu": []
       },
       {
-        "name": "THE MOVIE",
+        "name": "PRODUKTET",
         "subname": "",
         "path": "5",
         "navigationHide": false,
