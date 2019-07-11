@@ -12,7 +12,8 @@ export class BasicContentComponent implements OnInit {
   componentPath: string;
   configuration: Site;
 
-  constructor(private siteConfigurationService: SiteConfigurationService,) {}
+  constructor(private siteConfigurationService: SiteConfigurationService) {
+  }
 
   ngOnInit() {
     this.componentPath = window.location.pathname;

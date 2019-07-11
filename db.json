@@ -29,7 +29,11 @@
     },
     "content": {
       "name": "basic-content",
-      "additional": []
+      "additional": [
+        {
+          "name": "banner"
+        }
+      ]
     },
     "scripts": [
       "https://code.jquery.com/jquery-latest.min.js",
@@ -41,7 +45,7 @@
       "../assets/css/basic.css"
     ]
   },
-  "localhost_test": {
+  "localhost_t": {
     "pageId": 1274,
     "layout": {
       "name": "m-box-layout"
