@@ -17,5 +17,6 @@ export default {
   'text': 'additional-content/text/text.module',
   'image': 'additional-content/image/image.module',
   'basicgallery': 'additional-content/basicgallery/basicgallery.module',
-  'youtubevideo': 'additional-content/youtubevideo/youtubevideo.module'
+  'youtubevideo': 'additional-content/youtubevideo/youtubevideo.module',
+  'slider': 'additional-content/slider/slider.module'
 }
