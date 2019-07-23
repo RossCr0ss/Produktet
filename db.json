@@ -11,17 +11,7 @@
     },
     "header": {
       "name": "basic-header",
-      "additional": [
-        {
-          "name": "video"
-        },
-        {
-          "name": "image"
-        },
-        {
-          "name": "text"
-        }
-      ]
+      "additional": []
     },
     "footer": {
       "name": "basic-footer",
@@ -32,6 +22,15 @@
       "additional": [
         {
           "name": "banner"
+        },
+        {
+          "name": "video"
+        },
+        {
+          "name": "image"
+        },
+        {
+          "name": "text"
         }
       ]
     },

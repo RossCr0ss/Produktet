@@ -1,6 +1,11 @@
-<dynamic-loader [moduleName]="configuration.header.name"></dynamic-loader>
 
+<header>
+<dynamic-loader [moduleName]="configuration.header.name"></dynamic-loader>
+</header>
+
+<nav>
 <dynamic-loader [moduleName]="configuration.menu.name"></dynamic-loader>
+</nav>
 
 <main class="content">
   <router-outlet></router-outlet>
