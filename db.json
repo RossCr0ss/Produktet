@@ -31,11 +31,13 @@
         },
         {
           "name": "text"
+        },
+        {
+          "name": "slider"
         }
       ]
     },
     "scripts": [
-      "https://code.jquery.com/jquery-latest.min.js",
       "../assets/js/basic-menu.js"
     ],
     "styles": [

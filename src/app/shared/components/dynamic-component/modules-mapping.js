@@ -18,5 +18,6 @@ export default {
   'image': 'additional-content/image/image.module',
   'basicgallery': 'additional-content/basicgallery/basicgallery.module',
   'youtubevideo': 'additional-content/youtubevideo/youtubevideo.module',
-  'video': 'additional-content/video/video.module'
+  'video': 'additional-content/video/video.module',
+  'slider': 'additional-content/slider/slider.module'
 }
