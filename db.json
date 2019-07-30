@@ -20,21 +20,6 @@
     "content": {
       "name": "basic-content",
       "additional": [
-        {
-          "name": "banner"
-        },
-        {
-          "name": "video"
-        },
-        {
-          "name": "image"
-        },
-        {
-          "name": "text"
-        },
-        {
-          "name": "slider"
-        }
       ]
     },
     "scripts": [
@@ -57,9 +42,6 @@
     "header": {
       "name": "basic-header",
       "additional": [
-        {
-          "name": "video"
-        }
       ]
     },
     "footer": {
@@ -68,18 +50,6 @@
     "content": {
       "name": "m-box-content",
       "additional": [
-        {
-          "name": "youtubevideo"
-        },
-        {
-          "name": "image"
-        },
-        {
-          "name": "text"
-        },
-        {
-          "name": "basicgallery"
-        }
       ]
     },
     "scripts": [
@@ -203,7 +173,7 @@
             "name": "text"
           },
           {
-            "name": "basicgallery"
+            "name": "slider"
           }
         ]
       },
