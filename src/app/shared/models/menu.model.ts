@@ -1,3 +1,5 @@
+import {ComponentContent} from "./component-content.model";
+
 export class Menu {
   name: string;
   subname: string;
@@ -8,6 +10,7 @@ export class Menu {
   menuMp4: string;
   menuWebm: string;
   subMenu: Array<Menu>;
+  content?: ComponentContent[];
 
   constructor(menu?: any) {
     this.name = menu && menu.name || '';
@@ -19,5 +22,6 @@ export class Menu {
     this.menuMp4 = menu && menu.menuMp4 || '';
     this.menuWebm = menu && menu.menuWebm || '';
     this.subMenu = menu && menu.subMenu || [];
+    this.content = menu && menu.content || [];
   }
 }

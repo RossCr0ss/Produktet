@@ -15,13 +15,13 @@ export class RouteService {
   setRoutes(menus: Array<Menu>, contentModuleName: string): void {
     menus.forEach((firstLevelMenu: Menu) => {
       this.router.config.push({path: firstLevelMenu.path, component: DynamicLoaderComponent,
-        data: {moduleName: contentModuleName}});
+        data: {moduleName: contentModuleName, content: firstLevelMenu.content}});
       firstLevelMenu.subMenu.forEach((secondLevelMenu: Menu) => {
         this.router.config.push({path: `${firstLevelMenu.path}/${secondLevelMenu.path}`, component: DynamicLoaderComponent,
-          data: {moduleName: contentModuleName}});
+          data: {moduleName: contentModuleName, content: secondLevelMenu.content}});
         secondLevelMenu.subMenu.forEach((thirdLevelMenu: Menu) => {
           this.router.config.push({path: `${firstLevelMenu.path}/${secondLevelMenu.path}/${thirdLevelMenu.path}`,
-            component: DynamicLoaderComponent, data: {moduleName: contentModuleName}});
+            component: DynamicLoaderComponent, data: {moduleName: contentModuleName, content: thirdLevelMenu.content}});
         });
       });
     });

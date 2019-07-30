@@ -1,6 +1,6 @@
 import {
   Compiler,
-  Component,
+  Component, ComponentRef,
   Injector,
   Input,
   NgModuleRef,
@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import modulesMapping from './modules-mapping';
+import {ComponentContent} from "../../models/component-content.model";
 
 @Component({
   selector: 'dynamic-loader',
@@ -21,13 +22,15 @@ export class DynamicLoaderComponent implements OnInit {
 
   public modulesMapping = modulesMapping;
 
+  private componentContent: ComponentContent[] = [];
+
   constructor(private compiler: Compiler, private viewRef: ViewContainerRef, private injector: Injector, private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
     if (!this.moduleName) {
       const moduleNameFromRoute = this.route.snapshot.data['moduleName'];
-
+      this.componentContent = this.route.snapshot.data['content'];
       if (moduleNameFromRoute) {
         this.moduleName = moduleNameFromRoute;
       }
@@ -50,7 +53,8 @@ export class DynamicLoaderComponent implements OnInit {
     .then((compiled) => {
       const moduleRef: NgModuleRef<any> = compiled.ngModuleFactory.create(this.injector);
       const componentFactory = moduleRef.componentFactoryResolver.resolveComponentFactory(module.entryComponent());
-      this.viewRef.createComponent(componentFactory);
+      const componentRef: ComponentRef<any> = this.viewRef.createComponent(componentFactory);
+      componentRef.instance.additionalContent = this.componentContent;
     });
   }
 

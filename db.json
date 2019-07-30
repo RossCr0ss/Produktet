@@ -111,13 +111,14 @@
           {
             "Name": "Link1",
             "Url": "/link1",
-            "Target": "_blank"},
+            "Target": "_blank"
+          },
           {
             "Name": "Link2",
             "Url": "/link3",
             "Target": ""
           }
-            ],
+        ],
         "ScriptHead": null,
         "ScriptBodyTop": null,
         "ScriptBodyBottom": null
@@ -193,7 +194,18 @@
         "menuImg": "",
         "menuMp4": "",
         "menuWebm": "",
-        "subMenu": []
+        "subMenu": [],
+        "content": [
+          {
+            "name": "image"
+          },
+          {
+            "name": "text"
+          },
+          {
+            "name": "basicgallery"
+          }
+        ]
       },
       {
         "name": "THE MOVIE",
@@ -204,7 +216,12 @@
         "menuImg": "",
         "menuMp4": "",
         "menuWebm": "",
-        "subMenu": []
+        "subMenu": [],
+        "content": [
+          {
+            "name": "text"
+          }
+        ]
       },
       {
         "name": "KONTAKT",
