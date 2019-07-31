@@ -1,6 +1,7 @@
 import {
   Compiler,
-  Component, ComponentRef,
+  Component,
+  ComponentRef,
   Injector,
   Input,
   NgModuleRef,

@@ -6,7 +6,6 @@ import {GeneralData} from '../../../shared/models/general-data.model';
 import {Site} from '../../../shared/models/site.model';
 import {takeUntil} from 'rxjs/operators';
 import {Subject} from 'rxjs';
-import { THROW_IF_NOT_FOUND } from '@angular/core/src/di/injector';
 
 @Component({
   selector: 'app-basic-footer',
