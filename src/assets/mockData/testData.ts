@@ -6,6 +6,12 @@ export const imageJson = {
 
 export const textJson = {
   'markup': `
+<p>This will be simple markup from RTE
+  `
+};
+
+export const gridJson = {
+  'markup': `
   <div class="section no-pad-bot" id="index-banner">
   <div class="container">
     <br><br>

@@ -31,7 +31,7 @@
       "../assets/css/basic.css"
     ]
   },
-  "localhost_t": {
+  "localhost_test": {
     "pageId": 1274,
     "layout": {
       "name": "m-box-layout"
@@ -166,6 +166,9 @@
         "menuWebm": "",
         "subMenu": [],
         "content": [
+          {
+            "name": "grid"
+          },
           {
             "name": "image"
           },

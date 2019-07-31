@@ -7,11 +7,6 @@ a.link-inherit {
 
 
 /* component special combination rules.... */
-.menu-basic-menu main, 
-.menu-basic-menu app-image > div,
-.menu-basic-menu app-text > div,
-.menu-basic-menu app-basic-footer > div,
-.menu-basic-menu app-video > div,
-.menu-basic-menu app-basic-gallery > div  {
+body.menu-basic-menu  {
     padding-left: 60px;
 }

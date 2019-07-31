@@ -19,5 +19,6 @@ export default {
   'basicgallery': 'additional-content/basicgallery/basicgallery.module',
   'youtubevideo': 'additional-content/youtubevideo/youtubevideo.module',
   'video': 'additional-content/video/video.module',
-  'slider': 'additional-content/slider/slider.module'
+  'slider': 'additional-content/slider/slider.module',
+  'grid': 'additional-content/grid/grid.module'
 }

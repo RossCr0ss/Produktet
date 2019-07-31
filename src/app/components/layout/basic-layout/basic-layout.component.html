@@ -1,13 +1,11 @@
 
-<header>
+<!-- We need to add header tag -->
 <dynamic-loader [moduleName]="configuration.header.name"></dynamic-loader>
-</header>
 
-<nav>
+<!-- we need to add nav tag-->
 <dynamic-loader [moduleName]="configuration.menu.name"></dynamic-loader>
-</nav>
 
-<main class="content">
+<main>
   <router-outlet></router-outlet>
 </main>
 
