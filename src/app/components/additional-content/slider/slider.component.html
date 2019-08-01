@@ -5,12 +5,14 @@
     </div>
     <!-- <button [ngClass] = 'BgColor + FontColor' NguCarouselNext class="right-btn"><i class="material-icons">chevron_right</i></button> -->
     <!-- <button [ngClass] = 'BgColor + FontColor' NguCarouselPrev class="left-btn"><i class="material-icons">chevron_left</i></button> -->
-    <i class="material-icons right-btn" [ngClass] = 'FontColor' NguCarouselNext>chevron_right</i>
-    <i class="material-icons left-btn" [ngClass] = 'FontColor' NguCarouselPrev>chevron_left</i>
+    <!-- <i class="material-icons right-btn" [ngClass] = 'FontColor' NguCarouselNext>navigate_next</i> -->
+    <!-- <i class="material-icons left-btn" [ngClass] = 'FontColor' NguCarouselPrev>navigate_before</i> -->
+    <img src="/assets/svg/left.svg" class="left-btn" [ngClass] = 'FontColor' NguCarouselPrev>
+    <img src="/assets/svg/right.svg" class="right-btn" [ngClass] = 'FontColor' NguCarouselNext>
     <ul class="point" NguCarouselPoint>
       <li *ngFor="let j of slider.pointNumbers; let j = index" [class.active]="j==slider.activePoint" (click)="slider.moveTo(j)"></li>
     </ul>
   </ngu-carousel>
   
-  <div [ngClass] = 'BgColor' class="overlay"></div>
+  <div [ngClass] = 'BgColor' class="overlay">{{slider.activePoint + 1}} / {{slider.pointNumbers.length}}</div>
 </div>
