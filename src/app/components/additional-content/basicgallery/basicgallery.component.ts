@@ -42,6 +42,20 @@ export class BasicGalleryComponent implements OnInit, AfterViewInit {
 
   }
 
+  slickInit(event) {
+  }
+
+  breakpoint(event) {
+
+  }
+
+  afterChange(event) {
+
+  }
+
+  beforeChange(event) {
+
+  }
 
 
 }

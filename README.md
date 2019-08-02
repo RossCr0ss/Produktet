@@ -53,4 +53,6 @@ See `basic-layout.component.html`.
 
 `dynamic-loader` is main component in the application. Component is responsible for loading all dynamic modules.
 
-
+##Revert extra-webpack configuration after Angular fix bug in dynamic module template loading
+Issue: https://github.com/angular/angular-cli/issues/14566
+Solution: https://codeburst.io/customizing-angular-cli-6-build-an-alternative-to-ng-eject-a48304cd3b21 <- revert this when new version is realised
