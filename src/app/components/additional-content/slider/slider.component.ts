@@ -1,5 +1,5 @@
-import {AfterViewInit, ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {NguCarouselConfig} from '@ngu/carousel';
+import {AfterViewInit, ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
+import {NguCarouselConfig, NguCarousel} from '@ngu/carousel';
 
 
 @Component({
@@ -19,13 +19,15 @@ export class SliderComponent implements AfterViewInit {
     'https://images.unsplash.com/photo-1491166617655-0723a0999cfc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
   ];
 
+  mySlider: NguCarousel;
+
   carouselConfig: NguCarouselConfig = {
     grid: {xs: 1, sm: 1, md: 1, lg: 1, all: 0},
     load: 3,
-    interval: {timing: 10000000000, initialDelay: 1000},
+    interval: {timing: 3000, initialDelay: 1000},
     loop: true,
     touch: true,
-    velocity: 0.2
+    velocity: 0.2,
   }
 
   constructor(private cdr: ChangeDetectorRef) {
@@ -39,6 +41,10 @@ export class SliderComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.cdr.detectChanges();
+  }
+
+  moveTo(slide) {
+    // this.mySlid/er.moveTo(slide, false);
   }
 
 }
