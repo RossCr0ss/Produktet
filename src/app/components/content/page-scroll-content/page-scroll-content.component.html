@@ -1,0 +1,17 @@
+<h1>THIS IS CONTENT</h1>
+
+<ng-container *ngFor="let menu of menus">
+  <div [id]="menu.path" style="border: 1px solid red; margin-bottom: 20px; min-height: 500px">
+    <ng-container *ngIf="menu.content;else noContent">
+      <h1>Page name: {{menu.path}}</h1>
+      <div *ngFor="let content of menu.content">
+        {{content.name}}
+        <dynamic-loader [moduleName]="content.name"></dynamic-loader>
+      </div>
+    </ng-container>
+    <ng-template #noContent>
+      <h1>Page name: {{menu.path}}</h1>
+      <h1>Page doesn't have any content configured in db.json</h1>
+    </ng-template>
+  </div>
+</ng-container>

@@ -2,6 +2,32 @@
   "localhost": {
     "pageId": 1274,
     "layout": {
+      "name": "page-scroll-layout",
+      "content": []
+    },
+    "menu": {
+      "name": "page-scroll-menu",
+      "content": []
+    },
+    "header": {
+      "name": "basic-header",
+      "additional": []
+    },
+    "footer": {
+      "name": "basic-footer",
+      "content": []
+    },
+    "content": {
+      "name": "page-scroll-content",
+      "additional": [
+      ]
+    },
+    "scripts": [],
+    "styles": []
+  },
+  "localhost_origin": {
+    "pageId": 1274,
+    "layout": {
       "name": "basic-layout",
       "content": []
     },

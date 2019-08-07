@@ -19,7 +19,7 @@ export class SliderComponent implements AfterViewInit {
     'https://images.unsplash.com/photo-1491166617655-0723a0999cfc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
   ];
 
-  mySlider: NguCarousel;
+  mySlider: NguCarousel<any>;
 
   carouselConfig: NguCarouselConfig = {
     grid: {xs: 1, sm: 1, md: 1, lg: 1, all: 0},

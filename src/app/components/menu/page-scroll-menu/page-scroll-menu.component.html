@@ -1,0 +1,6 @@
+<h1>Page scroll menu</h1>
+<ul>
+  <li *ngFor="let menu of menus">
+    <a pageScroll [routerLink]="['/']" [fragment]="menu.path" [href]="'#'+menu.path" *ngIf="!menu.navigationHide">{{menu.name}}</a>
+  </li>
+</ul>

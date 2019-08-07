@@ -1,13 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {CoreModule} from './shared/services/core.module';
 import {environment} from '../environments/environment';
 import {SharedModule} from './shared/shared.module';
 import {RouterModule} from '@angular/router';
 
-import { SlickCarouselModule } from 'ngx-slick-carousel';
+import {SlickCarouselModule} from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,11 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     BrowserModule,
     CoreModule,
     SharedModule,
-    RouterModule.forRoot([], {initialNavigation: false}),
+    RouterModule.forRoot([], {
+      scrollPositionRestoration: 'enabled',
+      anchorScrolling: 'enabled',
+      initialNavigation: false
+    }),
     SlickCarouselModule
   ],
   providers: [
@@ -25,4 +29,5 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
