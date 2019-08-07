@@ -5,7 +5,6 @@
     <ng-container *ngIf="menu.content;else noContent">
       <h1>Page name: {{menu.path}}</h1>
       <div *ngFor="let content of menu.content">
-        {{content.name}}
         <dynamic-loader [moduleName]="content.name"></dynamic-loader>
       </div>
     </ng-container>
