@@ -1,0 +1,505 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, .h1, .h2, .h3, .h4, .h5, .h6, .p {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	line-height: 1;
+  font-weight: normal;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+}
+
+body, html {
+  height:100%;
+  width:100%;
+  margin:0;
+  overflow: hidden;
+  background: #F2F2F2;
+  color: #FFF;
+}
+
+.loading {
+  position:absolute;
+  height:100%;
+  width:100%;
+  background:transparent;
+  z-index:11;
+  font-size: 30px;
+}
+
+.pageready .loading{
+  animation:fadeout 0s forwards 0s;
+}
+
+#item-close-btn {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  top: 30px;
+  right: 55px;
+  z-index: 30;
+  opacity: 0;
+  z-index: 0;
+  opacity: 0;
+  animation-duration: 450ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+#item-close-btn svg {
+  fill: #fff;
+}
+
+
+#item-close-btn svg{
+  width: 100%;
+  height: 100%;
+}
+
+.content-open #item-close-btn {
+  animation: bounceIn 0.5s forwards 2s;
+  z-index:31;
+  cursor: pointer;
+}
+
+#content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 0;
+  overflow-y: scroll;
+} 
+
+.content-open #content {
+  animation:fadein 0.5s forwards 1s;
+  z-index:30;
+}
+
+.menuitem {
+  float:left;
+  overflow:hidden;
+  position:absolute;
+}
+
+.inner {
+  margin: auto;
+  height:100%;
+  width:100%;
+  cursor:pointer;
+  position: relative;
+  top: 0; left: 0; bottom: 0; right: 0;
+  opacity:0;  
+  display: table;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.content-open .inner  {
+  display: none;
+}
+
+.pageready .inner {
+  animation:fadein 0.2s forwards 1.4s;
+}
+
+.loading > .inner {
+  opacity:1;
+}
+
+.loading > .inner > .ellipsis::after{
+  content: '.';
+  font-size: 1em;
+  color: transparent;
+  animation: ellipsis .75s steps(3) 50;
+}
+
+a, a:hover, a:active, a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.inner p {
+  display: table-cell;
+  vertical-align: middle;
+  width:100%;
+  text-align:center;
+  font-size: 2.6rem;
+}
+
+.border1, .border2, .border3, .border4 { 
+  background:#fff;
+  position:absolute;
+  transition:all 0.4s ease;
+}
+
+.content-open .border1, .content-open .border2, .content-open .border3, .content-open .border4 {
+  display: none;
+}
+
+
+p.menu-item-heading, 
+p.menu-item-sub-heading {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  font-weight: 900;
+}
+
+p.menu-item-sub-heading {
+  font-size: 1.8rem;
+}
+  
+/* Items */
+/* Item 1 */
+.pageready .menuitem.item1 {
+  z-index:10;
+  background: #065264;
+  width:100%;
+  height:100%;
+  animation: slidein1 0.6s forwards 0.4s;
+}
+.menuitem.item1.itemopen{
+  z-index: 20;
+  height:100%; width:50%;
+  animation: slide1isopen 1s forwards 0.1s;
+}
+.menuitem.item1.itemclosed{
+  z-index: 20;
+  height:100%; width:100%;
+  animation: slide1isclosed 1s forwards 0s;
+}
+@keyframes slidein1 {
+  0% {width:100%;}
+  100% {width:50%;}
+}
+@keyframes slide1isopen {
+  0% {height:100%; width:50%;}
+  100% {width:100%; height: 100%}
+}
+@keyframes slide1isclosed {
+  0% {height:100%; width:100%;}
+  100% {width:50%; height: 100%; z-index:10}
+}
+
+/*item 2*/
+.pageready .menuitem.item2{
+  z-index:9;
+  background:#073a46;
+  right:0;
+  width:50%;
+  height:100%;
+  animation: slidein2 0.4s forwards 0.6s;
+}
+.menuitem.item2.itemopen{
+  z-index: 20;
+  height:50%; width:50%;
+  animation: slide2isopen 1s forwards 0.1s;
+}
+.menuitem.item2.itemclosed{
+  z-index: 20;
+  height:100%; width:100%;
+  animation: slide2isclosed 1s forwards 0s;
+}
+@keyframes slidein2 {
+  0% {height:100%;}
+  100% {height:50%;}
+}
+@keyframes slide2isopen {
+  0% {height:50%; width:50%;}
+  100% {width:100%; height: 100%}
+}
+@keyframes slide2isclosed {
+  0% {height:100%; width:100%;}
+  80% {width:50%; height: 50%;}
+  100% {width:50%; height: 50%; z-index: 9}
+}
+
+/*item 3*/
+.pageready .menuitem.item3{
+  z-index:8;
+  left:50%;
+  bottom:0;
+  background:#011f26;
+  width:50%;
+  height:50%;
+  animation: slidein3 0.6s forwards 0.8s;
+}
+.menuitem.item3.itemopen{
+  z-index: 20;
+  height:50%; width:25%;
+  animation: slide3isopen 1s forwards 0.1s;
+}
+.menuitem.item3.itemclosed{
+  z-index: 20;
+  height:100%; width:100%;
+  animation: slide3isclosed 1s forwards 0s;
+}
+@keyframes slidein3 {
+  0% {width:50%;}
+  100% {width:25%;}
+}
+@keyframes slide3isopen {
+  0% {height:50%; width:25%;}
+  100% {width:100%; height: 100%; left: 0;}
+}
+@keyframes slide3isclosed {
+  0% {height:100%; width:100%; left: 0;}
+  90% {width:25%; height: 50%; left: 50%}
+  100% {width:25%; height: 50%; z-index:8}
+}
+
+/*item 4*/
+.pageready .menuitem.item4{
+  z-index:7;
+  right:0;
+  top:50%;
+  background:#07667c;
+  width:25%;
+  height:50%;
+  animation: slidein4 0.6s forwards 1s;
+}
+.menuitem.item4.itemopen{
+  z-index: 20;
+  height:25%; width:25%;
+  animation: slide4isopen 1s forwards 0.1s;
+}
+.menuitem.item4.itemclosed{
+  z-index: 20;
+  height:100%; width:100%;
+  animation: slide4isclosed 1s forwards 0s;
+}
+@keyframes slidein4 {
+  0% {height:25%;}
+  100% {height:25%;}
+}
+@keyframes slide4isopen {
+  0% {height:25%; width:25%;}
+  100% {width:100%; height: 100%; top: 0;}
+}
+@keyframes slide4isclosed {
+  0% {height:100%; width:100%; top: 0;}
+  80% {width:25%; height: 25%; top: 50%;}
+  100% {width:25%; height: 25%; z-index:7}
+}
+
+/*item 5*/
+.pageready .menuitem.item5{
+  z-index:6;
+  right:0;
+  top:75%;
+  background:#25515b;
+  width:25%;
+  height:50%;
+  animation: slidein5 0.6s forwards 1.2s;
+}
+.menuitem.item5.itemopen{
+  z-index: 20;
+  height:25%; width:25%;
+  animation: slide5isopen 1s forwards 0.1s;
+}
+.menuitem.item5.itemclosed{
+  z-index: 20;
+  height:100%; width:100%;
+  animation: slide5isclosed 1s forwards 0s;
+}
+@keyframes slidein5 {
+  0% {height:25%;}
+  100% {height:25%;}
+}
+@keyframes slide5isopen {
+  0% {height:25%; width:25%;}
+  100% {width:100%; height: 100%; top: 0;}
+}
+@keyframes slide5isclosed {
+  0% {height:100%; width:100%; top: 0;}
+  80% {width:25%; height: 25%; top: 75%}
+  100% {width:25%; height: 25%; z-index:6}
+}
+
+@keyframes fadeout {
+  0% {opacity:1;background:transparent;}
+  50% {background:transparent;} /* Fade lighter: #00897B */
+  99% {height:100%;width:100%;opacity:0;}
+  100% {height:0;width:0;opacity:0;} 
+}
+@keyframes fadein {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+@keyframes ellipsis {
+    0%   {color: transparent; text-shadow: none;}
+    1%   {color: #333; text-shadow: .5em 0 0 transparent, 1em 0 0 transparent;}
+    26%  {color: black; text-shadow: .5em 0 0 transparent, 1em 0 0 transparent;}
+    51%  {color: black; text-shadow: .5em 0 0 black, 1em 0 0 transparent;}
+    76%  {color: black; text-shadow: .5em 0 0 black, 1em 0 0 black;}
+    100% {color: black; text-shadow: .5em 0 0 black, 1em 0 0 black;}
+}
+  
+/* Borders */
+.menuitem a > .border1 {
+  width:10px;
+  height:100%;
+  left:-10px;
+  top: 0;
+}
+.menuitem a > .border2 {
+  width:10px;
+  height:100%;
+  right:-10px;
+  top: 0;
+}
+.menuitem a > .border3{
+  width:100%;
+  height:10px;
+  top:-10px;
+}
+.menuitem a > .border4 {
+  width:100%;
+  height:10px;
+  bottom:-10px;
+}
+  
+/* Border Animation */
+.menuitem:hover a > .border1{
+  left:0;
+}
+.menuitem:hover a > .border2{
+  right:0;
+}
+.menuitem:hover a > .border3{
+  top:0;
+}
+.menuitem:hover a > .border4{
+  bottom:0;
+}
+
+@keyframes bounceIn{
+  0%{
+    opacity: 0;
+    transform: scale(0.3) translate3d(0,0,0);
+  }
+  50%{
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  80%{
+    opacity: 1;
+    transform: scale(0.89);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1) translate3d(0,0,0);
+  }
+}
+
+
+/* menuitem video and images */
+
+.menuitem video, .menuitem img { 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 101%;
+  min-height: 101%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  /*background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;*/
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+/* The paper */
+
+
+
+.paper article{
+  text-align: left;
+}
+
+.paper article{
+  max-width: 100%;
+  max-width: 800px;
+  background: #fff;
+  min-height: 100%;
+  color: #011f26;
+  padding: 40px 20px;
+  margin: 0 0 0 80px;
+}
+
+.paper h1 {
+  font-size: 2.6rem;
+  font-weight: 900;
+}
+
+.paper p {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.paper .img-deco {
+  position: relative;
+}
+
+.paper .img-overlay {
+  width: 100%;
+  height: 100%;
+  width: 50%;
+  height: 50%;
+  background-color: #e66a37;
+  mix-blend-mode: multiply;
+  z-index: 1;
+  position: absolute;
+  bottom: -8%;
+  left: 25%;
+  display: none;
+}
+
+.paper img, .paper video {
+  width: 100%;
+}
+
+
+
+
+/* media qureies*/
+
+@media only screen and (max-width: 768px) {
+  #item-close-btn {
+      width: 25px;
+      height: 25px;
+      top: 14px;
+      right: 16px;
+  }
+
+  .paper h1 {
+      font-size: 1.6rem;
+  }
+
+  .paper article{
+      margin: 50px 10px;;
+  }
+}
+  

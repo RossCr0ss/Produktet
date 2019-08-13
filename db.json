@@ -23,7 +23,9 @@
       ]
     },
     "scripts": [],
-    "styles": []
+    "styles": [
+      "../assets/css/dynamikfabrikken_elevator.css"
+    ]
   },
   "localhost_origin": {
     "pageId": 1274,

@@ -1,6 +1,22 @@
-<h1>Page scroll menu</h1>
-<ul>
-  <li *ngFor="let menu of menus">
-    <a pageScroll [routerLink]="['/']" [fragment]="menu.path" [href]="'#'+menu.path" *ngIf="!menu.navigationHide">{{menu.name}}</a>
-  </li>
-</ul>
+<aside class="sidebar">
+  <div class="sidebar__elevator-top"></div>
+  <div class="sidebar__elevator-rope"></div>
+  <div class="hamb sidebar__hamb js-hamb">
+    <div class="hamb-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <p>menu</p>
+  </div>
+  <div class="sidebar__elevator js-elevator">
+    <figure class="sidebar__figure">
+      <img src="/assets/graphics/dynamikfabrikken/elevator(cropped).svg" alt="">      
+    </figure>
+    <nav class="sidebar-nav">
+      <span *ngFor="let menu of menus">
+      <a pageScroll [routerLink]="['/']" [fragment]="menu.path" [href]="'#'+menu.path" *ngIf="!menu.navigationHide" class="sidebar-nav__item js-navItem">{{menu.name}}</a>
+    </span>
+    </nav>
+  </div>
+</aside>
