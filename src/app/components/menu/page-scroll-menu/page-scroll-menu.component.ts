@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, Inject, OnDestroy, OnInit} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
 import {Menu} from "../../../shared/models/menu.model";
 import {Site} from "../../../shared/models/site.model";
@@ -7,18 +7,20 @@ import {RouteService} from "../../../shared/services/route.service";
 import {SiteConfigurationService} from "../../../shared/services/site-configuration.service";
 import {Router} from "@angular/router";
 import {ContentService} from "../../../shared/services/content.service";
-import {filter, map} from "rxjs/operators";
+import {filter, map, takeUntil} from "rxjs/operators";
 import {PageScrollService} from "ngx-page-scroll-core";
+import {Subject} from "rxjs";
 
 @Component({
   selector: 'app-page-scroll-menu',
   templateUrl: './page-scroll-menu.component.html',
   styleUrls: ['./page-scroll-menu.component.css']
 })
-export class PageScrollMenuComponent implements OnInit {
+export class PageScrollMenuComponent implements OnInit, OnDestroy {
 
   menus: Array<Menu>;
   configuration: Site;
+  unsubscribe$ = new Subject()
 
   constructor(
     @Inject(DOCUMENT) private document: any,
@@ -40,6 +42,7 @@ export class PageScrollMenuComponent implements OnInit {
 
       this.contentService.afterContentLoaded()
       .pipe(
+        takeUntil(this.unsubscribe$),
         filter(value => value),
         map(() => {
           return locationHash || `#${this.menus[0].path}`
@@ -131,6 +134,11 @@ export class PageScrollMenuComponent implements OnInit {
     `;
     this.document.head.appendChild(script);
 
+  }
+
+  ngOnDestroy(): void {
+    this.unsubscribe$.next()
+    this.unsubscribe$.complete()
   }
 
 }
