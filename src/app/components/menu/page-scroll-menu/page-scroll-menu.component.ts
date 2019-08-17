@@ -1,11 +1,14 @@
-import {Component, OnInit, Inject} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
+import {DOCUMENT} from '@angular/common';
 import {Menu} from "../../../shared/models/menu.model";
 import {Site} from "../../../shared/models/site.model";
 import {MenuService} from "../../../shared/services/menu.service";
 import {RouteService} from "../../../shared/services/route.service";
 import {SiteConfigurationService} from "../../../shared/services/site-configuration.service";
 import {Router} from "@angular/router";
-import {DOCUMENT} from "@angular/common";
+import {ContentService} from "../../../shared/services/content.service";
+import {filter, map} from "rxjs/operators";
+import {PageScrollService} from "ngx-page-scroll-core";
 
 @Component({
   selector: 'app-page-scroll-menu',
@@ -21,18 +24,41 @@ export class PageScrollMenuComponent implements OnInit {
     @Inject(DOCUMENT) private document: any,
     private menuService: MenuService,
     private routeService: RouteService,
-    private siteConfiguration: SiteConfigurationService, private router: Router) {
+    private siteConfiguration: SiteConfigurationService, private router: Router,
+    private contentService: ContentService, private pageScrollService: PageScrollService) {
   }
 
   ngOnInit() {
+    let locationHash = location.hash
     this.configuration = this.siteConfiguration.configuration;
 
     this.menuService.getMenu(this.siteConfiguration.configuration.pageId)
     .subscribe((menus: Array<Menu>) => {
       this.menus = menus;
       this.routeService.setPageScrollDefaultRoute(this.siteConfiguration.configuration.content.name);
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/')
+
+      this.contentService.afterContentLoaded()
+      .pipe(
+        filter(value => value),
+        map(() => {
+          return locationHash || `#${this.menus[0].path}`
+        }))
+      .subscribe((location: string) => {
+        this.router.navigate(['/'], {fragment: location.replace("#", "")});
+        this.pageScrollService.scroll({
+          document: this.document,
+          scrollTarget: location,
+        })
+      })
     });
+
+    window.onhashchange = () => {
+      this.pageScrollService.scroll({
+        document: this.document,
+        scrollTarget: window.location.hash,
+      })
+    }
 
     const script = this.document.createElement('script');
     script.type = 'text/javascript';
