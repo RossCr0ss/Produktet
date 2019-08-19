@@ -1071,7 +1071,7 @@ canvas {
     bottom: 0px;
   }
   100% {
-    bottom: -60px;
+    bottom: -70px;
     display: none;
   }
 }
@@ -1087,6 +1087,20 @@ canvas {
   width: 50%;
   float: left;
 }
+
+@media only screen and (max-width: 768px) {
+  .testimonial {
+    width: 100%;
+  }
+  .testimonial blockquote,
+  .testimonial .statment-footer .statment-sender {
+    font-size: 10px !important;
+  }
+  .testimonial blockquote img {
+    max-height: 40px !important;
+  }
+}
+
 
 .testimonial blockquote {
   margin: 20px 45px;
@@ -1109,13 +1123,13 @@ canvas {
   font-size: 60px;
   font-family: SequentialistBB, cursive;
   right: 10px;
-  margin-top: -20px;
+  margin-top: -10px;
 }
 
 
 .testimonial .statment-footer {
   display: block;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 .testimonial .statment-footer .statment-sender {
