@@ -18,6 +18,8 @@ import {Subject} from "rxjs";
 })
 export class PageScrollMenuComponent implements OnInit, OnDestroy {
 
+  // small changes
+
   menus: Array<Menu>;
   configuration: Site;
   unsubscribe$ = new Subject()
