@@ -25,6 +25,7 @@ export class PageScrollMenuComponent implements OnInit {
   }
 
   ngOnInit() {
+    
     this.configuration = this.siteConfiguration.configuration;
 
     this.menuService.getMenu(this.siteConfiguration.configuration.pageId)

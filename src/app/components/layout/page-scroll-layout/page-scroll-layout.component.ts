@@ -1,9 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Inject} from '@angular/core';
 import {Site} from "../../../shared/models/site.model";
 import {SiteConfigurationService} from "../../../shared/services/site-configuration.service";
 import {Router} from "@angular/router";
 import {DataService} from "../../../shared/services/data.service";
 import {SeoService} from "../../../shared/services/seo.service";
+import {DOCUMENT} from "@angular/common";
 
 @Component({
   selector: 'app-page-scroll-layout',
@@ -15,7 +16,7 @@ export class PageScrollLayoutComponent implements OnInit {
   configuration: Site;
   pageData: any;
 
-  constructor(private siteConfigurationService: SiteConfigurationService, private router: Router,
+  constructor(@Inject(DOCUMENT) private document: any,private siteConfigurationService: SiteConfigurationService, private router: Router,
               private dataService: DataService, private seoService: SeoService) {
   }
 
@@ -30,5 +31,15 @@ export class PageScrollLayoutComponent implements OnInit {
       this.seoService.setTitle(this.pageData.data.title);
     });
 
+  }
+
+  ngAfterViewInit(): void {
+    const script = this.document.createElement('script');
+    script.type = 'text/javascript';
+    script.text = `
+
+
+    `;
+    this.document.head.appendChild(script);
   }
 }
