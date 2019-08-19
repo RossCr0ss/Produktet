@@ -31,11 +31,7 @@ export class PageScrollMenuComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-<<<<<<< HEAD
-    
-=======
     let locationHash = location.hash
->>>>>>> 38bab85af1bb2dacc7eb06497cf355a19c9fa4fd
     this.configuration = this.siteConfiguration.configuration;
 
     this.menuService.getMenu(this.siteConfiguration.configuration.pageId)
