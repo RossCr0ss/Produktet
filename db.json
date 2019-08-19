@@ -146,8 +146,7 @@
         "menuImg": "",
         "menuMp4": "",
         "menuWebm": "",
-        "subMenu": [],
-        "content": []
+        "subMenu": []
       },
       {
         "name": "THE MOVIE",
@@ -158,12 +157,7 @@
         "menuImg": "",
         "menuMp4": "",
         "menuWebm": "",
-        "subMenu": [],
-        "content": [
-          {
-            "name": "text"
-          }
-        ]
+        "subMenu": []
       },
       {
         "name": "KONTAKT",
