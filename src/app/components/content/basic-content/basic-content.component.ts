@@ -14,7 +14,7 @@ export class BasicContentComponent implements OnInit {
   // Can be used to set content from the menu
   additionalContent: ComponentContent[];
 
-  constructor(private siteConfigurationService: SiteConfigurationService) {
+  constructor(private siteConfigurationService: SiteConfigurationService,) {
   }
 
   ngOnInit() {

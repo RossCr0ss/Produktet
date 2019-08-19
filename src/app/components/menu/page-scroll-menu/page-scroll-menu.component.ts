@@ -1,39 +1,71 @@
-import {Component, OnInit, Inject} from '@angular/core';
+import {Component, Inject, OnDestroy, OnInit} from '@angular/core';
+import {DOCUMENT} from '@angular/common';
 import {Menu} from "../../../shared/models/menu.model";
 import {Site} from "../../../shared/models/site.model";
 import {MenuService} from "../../../shared/services/menu.service";
 import {RouteService} from "../../../shared/services/route.service";
 import {SiteConfigurationService} from "../../../shared/services/site-configuration.service";
 import {Router} from "@angular/router";
-import {DOCUMENT} from "@angular/common";
+import {ContentService} from "../../../shared/services/content.service";
+import {filter, map, takeUntil} from "rxjs/operators";
+import {PageScrollService} from "ngx-page-scroll-core";
+import {Subject} from "rxjs";
 
 @Component({
   selector: 'app-page-scroll-menu',
   templateUrl: './page-scroll-menu.component.html',
   styleUrls: ['./page-scroll-menu.component.css']
 })
-export class PageScrollMenuComponent implements OnInit {
+export class PageScrollMenuComponent implements OnInit, OnDestroy {
 
   menus: Array<Menu>;
   configuration: Site;
+  unsubscribe$ = new Subject()
 
   constructor(
     @Inject(DOCUMENT) private document: any,
     private menuService: MenuService,
     private routeService: RouteService,
-    private siteConfiguration: SiteConfigurationService, private router: Router) {
+    private siteConfiguration: SiteConfigurationService, private router: Router,
+    private contentService: ContentService, private pageScrollService: PageScrollService) {
   }
 
   ngOnInit() {
+<<<<<<< HEAD
     
+=======
+    let locationHash = location.hash
+>>>>>>> 38bab85af1bb2dacc7eb06497cf355a19c9fa4fd
     this.configuration = this.siteConfiguration.configuration;
 
     this.menuService.getMenu(this.siteConfiguration.configuration.pageId)
     .subscribe((menus: Array<Menu>) => {
       this.menus = menus;
       this.routeService.setPageScrollDefaultRoute(this.siteConfiguration.configuration.content.name);
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/')
+
+      this.contentService.afterContentLoaded()
+      .pipe(
+        takeUntil(this.unsubscribe$),
+        filter(value => value),
+        map(() => {
+          return locationHash || `#${this.menus[0].path}`
+        }))
+      .subscribe((location: string) => {
+        this.router.navigate(['/'], {fragment: location.replace("#", "")});
+        this.pageScrollService.scroll({
+          document: this.document,
+          scrollTarget: location,
+        })
+      })
     });
+
+    window.onhashchange = () => {
+      this.pageScrollService.scroll({
+        document: this.document,
+        scrollTarget: window.location.hash,
+      })
+    }
 
     const script = this.document.createElement('script');
     script.type = 'text/javascript';
@@ -106,6 +138,11 @@ export class PageScrollMenuComponent implements OnInit {
     `;
     this.document.head.appendChild(script);
 
+  }
+
+  ngOnDestroy(): void {
+    this.unsubscribe$.next()
+    this.unsubscribe$.complete()
   }
 
 }
