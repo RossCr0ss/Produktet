@@ -1,163 +1,181 @@
 {
   "localhost": {
-    "pageId": 1152,
-    "menu": {
-      "name": "page-scroll-menu",
-      "content": null
-    },
+    "pageId": 1274,
     "layout": {
       "name": "page-scroll-layout",
-      "content": null
+      "content": []
+    },
+    "menu": {
+      "name": "page-scroll-menu",
+      "content": []
     },
     "header": {
       "name": "basic-header",
-      "content": null
+      "additional": []
     },
     "footer": {
       "name": "basic-footer",
-      "content": null
+      "content": []
     },
     "content": {
       "name": "page-scroll-content",
-      "content": null
+      "additional": [
+      ]
     },
     "scripts": [],
     "styles": [
       "../assets/css/dynamikfabrikken_elevator.css"
     ]
   },
-  "getgeneralData": {
-    "CompanyName": "Dynamikfabrikken",
-    "CompanyAddress": "Sjællandsgade 36",
-    "CompanyAddress2": "8000 Aarhus C",
-    "CompanyPhone": "+45 31375043",
-    "CompanyEmail": "info@dynamikfabrikken.com",
-    "MainLogo": "/media/ku1leoeu/logobrevpapir.jpg",
-    "CompanyFacebook": "",
-    "CompanyLinkedin": "https://www.linkedin.com/in/anders-bak-schmidt-holm-bb428b49/?originalSubdomain=dk",
-    "CompanyInstagram": "",
-    "CompanyTwitter": "",
-    "CompanyDescription": "Dynamikfabrikken ændre internettet - En side af gangen.",
-    "FooterLinks": [
-      {
-        "Name": "Til google",
-        "Url": "https://google.com",
-        "Target": "_blank"
-      },
-      {
-        "Name": "Test-page",
-        "Url": "/",
-        "Target": null
-      },
-      {
-        "Name": "Til Facebook",
-        "Url": "https://facebook.com",
-        "Target": "_blank"
-      }
+  "localhost_origin": {
+    "pageId": 1274,
+    "layout": {
+      "name": "basic-layout",
+      "content": []
+    },
+    "menu": {
+      "name": "basic-menu",
+      "content": []
+    },
+    "header": {
+      "name": "basic-header",
+      "additional": []
+    },
+    "footer": {
+      "name": "basic-footer",
+      "content": []
+    },
+    "content": {
+      "name": "basic-content",
+      "additional": [
+      ]
+    },
+    "scripts": [
+      "../assets/js/basic-menu.js"
     ],
-    "ScriptHead": [],
-    "ScriptBodyTop": [],
-    "ScriptBodyBottom": []
+    "styles": [
+      "https://fonts.googleapis.com/icon?family=Material+Icons",
+      "../assets/css/materialize.css",
+      "../assets/css/basic.css"
+    ]
   },
-  "menus": [
-    {
-      "name": "Test-page",
-      "subname": null,
-      "path": "/",
-      "navigationHide": false,
-      "menuIcon": null,
-      "menuImg": null,
-      "menuMp4": null,
-      "menuWebm": null,
-      "subMenu": null,
-      "metaTitle": "This will be title foreach page",
-      "metaDescription": "Metadescription foreach page",
-      "metaKeywords": "Keywords, morekeywords",
-      "metaImage": "dynamikfabriokken.dk/image.png",
-      "favicon": "dynamikfabriokken.dk/image.png",
-      "content": [
-        {
-          "name": null,
-          "markup": "<p>Dette er fra RTE</p>",
-          "key": "c29e1c26-94ab-4f76-b138-609aa8c4c25a",
-          "nodeid": 0
-        }
+  "localhost_test": {
+    "pageId": 1274,
+    "layout": {
+      "name": "m-box-layout"
+    },
+    "menu": {
+      "name": "m-box-menu"
+    },
+    "header": {
+      "name": "basic-header",
+      "additional": [
       ]
     },
-    {
-      "name": "Subpage 1",
-      "subname": null,
-      "path": "/subpage-1/",
-      "navigationHide": false,
-      "menuIcon": null,
-      "menuImg": null,
-      "menuMp4": null,
-      "menuWebm": null,
-      "subMenu": [
-        {
-          "name": "SubpagrForSubpage 1",
-          "subname": null,
-          "path": "/subpage-1/subpagrforsubpage-1/",
-          "navigationHide": false,
-          "menuIcon": null,
-          "menuImg": null,
-          "menuMp4": null,
-          "menuWebm": null,
-          "subMenu": [],
-          "metaTitle": "This will be title foreach page",
-          "metaDescription": "Metadescription foreach page",
-          "metaKeywords": "Keywords, morekeywords",
-          "metaImage": "dynamikfabriokken.dk/image.png",
-          "favicon": "dynamikfabriokken.dk/image.png",
-          "content": [
-            {
-              "name": null,
-              "markup": "/media/662af6ca411a4c93a6c722c4845698e7/00000006000000000000000000000000/16403439029_f500be349b_o.jpg",
-              "key": "e77b682b-6c8f-4e47-a381-c03eb492d40c",
-              "nodeid": 0
-            }
-          ]
-        }
-      ],
-      "metaTitle": "This will be title foreach page",
-      "metaDescription": "Metadescription foreach page",
-      "metaKeywords": "Keywords, morekeywords",
-      "metaImage": "dynamikfabriokken.dk/image.png",
-      "favicon": "dynamikfabriokken.dk/image.png",
-      "content": [
-        {
-          "name": null,
-          "markup": "<p>This is subpage 1 RTE from Grid</p>",
-          "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
-          "nodeid": 0
-        }
+    "footer": {
+      "name": "basic-footer"
+    },
+    "content": {
+      "name": "m-box-content",
+      "additional": [
       ]
     },
-    {
-      "name": "Subpage 2",
-      "subname": null,
-      "path": "/subpage-2/",
-      "navigationHide": false,
-      "menuIcon": null,
-      "menuImg": null,
-      "menuMp4": null,
-      "menuWebm": null,
-      "subMenu": [],
-      "metaTitle": "This will be title foreach page",
-      "metaDescription": "Metadescription foreach page",
-      "metaKeywords": "Keywords, morekeywords",
-      "metaImage": "dynamikfabriokken.dk/image.png",
-      "favicon": "dynamikfabriokken.dk/image.png",
-      "content": [
-        {
-          "name": null,
-          "markup": "<p>This is subpage 2 RTE</p>",
-          "key": "4262649c-5249-4691-8af6-2b316f4e3a79",
-          "nodeid": 0
-        }
-      ]
-    }
-  ]
+    "scripts": [
+      "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+    ],
+    "styles": [
+      "https://fonts.googleapis.com/css?family=Work+Sans:200,400,600,900",
+      "../assets/css/m-box.css"
+    ]
+  },
+  "getgeneralData": {
+    "meta": {
+      "code": 200
+    },
+    "data": [
+      {
+        "CompanyName": "Q-Construction",
+        "CompanyAddress": "Testvej 20",
+        "CompanyAddress2": "8000 Aarhus",
+        "CompanyPhone": "+45 21332323",
+        "CompanyEmail": "info@q-c.dk",
+        "MainLogo": "http://produktetapi.dynamikfabrikken.com:80/media/1065/q-construction-logo.png",
+        "CompanyFacebook": "",
+        "CompanyLinkedin": "https://linkeding.com",
+        "CompanyInstagram": "https://instagram",
+        "CompanyTwitter": "https://twitter.com",
+        "CompanyDescription": "Lorem ipsum dolor sit amet, et parturient eros, at tempus odio sed sed ut et, aliquid habitasse amet, scelerisque eget enim eget in quis. Nec arcu et in luctus et, lorem penatibus ipsum. Sodales in. Id adipiscing ac sapien a sed eget, nulla ullamcorper nihil et vivamus euismod nec, pulvinar praesent",
+        "FooterLinks": [
+          {
+            "Name": "Link1",
+            "Url": "/link1",
+            "Target": "_blank"
+          },
+          {
+            "Name": "Link2",
+            "Url": "/link3",
+            "Target": ""
+          }
+        ],
+        "ScriptHead": null,
+        "ScriptBodyTop": null,
+        "ScriptBodyBottom": null
+      }
+    ]
+  },
+  "menus": {
+    "pageId": "1274",
+    "menus": [
+      {
+        "name": "FORSIDE",
+        "subname": "",
+        "path": "forside",
+        "navigationHide": false,
+        "menuIcon": "mdi-account-minus",
+        "menuImg": "",
+        "menuMp4": "",
+        "menuWebm": "",
+        "subMenu": []
+      },
+      {
+        "name": "ANBEFALINGER",
+        "subname": "",
+        "path": "anbefalinger",
+        "navigationHide": false,
+        "menuIcon": "",
+        "menuImg": "",
+        "menuMp4": "",
+        "menuWebm": "",
+        "subMenu": [],
+        "content": []
+      },
+      {
+        "name": "THE MOVIE",
+        "subname": "",
+        "path": "the-movie",
+        "navigationHide": false,
+        "menuIcon": "",
+        "menuImg": "",
+        "menuMp4": "",
+        "menuWebm": "",
+        "subMenu": [],
+        "content": [
+          {
+            "name": "text"
+          }
+        ]
+      },
+      {
+        "name": "KONTAKT",
+        "subname": "",
+        "path": "kontakt",
+        "navigationHide": false,
+        "menuImg": "",
+        "menuMp4": "",
+        "menuWebm": "",
+        "subMenu": []
+      }
+    ]
+  }
 }
-
 
