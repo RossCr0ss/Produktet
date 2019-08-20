@@ -21,12 +21,17 @@ import {Router} from "@angular/router";
 })
 export class PageScrollContentComponent implements OnInit, AfterViewInit {
   menus: Menu[];
+  mp4Src: string;
+  oggSrc: string;
   
   constructor(@Inject(DOCUMENT) private document: any, private siteConfiguration: SiteConfigurationService, private menuService: MenuService,
               private contentService: ContentService, private router: Router) {
   }
 
   ngOnInit() {
+
+    this.mp4Src = "/assets/graphics/dynamikfabrikken/dynamikfabrikken.mp4";
+    this.oggSrc = "/assets/graphics/dynamikfabrikken/dynamikfabrikken.ogg";
 
     this.menuService.getMenu(this.siteConfiguration.configuration.pageId)
     .subscribe((menus: Array<Menu>) => {
@@ -40,7 +45,6 @@ export class PageScrollContentComponent implements OnInit, AfterViewInit {
     script.type = 'text/javascript';
     script.src = `../assets/js/dynamikfabrikken_elevator.js`;
     this.document.head.appendChild(script);
-
 
     setTimeout(() => {
       this.contentService.contentLoaded()

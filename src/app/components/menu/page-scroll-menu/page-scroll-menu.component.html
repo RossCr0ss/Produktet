@@ -1,7 +1,7 @@
 <aside class="sidebar">
   <div class="sidebar__elevator-top"></div>
   <div class="sidebar__elevator-rope"></div>
-  <div id="burgericon" class="hamb sidebar__hamb js-hamb">
+  <div class="hamb sidebar__hamb js-hamb">
     <div class="hamb-icon">
       <span></span>
       <span></span>
@@ -13,7 +13,7 @@
     <figure class="sidebar__figure">
       <img src="/assets/graphics/dynamikfabrikken/elevator(cropped).svg" alt="">      
     </figure>
-    <nav id="sidebarnav" class="sidebar-nav">
+    <nav class="sidebar-nav">
       <span *ngFor="let menu of menus">
       <a pageScroll [routerLink]="['/']" [fragment]="menu.path" [href]="'#'+menu.path" *ngIf="!menu.navigationHide" class="sidebar-nav__item js-navItem">{{menu.name}}</a>
     </span>

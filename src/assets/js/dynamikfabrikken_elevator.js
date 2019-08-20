@@ -25,8 +25,6 @@ function videoFadeOut() {
     stars.className = "transperant";
    }, 3000);
 
-
-
   setTimeout(function(){
     stars.className = "gone";
    }, 6000);
@@ -75,6 +73,7 @@ function videoFadeOut() {
    });
 
 
+  /* click s to skip the intro */
   player.addEventListener('play', function() {
     document.addEventListener('keydown', event => {
         const charList = 's';
@@ -89,13 +88,8 @@ function videoFadeOut() {
   }, false);
 
   /* the elevator */
-
   var elevator = document.getElementById("elevator");
-  var burgericon = document.getElementById("burgericon");
-  var mobilemenupverlay = document.getElementById("mobilemenupverlay");
-  var sidebarnav = document.getElementById("sidebarnav");
 
-  
   var scrollTimer = -1;
   function bodyScroll() {
       if(!hasClass(elevator, "shake"))
@@ -108,19 +102,7 @@ function videoFadeOut() {
 
   function scrollFinished() {
       removeClass(elevator, "shake");
-      
-      
- //     document.getElementById("burgericon").click();
-/*
-      setTimeout(function(){
-        removeClass(elevator, "visible");
-        removeClass(elevator, "active");
-        removeClass(burgericon, "active");
-        removeClass(sidebarnav, "active");      
-        removeClass(mobilemenupverlay, "active");
-       }, 1000);*/
   }
-
 
   setTimeout(function(){
     allbody.style.display = 'block';
@@ -236,7 +218,6 @@ function videoFadeOut() {
         "retina_detect": true
       });
 
-      player.play();
      }, 100);
    }, 100);
 
