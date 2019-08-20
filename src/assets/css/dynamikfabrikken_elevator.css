@@ -373,7 +373,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url("/assets/graphics/dynamikfabrikken/bg-main.png") repeat; }
+    background: url("/assets/graphics/dynamikfabrikken/bg-main.png") repeat; 
+    display: none;
+  }
     body.blocked {
       overflow: hidden;
       height: 100%; }

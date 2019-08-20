@@ -2,11 +2,9 @@
 <div id="particles-js"></div>
 
 <div id="video-container">
-    <video id="video" autoplay="autoplay" muted="true">
+    <video id="video" muted>
         <source src='../../../../assets/graphics/dynamikfabrikken/dynamikfabrikken.mp4'  type='video/mp4'>
-          <!--
-        <source src='../assets/graphics/dynamikfabrikken/dynamikfabrikken.ogg'  type='video/ogg'>
-          -->
+        <source src='../../../../sassets/graphics/dynamikfabrikken/dynamikfabrikken.ogg'  type='video/ogg'>         
     </video>
 </div>
 
@@ -90,9 +88,9 @@
             </div>
             <div class="button-wrapper">
               <!--
-                          <a href="#" class="button">Se mere</a>
-                          <a href="#" class="button">Kontakt os</a>
-          -->
+                <a href="#" class="button">Se mere</a>
+                <a href="#" class="button">Kontakt os</a>
+              -->
             </div>
           </div>
 
@@ -122,63 +120,3 @@
     </ng-template>
   </section>
 </ng-container>
-
-
-<!--
-<ng-container *ngFor="let menu of menus">
-  <div [id]="menu.path" style="border: 1px solid red; margin-bottom: 20px; min-height: 500px">
-    <ng-container *ngIf="menu.content;else noContent">
-      <h1>Page name: {{menu.path}}</h1>
-      <div *ngFor="let content of menu.content">
-        <dynamic-loader [moduleName]="content.name"></dynamic-loader>
-      </div>
-    </ng-container>
-    <ng-template #noContent>
-      <h1>Page name: {{menu.path}}</h1>
-      <h1>Page doesn't have any content configured in db.json</h1>
-    </ng-template>
-  </div>
-</ng-container>
--->
-
-<!--
-  STATIC FRONTEND
-
-  <section class="section">
-    <div class="section__content">
-      <h2 class="headline">DYNAMIKFABRIKKEN</h2>
-      <div class="headline-desc">
-        <p>Spænd hjelmen. Dynamiske webapplikationer kræver hårdt arbejde.</p>
-        <p>Vi er heldigvis ikke bange for lidt sved på panden.</p>
-      </div>
-      <div class="button-wrapper">
-        <a href="#" class="button">Se mere</a>
-        <a href="#" class="button">Kontakt os</a>
-      </div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section__content">
-      <h2 class="headline">DYNAMIKFABRIKKEN</h2>
-      <div class="headline-desc">
-        <p>Spænd hjelmen. Dynamiske webapplikationer kræver hårdt arbejde.</p>
-        <p>Vi er heldigvis ikke bange for lidt sved på panden.</p>
-      </div>
-      <div class="button-wrapper">
-        <a href="#" class="button">Se mere</a>
-        <a href="#" class="button">Kontakt os</a>
-      </div>
-    </div>
-  </section>
-  <section class="section section--footer">
-    <div class="section__content">
-      <div class="typo">
-        <h2>DYNAMIKFABRIKKEN</h2>
-        <p>V. Anders Bak Schmidt Holm</p>
-        <p><a href="tel:+4531375043">+45 31375043</a></p>
-        <p><a href="mailto:info@dynamikfabrikken.com">info@dynamikfabrikken.com</a></p>
-        <p><a href="skype:anders.schmidt.holm?chat">Skype: anders.schmidt.holm</a></p>
-      </div>
-    </div>
-  </section>
-  -->
