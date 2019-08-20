@@ -36,7 +36,7 @@ export class PageScrollMenuComponent implements OnInit, OnDestroy {
     let locationHash = location.hash
     this.configuration = this.siteConfiguration.configuration;
 
-    this.menuService.getMenu(this.siteConfiguration.configuration.pageId)
+    this.menuService.getMenu()
     .subscribe((menus: Array<Menu>) => {
       this.menus = menus;
       this.routeService.setPageScrollDefaultRoute(this.siteConfiguration.configuration.content.name);
@@ -51,18 +51,18 @@ export class PageScrollMenuComponent implements OnInit, OnDestroy {
         }))
       .subscribe((location: string) => {
         this.router.navigate(['/'], {fragment: location.replace("#", "")});
-        this.pageScrollService.scroll({
-          document: this.document,
-          scrollTarget: location,
-        })
+        // this.pageScrollService.scroll({
+        //   document: this.document,
+        //   scrollTarget: location,
+        // })
       })
     });
 
     window.onhashchange = () => {
-      this.pageScrollService.scroll({
-        document: this.document,
-        scrollTarget: window.location.hash,
-      })
+      // this.pageScrollService.scroll({
+      //   document: this.document,
+      //   scrollTarget: window.location.hash,
+      // })
     }
 
     const script = this.document.createElement('script');

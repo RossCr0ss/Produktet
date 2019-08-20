@@ -15,12 +15,6 @@ import {HttpClient} from '@angular/common/http';
     private siteConfigurationService: SiteConfigurationService) {
   }
 
-  getData(url: string): Observable<any> {
-    url = url === '/' ? url : url.slice(1);
-    return this.http.get(`${this.backendApiUrl}getData?pageid=${this.siteConfigurationService.configuration.pageId}&url=${url}`)
-      .pipe(map((response: any) => response));
-  }
-
   getGeneralData(): Observable<GeneralData> {
     return this.http.get(`${this.backendApiUrl}getgeneralData?pageid=${this.siteConfigurationService.configuration.pageId}`)
       .pipe(map((response: any) => response as GeneralData));

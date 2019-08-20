@@ -10,7 +10,12 @@ export class Menu {
   menuMp4: string;
   menuWebm: string;
   subMenu: Array<Menu>;
-  content?: ComponentContent[];
+  metaTitle: string;
+  metaDescription: string;
+  metaKeywords: string;
+  metaImage: string;
+  favicon: string;
+  content: ComponentContent[];
 
   constructor(menu?: any) {
     this.name = menu && menu.name || '';
@@ -22,6 +27,11 @@ export class Menu {
     this.menuMp4 = menu && menu.menuMp4 || '';
     this.menuWebm = menu && menu.menuWebm || '';
     this.subMenu = menu && menu.subMenu || [];
+    this.metaTitle = menu && menu.metaTitle || '';
+    this.metaDescription = menu && menu.metaDescription || '';
+    this.metaKeywords = menu && menu.metaKeywords || '';
+    this.metaImage = menu && menu.metaImage || '';
+    this.favicon = menu && menu.favicon || '';
     this.content = menu && menu.content || [];
   }
 }

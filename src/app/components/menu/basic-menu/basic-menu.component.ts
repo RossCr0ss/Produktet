@@ -32,7 +32,7 @@ export class BasicMenuComponent implements OnInit, OnDestroy, AfterViewInit {
   ngOnInit() {
     this.configuration = this.siteConfiguration.configuration;
 
-    this.menuService.getMenu(this.siteConfiguration.configuration.pageId)
+    this.menuService.getMenu()
       .pipe(takeUntil(this.cancelSubscription$))
       .subscribe((menus: Array<Menu>) => {
         this.menus = menus;

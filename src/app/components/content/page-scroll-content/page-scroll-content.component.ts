@@ -1,15 +1,6 @@
-import {
-  Inject,
-  AfterContentInit,
-  AfterViewChecked,
-  AfterViewInit,
-  ChangeDetectorRef,
-  Component, ElementRef,
-  OnInit, ViewChild
-} from '@angular/core';
+import {AfterViewInit, Component, Inject, OnInit} from '@angular/core';
 import {Menu} from "../../../shared/models/menu.model";
 import {MenuService} from "../../../shared/services/menu.service";
-import {SiteConfigurationService} from "../../../shared/services/site-configuration.service";
 import {DOCUMENT} from "@angular/common";
 import {ContentService} from "../../../shared/services/content.service";
 import {Router} from "@angular/router";
@@ -23,8 +14,8 @@ export class PageScrollContentComponent implements OnInit, AfterViewInit {
   menus: Menu[];
   mp4Src: string;
   oggSrc: string;
-  
-  constructor(@Inject(DOCUMENT) private document: any, private siteConfiguration: SiteConfigurationService, private menuService: MenuService,
+
+  constructor(@Inject(DOCUMENT) private document: any, private menuService: MenuService,
               private contentService: ContentService, private router: Router) {
   }
 
@@ -33,7 +24,7 @@ export class PageScrollContentComponent implements OnInit, AfterViewInit {
     this.mp4Src = "/assets/graphics/dynamikfabrikken/dynamikfabrikken.mp4";
     this.oggSrc = "/assets/graphics/dynamikfabrikken/dynamikfabrikken.ogg";
 
-    this.menuService.getMenu(this.siteConfiguration.configuration.pageId)
+    this.menuService.getMenu()
     .subscribe((menus: Array<Menu>) => {
       this.menus = menus;
     });

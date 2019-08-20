@@ -2,6 +2,5 @@ import {ComponentContent} from './component-content.model';
 
 export interface SiteComponent {
   name: string;
-  additional: ComponentContent[];
-  content: ComponentContent[];
+  content: ComponentContent;
 }

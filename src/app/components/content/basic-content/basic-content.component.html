@@ -1,11 +1,13 @@
 
 
-<ng-container *ngFor="let contentComponent of configuration.content.additional">
-  <dynamic-loader [moduleName]="contentComponent.name"></dynamic-loader>
+<ng-container *ngIf="configuration.content && configuration.content.name">
+  <dynamic-loader [moduleName]="configuration.content.name"></dynamic-loader>
 </ng-container>
 
-<ng-container *ngFor="let contentComponent of additionalContent">
-  <dynamic-loader [moduleName]="contentComponent.name"></dynamic-loader>
+<ng-container *ngIf="additionalContent && additionalContent.name">
+  <dynamic-loader [moduleName]="additionalContent.name"></dynamic-loader>
+
+  {{additionalContent.markup}}
 </ng-container>
 
 

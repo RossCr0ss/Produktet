@@ -23,13 +23,13 @@ export class PageScrollLayoutComponent implements OnInit {
   ngOnInit() {
     this.configuration = this.siteConfigurationService.configuration;
 
-    this.dataService.getData(this.router.url)
+/*    this.dataService.getData(this.router.url)
     .subscribe((pageData: any) => {
       this.pageData = pageData;
       this.seoService.setMetaElement('metaDescription', this.pageData.data.metaDescription);
       this.seoService.setMetaElement('metaKeywords', this.pageData.data.metaKeywords);
       this.seoService.setTitle(this.pageData.data.title);
-    });
+    });*/
 
   }
 

@@ -24,7 +24,7 @@ export class BasicMenuComponent implements OnInit, OnDestroy {
     private router: Router) { }
 
   ngOnInit() {
-    this.menuService.getMenu(this.siteConfiguration.configuration.pageId)
+    this.menuService.getMenu()
       .subscribe((menus: Array<Menu>) => {
         this.menus = menus;
         this.routeService.setRoutes(menus, this.siteConfiguration.configuration.content.name);
