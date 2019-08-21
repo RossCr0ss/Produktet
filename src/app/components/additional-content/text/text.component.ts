@@ -10,9 +10,12 @@ import {ComponentContent} from "../../../shared/models/component-content.model";
 })
 export class TextComponent implements OnInit {
 
-  additionalContent: ComponentContent;
+  additionalContent: ComponentContent[];
   textJson: {};
   markup : string;
+  additionalMarkup: string;
+  key: string;
+  nodeId: string;
 
   constructor(private http: HttpClient) {
   }

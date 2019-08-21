@@ -15,7 +15,8 @@
         <h1 class="headline">Page name: {{menu.path}}</h1>
         <div class="headline-desc" *ngFor="let content of menu.content">
           <ng-container *ngIf="content.name">
-            <dynamic-loader [moduleName]="content.name"></dynamic-loader>
+            <dynamic-loader [moduleName]="content.name" [markup]="content.markup" [key]="content.key"
+                            [nodeId]="content.nodeid"></dynamic-loader>
           </ng-container>
         </div>
       </div>
