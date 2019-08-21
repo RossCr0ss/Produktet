@@ -2,5 +2,7 @@ export interface ComponentContent {
   name: string;
   markup: string;
   key: string;
-  nodeid: number
+  nodeid: number;
+  test: string;
+  testid: number;
 }

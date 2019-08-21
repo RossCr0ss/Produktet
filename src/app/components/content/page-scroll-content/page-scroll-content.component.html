@@ -8,11 +8,8 @@
   </video>
 </div>
 
-
 <ng-container *ngFor="let menu of menus">
-  <section class="section" [id]="menu.path"
-           [ngClass]="{'section--footer': menu.path=='kontakt', 'section--top': menu.path=='forside'}">
-
+  <section class="section" [id]="menu.path" [ngClass]="{'section--footer': menu.path=='/kontakt/', 'section--top': menu.path=='/'}">
     <ng-container *ngIf="menu.content;else noContent">
       <div class="section__content">
         <h1 class="headline">Page name: {{menu.path}}</h1>
@@ -27,7 +24,7 @@
     <ng-template #noContent>
 
       <!-- frontpage / top -->
-      <div class="section__content" *ngIf="menu.path == 'forside'">
+      <div class="section__content" *ngIf="menu.path == '/'">
         <h1 class="headline">Dynamikfabrikken</h1>
         <div class="headline-desc">
           <p>Spænd hjelmen. Dynamiske webapplikationer kræver hårdt arbejde.</p>
@@ -36,7 +33,7 @@
       </div>
 
       <!-- anbefaliger -->
-      <div class="section__content" *ngIf="menu.path == 'anbefalinger'">
+      <div class="section__content" *ngIf="menu.path == '/anbefalinger/'">
         <h2 class="headline">{{menu.path}}</h2>
         <div class="testimonial">
           <blockquote>
@@ -106,7 +103,7 @@
       </div>
 
       <!-- the movie -->
-      <div class="section__content" *ngIf="menu.path == 'the-movie'">
+      <div class="section__content" *ngIf="menu.path == '/the-movie/'">
         <h1 class="headline">The movie</h1>
         <p>Her kan du se Dynamikfabrikken - The movie. Igen og igen! god fornøjelse</p>
         <video controls style="max-width: 100%; width: 800px;">
@@ -118,7 +115,7 @@
       </div>
 
       <!-- kontakt -->
-      <div class="section__content" *ngIf="menu.path == 'kontakt'">
+      <div class="section__content" *ngIf="menu.path == '/kontakt/'">
         <div class="typo">
           <h2>KONTAKT - DYNAMIKFABRIKKEN</h2>
           <p>V. Anders Bak Schmidt Holm</p>

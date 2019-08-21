@@ -61,7 +61,7 @@
   },
   "menus": [
     {
-      "name": "Test-page",
+      "name": "Forside",
       "subname": null,
       "path": "/",
       "navigationHide": false,
@@ -77,66 +77,33 @@
       "favicon": "dynamikfabriokken.dk/image.png",
       "content": [
         {
-          "name": null,
-          "markup": "<p>Dette er fra RTE</p>",
-          "key": "c29e1c26-94ab-4f76-b138-609aa8c4c25a",
-          "nodeid": 0
+        "name": "text",
+        "markup": "<p>This is subpage 1 RTE from Grid</p>",
+        "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
+        "nodeid": 1154
         }
       ]
     },
     {
-      "name": "Subpage 1",
+      "name": "Anbefalinger",
       "subname": null,
-      "path": "/subpage-1/",
+      "path": "/anbefalinger/",
       "navigationHide": false,
       "menuIcon": null,
       "menuImg": null,
       "menuMp4": null,
       "menuWebm": null,
-      "subMenu": [
-        {
-          "name": "SubpagrForSubpage 1",
-          "subname": null,
-          "path": "/subpage-1/subpagrforsubpage-1/",
-          "navigationHide": false,
-          "menuIcon": null,
-          "menuImg": null,
-          "menuMp4": null,
-          "menuWebm": null,
-          "subMenu": [],
-          "metaTitle": "This will be title foreach page",
-          "metaDescription": "Metadescription foreach page",
-          "metaKeywords": "Keywords, morekeywords",
-          "metaImage": "dynamikfabriokken.dk/image.png",
-          "favicon": "dynamikfabriokken.dk/image.png",
-          "content": [
-            {
-              "name": null,
-              "markup": "/media/662af6ca411a4c93a6c722c4845698e7/00000006000000000000000000000000/16403439029_f500be349b_o.jpg",
-              "key": "e77b682b-6c8f-4e47-a381-c03eb492d40c",
-              "nodeid": 0
-            }
-          ]
-        }
-      ],
+      "subMenu": null,
       "metaTitle": "This will be title foreach page",
       "metaDescription": "Metadescription foreach page",
       "metaKeywords": "Keywords, morekeywords",
       "metaImage": "dynamikfabriokken.dk/image.png",
-      "favicon": "dynamikfabriokken.dk/image.png",
-      "content": [
-        {
-          "name": null,
-          "markup": "<p>This is subpage 1 RTE from Grid</p>",
-          "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
-          "nodeid": 0
-        }
-      ]
+      "favicon": "dynamikfabriokken.dk/image.png"
     },
     {
-      "name": "Subpage 2",
+      "name": "The movie",
       "subname": null,
-      "path": "/subpage-2/",
+      "path": "/the-movie/",
       "navigationHide": false,
       "menuIcon": null,
       "menuImg": null,
@@ -148,14 +115,24 @@
       "metaKeywords": "Keywords, morekeywords",
       "metaImage": "dynamikfabriokken.dk/image.png",
       "favicon": "dynamikfabriokken.dk/image.png",
-      "content": [
-        {
-          "name": "text",
-          "markup": "<p>This is subpage 2 RTE</p>",
-          "key": "4262649c-5249-4691-8af6-2b316f4e3a79",
-          "nodeid": 0
-        }
-      ]
+      "content": null
+    },
+    {
+      "name": "Kontakt",
+      "subname": null,
+      "path": "/kontakt/",
+      "navigationHide": false,
+      "menuIcon": null,
+      "menuImg": null,
+      "menuMp4": null,
+      "menuWebm": null,
+      "subMenu": [],
+      "metaTitle": "This will be title foreach page",
+      "metaDescription": "Metadescription foreach page",
+      "metaKeywords": "Keywords, morekeywords",
+      "metaImage": "dynamikfabriokken.dk/image.png",
+      "favicon": "dynamikfabriokken.dk/image.png",
+      "content": null
     }
   ]
 }
