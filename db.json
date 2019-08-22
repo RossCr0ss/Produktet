@@ -81,7 +81,13 @@
         "markup": "<p>This is subpage 1 RTE from Grid</p>",
         "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
         "nodeid": 1154
-        }
+        },
+        {
+          "name": "text",
+          "markup": "<p>This is subpage 1 RTE from Grid</p>",
+          "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
+          "nodeid": 1154
+          }
       ]
     },
     {
