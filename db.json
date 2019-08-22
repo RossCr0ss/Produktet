@@ -3,23 +3,23 @@
     "pageId": 1152,
     "menu": {
       "name": "page-scroll-menu",
-      "content": null
+      "content": []
     },
     "layout": {
       "name": "page-scroll-layout",
-      "content": null
+      "content": []
     },
     "header": {
       "name": "basic-header",
-      "content": null
+      "content": []
     },
     "footer": {
       "name": "basic-footer",
-      "content": null
+      "content": []
     },
     "content": {
       "name": "page-scroll-content",
-      "content": null
+      "content": []
     },
     "scripts": [],
     "styles": [
@@ -77,17 +77,11 @@
       "favicon": "dynamikfabriokken.dk/image.png",
       "content": [
         {
-        "name": "text",
-        "markup": "<p>This is subpage 1 RTE from Grid</p>",
-        "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
-        "nodeid": 1154
-        },
-        {
           "name": "text",
           "markup": "<p>This is subpage 1 RTE from Grid</p>",
           "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
           "nodeid": 1154
-          }
+        }
       ]
     },
     {
@@ -121,7 +115,14 @@
       "metaKeywords": "Keywords, morekeywords",
       "metaImage": "dynamikfabriokken.dk/image.png",
       "favicon": "dynamikfabriokken.dk/image.png",
-      "content": null
+      "content": [
+        {
+          "name": "text",
+          "markup": "<p>This is content for THE MOVIE PAGE take a look at db.json</p>",
+          "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcb66",
+          "nodeid": 1154
+        }
+      ]
     },
     {
       "name": "Kontakt",
@@ -138,7 +139,7 @@
       "metaKeywords": "Keywords, morekeywords",
       "metaImage": "dynamikfabriokken.dk/image.png",
       "favicon": "dynamikfabriokken.dk/image.png",
-      "content": null
+      "content": []
     }
   ]
 }

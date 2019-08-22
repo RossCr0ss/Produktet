@@ -50,19 +50,20 @@ export class PageScrollMenuComponent implements OnInit, OnDestroy {
           return locationHash || `#${this.menus[0].path}`
         }))
       .subscribe((location: string) => {
-        this.router.navigate(['/'], {fragment: location.replace("#", "")});
-        // this.pageScrollService.scroll({
-        //   document: this.document,
-        //   scrollTarget: location,
-        // })
+        this.router.navigate(['/'],
+          {fragment: location.replace("#", "")});
+        this.pageScrollService.scroll({
+          document: this.document,
+          scrollTarget: location,
+        })
       })
     });
 
     window.onhashchange = () => {
-      // this.pageScrollService.scroll({
-      //   document: this.document,
-      //   scrollTarget: window.location.hash,
-      // })
+      this.pageScrollService.scroll({
+        document: this.document,
+        scrollTarget: window.location.hash,
+      })
     }
 
     const script = this.document.createElement('script');
