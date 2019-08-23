@@ -2,7 +2,7 @@
 <div [id]="id" *ngIf="mp4Url || oggUrl">
 
   <video [autoplay]="isAutoplay" [loop]="isLoop" [muted]="isMuted">
-    <source [src]='mp4Url' *ngIf="mp4Url" type='video/mp4'>
+    <source [src]="mp4Url" *ngIf="mp4Url" type='video/mp4'>
     <source [src]="oggUrl" *ngIf="oggUrl" type="video/ogg">
   </video>
 

@@ -15,13 +15,14 @@ export class VideoComponent implements OnInit {
   @Input() isLoop: boolean;
   @Input() isMuted: boolean;
   @Input() showControls: boolean;
+  @Input() mp4Url: string;
+  @Input() oggUrl: string;
 
   videoJson: {};
   id: string;
 
   imgPoster: string;
-  mp4Url: string;
-  oggUrl: string;
+
 
   constructor(
     @Inject(DOCUMENT) private document: any,
