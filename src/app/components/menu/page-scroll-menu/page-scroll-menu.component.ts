@@ -28,6 +28,7 @@ export class PageScrollMenuComponent implements OnInit, OnDestroy {
   @ViewChild('sideBarNav', { static: false }) sideBarNav: ElementRef<HTMLElement>;
   @ViewChild('menuButton', { static: false }) menuButton: ElementRef<HTMLElement>;
   @ViewChild('elevator', { static: false }) elevator: ElementRef<HTMLElement>;
+  shakeElevator: boolean;
 
   constructor(
     @Inject(DOCUMENT) private document: any,
@@ -74,11 +75,25 @@ export class PageScrollMenuComponent implements OnInit, OnDestroy {
   }
 
   dingAction(event, menu) {
-    this.activeMenuItem = menu.name;
-    let audio = new Audio();
-    audio.src = this.elevatorSundPath;
-    audio.load();
-    audio.play();
+    if (menu.name !== this.activeMenuItem) {
+      this.shakeElevator = false;
+      this.activeMenuItem = menu.name;
+      let audio = new Audio();
+      audio.src = this.elevatorSundPath;
+      audio.load();
+      audio.play();
+      setTimeout(_ => {
+        window.innerWidth <= 700 ? this.menuSideToggle() : null;
+      }, 300);
+    }
+  }
+
+  toggleShakeElevator(menuName) {
+    if (menuName !== this.activeMenuItem) {
+      this.shakeElevator = true;
+    } else {
+      this.shakeElevator = false;
+    }
   }
 
   menuSideOn() {
