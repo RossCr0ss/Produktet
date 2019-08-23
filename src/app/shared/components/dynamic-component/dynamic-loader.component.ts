@@ -21,6 +21,15 @@ export class DynamicLoaderComponent implements OnInit {
   @Input()
   moduleName: string;
 
+  @Input()
+  markup: string;
+
+  @Input()
+  key: string;
+
+  @Input()
+  nodeId: number;
+
   public modulesMapping = modulesMapping;
 
   private componentContent: ComponentContent[] = [];
@@ -36,6 +45,7 @@ export class DynamicLoaderComponent implements OnInit {
         this.moduleName = moduleNameFromRoute;
       }
     }
+
     this.loadModule();
   }
 
@@ -59,6 +69,9 @@ export class DynamicLoaderComponent implements OnInit {
       const componentFactory = moduleRef.componentFactoryResolver.resolveComponentFactory(module.entryComponent());
       const componentRef: ComponentRef<any> = this.viewRef.createComponent(componentFactory);
       componentRef.instance.additionalContent = this.componentContent;
+      componentRef.instance.additionalMarkup = this.markup;
+      componentRef.instance.key = this.key;
+      componentRef.instance.nodeId = this.nodeId;
     });
   }
 
