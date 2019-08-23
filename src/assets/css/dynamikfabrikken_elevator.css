@@ -1,961 +1,1216 @@
-
 /* gulp project css */
-
-
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
-   ========================================================================== */
+ ========================================================================== */
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
- html {
-    -webkit-text-size-adjust: 100%;
-    /* 2 */ }
-  
-  /* Sections
-     ========================================================================== */
-  /**
-   * Remove the margin in all browsers.
-   */
-  body {
-    margin: 0; }
-  
-  /**
-   * Correct the font size and margin on `h1` elements within `section` and
-   * `article` contexts in Chrome, Firefox, and Safari.
-   */
-  h1 {
-    font-size: 2em;
-    margin: 0.67em 0; }
-  
-  /* Grouping content
-     ========================================================================== */
-  /**
-   * 1. Add the correct box sizing in Firefox.
-   * 2. Show the overflow in Edge and IE.
-   */
-  hr {
-    box-sizing: content-box;
-    /* 1 */
-    height: 0;
-    /* 1 */
-    overflow: visible;
-    /* 2 */ }
-  
-  /**
-   * 1. Correct the inheritance and scaling of font size in all browsers.
-   * 2. Correct the odd `em` font sizing in all browsers.
-   */
-  pre {
-    font-family: monospace, monospace;
-    /* 1 */
-    font-size: 1em;
-    /* 2 */ }
-  
-  /* Text-level semantics
-     ========================================================================== */
-  /**
-   * Remove the gray background on active links in IE 10.
-   */
-  a {
-    background-color: transparent; }
-  
-  /**
-   * 1. Remove the bottom border in Chrome 57-
-   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
-   */
-  abbr[title] {
-    border-bottom: none;
-    /* 1 */
-    text-decoration: underline;
-    /* 2 */
-    -webkit-text-decoration: underline dotted;
-            text-decoration: underline dotted;
-    /* 2 */ }
-  
-  /**
-   * Add the correct font weight in Chrome, Edge, and Safari.
-   */
-  b,
-  strong {
-    font-weight: bolder; }
-  
-  /**
-   * 1. Correct the inheritance and scaling of font size in all browsers.
-   * 2. Correct the odd `em` font sizing in all browsers.
-   */
-  code,
-  kbd,
-  samp {
-    font-family: monospace, monospace;
-    /* 1 */
-    font-size: 1em;
-    /* 2 */ }
-  
-  /**
-   * Add the correct font size in all browsers.
-   */
-  small {
-    font-size: 80%; }
-  
-  /**
-   * Prevent `sub` and `sup` elements from affecting the line height in
-   * all browsers.
-   */
-  sub,
-  sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline; }
-  
-  sub {
-    bottom: -0.25em; }
-  
-  sup {
-    top: -0.5em; }
-  
-  /* Embedded content
-     ========================================================================== */
-  /**
-   * Remove the border on images inside links in IE 10.
-   */
-  img {
-    border-style: none; }
-  
-  /* Forms
-     ========================================================================== */
-  /**
-   * 1. Change the font styles in all browsers.
-   * 2. Remove the margin in Firefox and Safari.
-   */
-  button,
-  input,
-  optgroup,
-  select,
-  textarea {
-    font-family: inherit;
-    /* 1 */
-    font-size: 100%;
-    /* 1 */
-    line-height: 1.15;
-    /* 1 */
-    margin: 0;
-    /* 2 */ }
-  
-  /**
-   * Show the overflow in IE.
-   * 1. Show the overflow in Edge.
-   */
-  button,
-  input {
-    /* 1 */
-    overflow: visible; }
-  
-  /**
-   * Remove the inheritance of text transform in Edge, Firefox, and IE.
-   * 1. Remove the inheritance of text transform in Firefox.
-   */
-  button,
-  select {
-    /* 1 */
-    text-transform: none; }
-  
-  /**
-   * Correct the inability to style clickable types in iOS and Safari.
-   */
-  button,
-  [type="button"],
-  [type="reset"],
-  [type="submit"] {
-    -webkit-appearance: button; }
-  
-  /**
-   * Remove the inner border and padding in Firefox.
-   */
-  button::-moz-focus-inner,
-  [type="button"]::-moz-focus-inner,
-  [type="reset"]::-moz-focus-inner,
-  [type="submit"]::-moz-focus-inner {
-    border-style: none;
-    padding: 0; }
-  
-  /**
-   * Restore the focus styles unset by the previous rule.
-   */
-  button:-moz-focusring,
-  [type="button"]:-moz-focusring,
-  [type="reset"]:-moz-focusring,
-  [type="submit"]:-moz-focusring {
-    outline: 1px dotted ButtonText; }
-  
-  /**
-   * Correct the padding in Firefox.
-   */
-  fieldset {
-    padding: 0.35em 0.75em 0.625em; }
-  
-  /**
-   * 1. Correct the text wrapping in Edge and IE.
-   * 2. Correct the color inheritance from `fieldset` elements in IE.
-   * 3. Remove the padding so developers are not caught out when they zero out
-   *    `fieldset` elements in all browsers.
-   */
-  legend {
-    box-sizing: border-box;
-    /* 1 */
-    color: inherit;
-    /* 2 */
-    display: table;
-    /* 1 */
-    max-width: 100%;
-    /* 1 */
-    padding: 0;
-    /* 3 */
-    white-space: normal;
-    /* 1 */ }
-  
-  /**
-   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
-   */
-  progress {
-    vertical-align: baseline; }
-  
-  /**
-   * Remove the default vertical scrollbar in IE 10+.
-   */
-  textarea {
-    overflow: auto; }
-  
-  /**
-   * 1. Add the correct box sizing in IE 10.
-   * 2. Remove the padding in IE 10.
-   */
-  [type="checkbox"],
-  [type="radio"] {
-    box-sizing: border-box;
-    /* 1 */
-    padding: 0;
-    /* 2 */ }
-  
-  /**
-   * Correct the cursor style of increment and decrement buttons in Chrome.
-   */
-  [type="number"]::-webkit-inner-spin-button,
-  [type="number"]::-webkit-outer-spin-button {
-    height: auto; }
-  
-  /**
-   * 1. Correct the odd appearance in Chrome and Safari.
-   * 2. Correct the outline style in Safari.
-   */
-  [type="search"] {
-    -webkit-appearance: textfield;
-    /* 1 */
-    outline-offset: -2px;
-    /* 2 */ }
-  
-  /**
-   * Remove the inner padding in Chrome and Safari on macOS.
-   */
-  [type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none; }
-  
-  /**
-   * 1. Correct the inability to style clickable types in iOS and Safari.
-   * 2. Change font properties to `inherit` in Safari.
-   */
-  ::-webkit-file-upload-button {
-    -webkit-appearance: button;
-    /* 1 */
-    font: inherit;
-    /* 2 */ }
-  
-  /* Interactive
-     ========================================================================== */
-  /*
-   * Add the correct display in Edge, IE 10+, and Firefox.
-   */
-  details {
-    display: block; }
-  
-  /*
-   * Add the correct display in all browsers.
-   */
-  summary {
-    display: list-item; }
-  
-  /* Misc
-     ========================================================================== */
-  /**
-   * Add the correct display in IE 10+.
-   */
-  template {
-    display: none; }
-  
-  /**
-   * Add the correct display in IE 10.
-   */
-  [hidden] {
-    display: none; }
-  
-  @font-face {
-    font-family: 'Work Sans';
-    src: url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Medium.woff2") format("woff2"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Medium.woff") format("woff"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Medium.svg#WorkSans-Medium") format("svg");
-    font-weight: 500;
-    font-style: normal; }
-  
-  @font-face {
-    font-family: 'Work Sans';
-    src: url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Bold.woff2") format("woff2"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Bold.woff") format("woff"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Bold.svg#WorkSans-Bold") format("svg");
-    font-weight: bold;
-    font-style: normal; }
-  
-  @font-face {
-    font-family: 'Work Sans';
-    src: url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-ExtraLight.woff2") format("woff2"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-ExtraLight.woff") format("woff"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-ExtraLight.svg#WorkSans-ExtraLight") format("svg");
-    font-weight: 200;
-    font-style: normal; }
-  
-  @font-face {
-    font-family: 'Work Sans';
-    src: url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-SemiBold.woff2") format("woff2"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-SemiBold.woff") format("woff"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-SemiBold.svg#WorkSans-SemiBold") format("svg");
-    font-weight: 600;
-    font-style: normal; }
-  
-  @font-face {
-    font-family: 'Work Sans';
-    src: url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-ExtraBold.woff2") format("woff2"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-ExtraBold.woff") format("woff"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-ExtraBold.svg#WorkSans-ExtraBold") format("svg");
-    font-weight: 800;
-    font-style: normal; }
-  
-  @font-face {
-    font-family: 'Work Sans';
-    src: url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Thin.woff2") format("woff2"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Thin.woff") format("woff"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Thin.svg#WorkSans-Thin") format("svg");
-    font-weight: 100;
-    font-style: normal; }
-  
-  @font-face {
-    font-family: 'Work Sans';
-    src: url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Black.woff2") format("woff2"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Black.woff") format("woff"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Black.svg#WorkSans-Black") format("svg");
-    font-weight: 900;
-    font-style: normal; }
-  
-  @font-face {
-    font-family: 'Work Sans';
-    src: url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Light.woff2") format("woff2"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Light.woff") format("woff"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Light.svg#WorkSans-Light") format("svg");
-    font-weight: 300;
-    font-style: normal; }
-  
-  @font-face {
-    font-family: 'Work Sans';
-    src: url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Regular.woff2") format("woff2"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Regular.woff") format("woff"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Regular.svg#WorkSans-Regular") format("svg");
-    font-weight: normal;
-    font-style: normal; }
-  
-  html {
-    height: 100%; }
-  
-  body {
-    font-family: "Work Sans", sans-serif;
-    font-weight: normal;
-    font-style: normal;
+html {
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+ ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+ ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+ ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+ ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+ ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+ ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+ ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Medium.woff2") format("woff2"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Medium.woff") format("woff"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Medium.svg#WorkSans-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Bold.woff2") format("woff2"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Bold.woff") format("woff"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Bold.svg#WorkSans-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-ExtraLight.woff2") format("woff2"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-ExtraLight.woff") format("woff"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-ExtraLight.svg#WorkSans-ExtraLight") format("svg");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-SemiBold.woff2") format("woff2"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-SemiBold.woff") format("woff"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-SemiBold.svg#WorkSans-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-ExtraBold.woff2") format("woff2"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-ExtraBold.woff") format("woff"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-ExtraBold.svg#WorkSans-ExtraBold") format("svg");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Thin.woff2") format("woff2"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Thin.woff") format("woff"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Thin.svg#WorkSans-Thin") format("svg");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Black.woff2") format("woff2"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Black.woff") format("woff"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Black.svg#WorkSans-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Light.woff2") format("woff2"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Light.woff") format("woff"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Light.svg#WorkSans-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Regular.woff2") format("woff2"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Regular.woff") format("woff"), url("/assets/fonts/dynamikfabrikken/worksans/hinted-WorkSans-Regular.svg#WorkSans-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+  max-width: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("/assets/graphics/dynamikfabrikken/bg-main.png") repeat;
+  display: none;
+}
+
+body.blocked {
+  overflow: hidden;
+  height: 100%;
+}
+
+body>* {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes mouseScrolling {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(5px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes mouseScrolling {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(5px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+.overlay {
+  background-color: #333;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex__item {
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.typo h1,
+.typo h2,
+.typo h3,
+.typo h4,
+.typo h5,
+.typo h6 {
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.typo p {
+  font-size: 14px;
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+}
+
+.typo a {
+  font-size: 14px;
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+}
+
+.typo strong {
+  font-weight: bold;
+}
+
+.content {
+  height: 100%;
+}
+
+.content__area {
+  flex-grow: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.form__inner {
+  margin-bottom: 50px;
+  min-height: 204px;
+}
+
+.form__row {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+  margin: 0 0 25px;
+}
+
+.form__warning {
+  display: none;
+}
+
+.form__warning.active {
+  display: block;
+}
+
+.form__warning p {
+  font-size: 14px;
+  color: #f00;
+}
+
+.form__fieldset {
+  position: relative;
+  width: 100%;
+  min-height: 56px;
+  box-sizing: border-box;
+  height: 56px;
+}
+
+.form__fieldset input {
+  font-size: 18px;
+  padding: 10px 10px 10px 10px;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #efefef;
+  color: #333;
+  height: 100%;
+}
+
+.form__fieldset input:focus {
+  outline: none;
+}
+
+.form__fieldset input:focus~label,
+.form__fieldset input:valid~label {
+  font-size: 12px;
+  bottom: auto;
+  margin: 0;
+  top: 2px;
+}
+
+.form__fieldset input.active~label {
+  top: 2px;
+  font-size: 12px;
+  bottom: auto;
+  margin: 0;
+}
+
+.form__fieldset textarea {
+  background: #efefef;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 20px 10px 10px 10px;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #757575;
+  color: #333;
+  height: 100%;
+  resize: none;
+}
+
+.form__fieldset textarea:focus {
+  outline: none;
+}
+
+.form__fieldset textarea:focus~label,
+.form__fieldset textarea:valid~label {
+  font-size: 12px;
+  bottom: auto;
+  margin: 0;
+  top: 2px;
+}
+
+.form__fieldset textarea.active~label {
+  top: 2px;
+  font-size: 12px;
+  bottom: auto;
+  margin: 0;
+}
+
+.form__fieldset label {
+  color: #333;
+  font-size: 18px;
+  display: block;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 20px;
+  bottom: 0;
+  height: 18px;
+  transition: 0.2s ease all;
+}
+
+.form__fieldset select {
+  background: #efefef;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 20px 10px 10px 10px;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #757575;
+  color: #333;
+  height: 100%;
+  cursor: pointer;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form__fieldset select::-ms-expand {
+  display: none;
+}
+
+.form__fieldset select:focus {
+  outline: none;
+}
+
+.form__fieldset select:focus~label,
+.form__fieldset select:valid~label {
+  font-size: 12px;
+  bottom: auto;
+  margin: 0;
+  top: 2px;
+}
+
+.form__fieldset select.active~label {
+  top: 2px;
+  font-size: 12px;
+  bottom: auto;
+  margin: 0;
+}
+
+.form__fieldset option:first-of-type {
+  display: none;
+}
+
+.form__fieldset .bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.form__fieldset .bar:before,
+.form__fieldset .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: #333;
+  transition: 0.2s ease all;
+}
+
+.form__fieldset .bar:before {
+  left: 50%;
+}
+
+.form__fieldset .bar:after {
+  right: 50%;
+}
+
+.form__fieldset input:focus~.bar:before,
+.form__fieldset input:focus~.bar:after {
+  width: 50%;
+}
+
+.form__fieldset textarea:focus~.bar:before,
+.form__fieldset textarea:focus~.bar:after {
+  width: 50%;
+}
+
+.form__fieldset .error~.bar:before,
+.form__fieldset .error~.bar:after {
+  background: #f00;
+  width: 50%;
+}
+
+.form__options {
+  margin: 50px 0 0;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.form__options a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+.button {
+  background: transparent;
+  color: #414042;
+  font-size: 20px;
+  line-height: 50px;
+  margin: 14px 5px;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+  font-weight: 600;
+  padding: 0 24px;
+  border: 2px solid #414042;
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.button-wrapper {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 -5px;
+}
+
+.checkbox label {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.checkbox input {
+  display: none;
+}
+
+.checkbox input~span:first-of-type {
+  width: 17px;
+  height: 17px;
+  border-radius: 4px;
+  border: 2px solid #333;
+  position: relative;
+  display: block;
+  font-size: 12px;
+  box-sizing: border-box;
+  margin-right: 15px;
+  transition: box-shadow 0.3s;
+}
+
+.checkbox input~span:first-of-type i {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.checkbox input:checked~span:first-of-type i {
+  opacity: 1;
+}
+
+.headline {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 0.8;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.headline-desc p {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0;
+  text-decoration: none;
+}
+
+.hamb-icon span {
+  width: 100%;
+  height: 4px;
+  background: #569c47;
+}
+
+.hamb {
+  width: 30px;
+  height: 35px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.hamb-icon {
+  position: relative;
+  height: 22px;
+  margin: auto;
+  transition: all 0.4s;
+  margin-bottom: 3px;
+  /*&:before {
+   content: '';
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   @extend %burger-stick;
+   transform-origin: 5px 0;
+   transition: all 0.4s;
+   }
+   .active &:before {
+   transform: rotate(43deg);
+   width: 110%;
+   border-radius: 4px;
+   }
+   &:after {
+   content: '';
+   display: block;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   @extend %burger-stick;
+   transform-origin: -1px 0;
+   transition: all 0.4s;
+   }
+   .active &:after {
+   transform: rotate(-43deg);
+   width: 110%;
+   border-radius: 4px;
+   }
+   .active & {
+   width: 0;
+   opacity: 0;
+   transition: all 0.15s;
+   }*/
+}
+
+.hamb-icon span {
+  display: block;
+  position: absolute;
+  transition: all 0.4s;
+}
+
+.hamb-icon span:nth-of-type(1) {
+  top: 0;
+  left: 0;
+  transform-origin: 5px 0;
+}
+
+.active .hamb-icon span:nth-of-type(1) {
+  transform: rotate(43deg);
+  top: 1px;
+  left: 5px;
+}
+
+.hamb-icon span:nth-of-type(2) {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.active .hamb-icon span:nth-of-type(2) {
+  width: 0;
+  opacity: 0;
+  transition: all 0.15s;
+}
+
+.hamb-icon span:nth-of-type(3) {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform-origin: -1px 0;
+}
+
+.active .hamb-icon span:nth-of-type(3) {
+  transform: rotate(-43deg);
+  left: 4px;
+  bottom: -1px;
+}
+
+.hamb p {
+  margin: 0;
+  text-transform: uppercase;
+  color: #569c47;
+  font-size: 10px;
+}
+
+.section {
+  min-height: 100%;
+  background: url("/assets/graphics/dynamikfabrikken/bg-bottom.png") no-repeat center bottom;
+  padding: 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  color: #414042;
+}
+
+.section--footer {
+  background: rgba(0, 0, 0, 0.8) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAA8CAYAAABfESsNAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RUQ5MjZDMTg1MDZCMTFFMkI3MDBBNDNGNDBCQ0QxQTAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RUQ5MjZDMTk1MDZCMTFFMkI3MDBBNDNGNDBCQ0QxQTAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpFRDkyNkMxNjUwNkIxMUUyQjcwMEE0M0Y0MEJDRDFBMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFRDkyNkMxNzUwNkIxMUUyQjcwMEE0M0Y0MEJDRDFBMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnX8G50AAABDSURBVHjaYqytq9vPQARgAWIHYhQyMRAJRhWOKqSDQpavX74Qp/Du7Tuj4TiqcFThqMJRhZSUuHqGBqPBQ7lCgAADAAF4CPj7sV4+AAAAAElFTkSuQmCC) repeat-x center bottom;
+  color: white;
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 375px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /*& > *:not(.hamb){
+   width: 100%;
+   }*/
+}
+
+.sidebar__figure {
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.sidebar__figure img {
+  max-width: 100%;
+  vertical-align: top;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.sidebar__elevator {
+  visibility: hidden;
+  transition-delay: 0.3s;
+  transition: transform 0.8s;
+  transform: translateY(-100%);
+  overflow: auto;
+  padding-top: 22px;
+}
+
+.sidebar__elevator.visible {
+  visibility: visible;
+}
+
+.sidebar__elevator.active {
+  transform: translateY(0);
+}
+
+.sidebar-nav {
+  background: #8e8e8e;
+  padding: 20px 5px;
+}
+
+.sidebar-nav__item {
+  text-decoration: none;
+  color: white;
+  display: block;
+  background: #414042;
+  padding: 5px 5px 5px 10px;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.sidebar-nav__item.current {
+  height: auto;
+  color: white;
+  text-transform: none;
+  text-indent: 0;
+  text-overflow: clip;
+  letter-spacing: normal;
+  white-space: pre;
+  word-spacing: normal;
+  box-shadow: none;
+  text-shadow: white 0px 0px 5px, white 0px 0px 10px, white 0px 0px 15px, cyan 0px 0px 20px, cyan 0px 0px 35px, cyan 0px 0px 40px, cyan 0px 0px 50px;
+  transform: none;
+  transform-origin: 50% 50% 0px;
+  overflow: visible;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  -o-border-image: initial;
+  border-image: initial;
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .flex {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  .typo p {
     font-size: 16px;
-    -webkit-font-smoothing: subpixel-antialiased !important;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    margin: 0 auto;
-    position: relative;
-    height: 100%;
-    max-width: 100%;
-    background: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: url("/assets/graphics/dynamikfabrikken/bg-main.png") repeat; 
+  }
+
+  .typo a {
+    font-size: 16px;
+  }
+
+  .form__row {
+    margin-bottom: 35px;
+  }
+
+  .form__options {
+    margin-top: 0;
+  }
+
+  .headline {
+    font-size: 30px;
+  }
+
+  .headline-desc p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+  .typo h1,
+  .typo h2,
+  .typo h3,
+  .typo h4,
+  .typo h5,
+  .typo h6 {
+    font-size: 30px;
+  }
+
+  .form__inner {
+    margin-bottom: 80px;
+  }
+
+  .form__options a:hover {
+    text-decoration: underline;
+  }
+
+  .checkbox label:hover input~span:first-of-type {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .headline {
+    font-size: 60px;
+  }
+
+  .headline-desc p {
+    font-size: 22px;
+  }
+
+  .hamb {
     display: none;
   }
-    body.blocked {
-      overflow: hidden;
-      height: 100%; }
-    body > * {
-      width: 100%;
-      box-sizing: border-box; }
-  
-  @-webkit-keyframes loading {
-    from {
-      transform: rotate(0deg); }
-    to {
-      transform: rotate(360deg); } }
-  
-  @keyframes loading {
-    from {
-      transform: rotate(0deg); }
-    to {
-      transform: rotate(360deg); } }
-  
-  @-webkit-keyframes mouseScrolling {
-    0% {
-      opacity: 0; }
-    10% {
-      opacity: 1;
-      transform: translateY(0); }
-    25% {
-      transform: translateY(5px); }
-    50% {
-      transform: translateY(0); }
-    75% {
-      transform: translateY(5px); }
-    100% {
-      transform: translateY(0);
-      opacity: 0; } }
-  
-  @keyframes mouseScrolling {
-    0% {
-      opacity: 0; }
-    10% {
-      opacity: 1;
-      transform: translateY(0); }
-    25% {
-      transform: translateY(5px); }
-    50% {
-      transform: translateY(0); }
-    75% {
-      transform: translateY(5px); }
-    100% {
-      transform: translateY(0);
-      opacity: 0; } }
-  
-  .overlay {
-    background-color: #333333;
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    visibility: hidden;
-    opacity: 0;
-    transition: all .3s; }
-    .overlay.active {
-      opacity: 1;
-      visibility: visible; }
-  
-  .flex {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center; }
-    .flex__item {
-      width: 100%;
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      position: relative; }
-  
-  .typo h1, .typo h2, .typo h3, .typo h4, .typo h5, .typo h6 {
-    font-size: 24px;
-    font-weight: 900;
-    margin: 0; }
-  
-  .typo p {
-    font-size: 14px;
-    text-decoration: none;
-    color: inherit;
-    margin: 0; }
-  
-  .typo a {
-    font-size: 14px;
-    text-decoration: none;
-    color: inherit;
-    margin: 0; }
-  
-  .typo strong {
-    font-weight: bold; }
-  
-  .content {
-    height: 100%; }
-    .content__area {
-      flex-grow: 1;
-      overflow-x: hidden;
-      overflow-y: auto; }
-  
-  .form__inner {
-    margin-bottom: 50px;
-    min-height: 204px; }
-  
-  .form__row {
-    display: flex;
-    justify-content: space-between;
-    min-width: 100%;
-    margin: 0 0 25px; }
-  
-  .form__warning {
-    display: none; }
-    .form__warning.active {
-      display: block; }
-    .form__warning p {
-      font-size: 14px;
-      color: #ff0000; }
-  
-  .form__fieldset {
-    position: relative;
-    width: 100%;
-    min-height: 56px;
-    box-sizing: border-box;
-    height: 56px; }
-    .form__fieldset input {
-      font-size: 18px;
-      padding: 10px 10px 10px 10px;
-      box-sizing: border-box;
-      display: block;
-      width: 100%;
-      border: none;
-      border-bottom: 2px solid #efefef;
-      color: #333333;
-      height: 100%; }
-      .form__fieldset input:focus {
-        outline: none; }
-      .form__fieldset input:focus ~ label, .form__fieldset input:valid ~ label {
-        font-size: 12px;
-        bottom: auto;
-        margin: 0;
-        top: 2px; }
-      .form__fieldset input.active ~ label {
-        top: 2px;
-        font-size: 12px;
-        bottom: auto;
-        margin: 0; }
-    .form__fieldset textarea {
-      background: #efefef;
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
-      box-sizing: border-box;
-      font-size: 16px;
-      padding: 20px 10px 10px 10px;
-      box-sizing: border-box;
-      display: block;
-      width: 100%;
-      border: none;
-      border-bottom: 1px solid #757575;
-      color: #333333;
-      height: 100%;
-      resize: none; }
-      .form__fieldset textarea:focus {
-        outline: none; }
-      .form__fieldset textarea:focus ~ label, .form__fieldset textarea:valid ~ label {
-        font-size: 12px;
-        bottom: auto;
-        margin: 0;
-        top: 2px; }
-      .form__fieldset textarea.active ~ label {
-        top: 2px;
-        font-size: 12px;
-        bottom: auto;
-        margin: 0; }
-    .form__fieldset label {
-      color: #333333;
-      font-size: 18px;
-      display: block;
-      font-weight: normal;
-      position: absolute;
-      pointer-events: none;
-      left: 10px;
-      top: 20px;
-      bottom: 0;
-      height: 18px;
-      transition: 0.2s ease all; }
-    .form__fieldset select {
-      background: #efefef;
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
-      box-sizing: border-box;
-      font-size: 16px;
-      padding: 20px 10px 10px 10px;
-      box-sizing: border-box;
-      display: block;
-      width: 100%;
-      border: none;
-      border-bottom: 1px solid #757575;
-      color: #333333;
-      height: 100%;
-      cursor: pointer;
-      -moz-appearance: none;
-           appearance: none;
-      -webkit-appearance: none; }
-      .form__fieldset select::-ms-expand {
-        display: none; }
-      .form__fieldset select:focus {
-        outline: none; }
-      .form__fieldset select:focus ~ label, .form__fieldset select:valid ~ label {
-        font-size: 12px;
-        bottom: auto;
-        margin: 0;
-        top: 2px; }
-      .form__fieldset select.active ~ label {
-        top: 2px;
-        font-size: 12px;
-        bottom: auto;
-        margin: 0; }
-    .form__fieldset option:first-of-type {
-      display: none; }
-    .form__fieldset .bar {
-      position: relative;
-      display: block;
-      width: 100%; }
-      .form__fieldset .bar:before, .form__fieldset .bar:after {
-        content: '';
-        height: 2px;
-        width: 0;
-        bottom: 0;
-        position: absolute;
-        background: #333333;
-        transition: 0.2s ease all; }
-      .form__fieldset .bar:before {
-        left: 50%; }
-      .form__fieldset .bar:after {
-        right: 50%; }
-    .form__fieldset input:focus ~ .bar:before, .form__fieldset input:focus ~ .bar:after {
-      width: 50%; }
-    .form__fieldset textarea:focus ~ .bar:before, .form__fieldset textarea:focus ~ .bar:after {
-      width: 50%; }
-    .form__fieldset .error ~ .bar:before, .form__fieldset .error ~ .bar:after {
-      background: #ff0000;
-      width: 50%; }
-  
-  .form__options {
-    margin: 50px 0 0;
-    font-size: 14px;
-    color: #333333;
-    box-sizing: border-box; }
-    .form__options a {
-      display: block;
-      text-decoration: none;
-      color: #333333; }
-  
-  .button {
-    background: transparent;
-    color: #414042;
-    font-size: 20px;
-    line-height: 50px;
-    margin: 14px 5px;
-    text-align: center;
-    transition: all 0.3s ease 0s;
-    font-weight: 600;
-    padding: 0 24px;
-    border: 2px solid #414042;
-    text-transform: uppercase;
-    display: inline-block;
-    text-decoration: none; }
-    .button-wrapper {
-      display: flex;
-      width: 100%;
-      box-sizing: border-box;
-      margin: 0 -5px; }
-  
-  .checkbox label {
-    display: flex;
-    align-items: flex-start;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent; }
-  
-  .checkbox input {
-    display: none; }
-    .checkbox input ~ span:first-of-type {
-      width: 17px;
-      height: 17px;
-      border-radius: 4px;
-      border: 2px solid #333333;
-      position: relative;
-      display: block;
-      font-size: 12px;
-      box-sizing: border-box;
-      margin-right: 15px;
-      transition: box-shadow .3s; }
-      .checkbox input ~ span:first-of-type i {
-        position: absolute;
-        left: 1px;
-        top: 1px;
-        opacity: 0;
-        transition: opacity .15s; }
-    .checkbox input:checked ~ span:first-of-type i {
-      opacity: 1; }
-  
-  .headline {
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 0.8;
-    margin: 0;
-    text-transform: uppercase; }
-    .headline-desc p {
-      font-size: 14px;
-      font-weight: 300;
-      margin: 0;
-      text-decoration: none; }
-  
-  .hamb-icon span {
-    width: 100%;
-    height: 4px;
-    background: #569C47; }
-  
-  .hamb {
-    width: 30px;
-    height: 35px;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 3;
-    cursor: pointer; }
-    .hamb-icon {
-      position: relative;
-      height: 22px;
-      margin: auto;
-      transition: all 0.4s;
-      margin-bottom: 3px;
-      /*&:before {
-           content: '';
-           display: block;
-           position: absolute;
-           top: 0;
-           left: 0;
-           @extend %burger-stick;
-           transform-origin: 5px 0;
-           transition: all 0.4s;
-        }
-  
-        .active &:before {
-           transform: rotate(43deg);
-           width: 110%;
-           border-radius: 4px;
-        }
-  
-        &:after {
-           content: '';
-           display: block;
-           position: absolute;
-           bottom: 0;
-           left: 0;
-           @extend %burger-stick;
-           transform-origin: -1px 0;
-           transition: all 0.4s;
-        }
-  
-        .active &:after {
-           transform: rotate(-43deg);
-           width: 110%;
-           border-radius: 4px;
-        }
-  
-        .active & {
-           width: 0;
-           opacity: 0;
-           transition: all 0.15s;
-        }*/ }
-      .hamb-icon span {
-        display: block;
-        position: absolute;
-        transition: all 0.4s; }
-        .hamb-icon span:nth-of-type(1) {
-          top: 0;
-          left: 0;
-          transform-origin: 5px 0; }
-          .active .hamb-icon span:nth-of-type(1) {
-            transform: rotate(43deg);
-            top: 1px;
-            left: 5px; }
-        .hamb-icon span:nth-of-type(2) {
-          top: 0;
-          left: 0;
-          bottom: 0;
-          margin: auto; }
-          .active .hamb-icon span:nth-of-type(2) {
-            width: 0;
-            opacity: 0;
-            transition: all 0.15s; }
-        .hamb-icon span:nth-of-type(3) {
-          display: block;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          transform-origin: -1px 0; }
-          .active .hamb-icon span:nth-of-type(3) {
-            transform: rotate(-43deg);
-            left: 4px;
-            bottom: -1px; }
-    .hamb p {
-      margin: 0;
-      text-transform: uppercase;
-      color: #569C47;
-      font-size: 10px; }
-  
+
   .section {
-    min-height: 100%;
-    background: url("/assets/graphics/dynamikfabrikken/bg-bottom.png") no-repeat center bottom;
-    padding: 0 10px;
     box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    color: #414042; }
-    .section--footer {
-      background: rgba(0, 0, 0, 0.8) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAA8CAYAAABfESsNAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RUQ5MjZDMTg1MDZCMTFFMkI3MDBBNDNGNDBCQ0QxQTAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RUQ5MjZDMTk1MDZCMTFFMkI3MDBBNDNGNDBCQ0QxQTAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpFRDkyNkMxNjUwNkIxMUUyQjcwMEE0M0Y0MEJDRDFBMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFRDkyNkMxNzUwNkIxMUUyQjcwMEE0M0Y0MEJDRDFBMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnX8G50AAABDSURBVHjaYqytq9vPQARgAWIHYhQyMRAJRhWOKqSDQpavX74Qp/Du7Tuj4TiqcFThqMJRhZSUuHqGBqPBQ7lCgAADAAF4CPj7sV4+AAAAAElFTkSuQmCC) repeat-x center bottom;
-      color: white; }
-  
+    padding-left: 260px;
+  }
+
   .sidebar {
-    position: fixed;
-    z-index: 3;
+    position: absolute;
     top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    max-width: 375px;
+    bottom: 60px;
+    left: 40px;
+    margin: 0;
+    justify-content: flex-end;
+  }
+
+  .sidebar__elevator {
+    padding-top: 0;
+    visibility: visible;
+    transform: translateY(0);
+    overflow: visible;
+  }
+
+  .sidebar__elevator-top {
+    width: 180px;
+    height: 86px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background: url("/assets/graphics/dynamikfabrikken/elevator-top.png") no-repeat center top;
+  }
+
+  .sidebar__elevator-rope {
+    width: 180px;
+    position: fixed;
+    top: 0;
+    bottom: 70px;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    /*& > *:not(.hamb){
-        width: 100%;
-     }*/ }
-    .sidebar__figure {
-      margin: 0;
-      -webkit-user-select: none;
-         -moz-user-select: none;
-          -ms-user-select: none;
-              user-select: none; }
-      .sidebar__figure img {
-        max-width: 100%;
-        vertical-align: top;
-        -webkit-user-select: none;
-           -moz-user-select: none;
-            -ms-user-select: none;
-                user-select: none; }
-    .sidebar__elevator {
-      visibility: hidden;
-      transition-delay: .3s;
-      transition: transform .8s;
-      transform: translateY(-100%);
-      overflow: auto;
-      padding-top: 22px; }
-      .sidebar__elevator.visible {
-        visibility: visible; }
-      .sidebar__elevator.active {
-        transform: translateY(0); }
-  
+    z-index: 0;
+    box-sizing: border-box;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAA5CAYAAACf4wE0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MUI4MkNBMkI1MTNCMTFFMjgxQzREMjkyMzQ3NUJBNzgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MUI4MkNBMkM1MTNCMTFFMjgxQzREMjkyMzQ3NUJBNzgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxQjgyQ0EyOTUxM0IxMUUyODFDNEQyOTIzNDc1QkE3OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxQjgyQ0EyQTUxM0IxMUUyODFDNEQyOTIzNDc1QkE3OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtglzYgAAACrSURBVHja7NKxCYAwEIbRxOVuJZ3ArJTpztNKbBVs3oMQSJHi5+uZ2d6IiOcHW50x52xc+5zXXme9v9c+3TrfW0yAoEHQIGgQNIIGQYOgQdAgaAQNggZBg6BB0AgaBA2CBkGDoBE0CBoEDYIGQSNoEDQIGgQNgkbQIGgQNAgaBI2gQdAgaBA0ggZBg6BB0CBoBA2CBkGDoEHQCBoEDYIGQYOgETQIGn52CDAA/bAMbx09Ux4AAAAASUVORK5CYII=) repeat-y;
+  }
+
+  .sidebar__elevator {
+    bottom: 60px;
+    position: fixed;
+    width: 180px;
+    z-index: 1;
+  }
+
+  .sidebar {
+    width: 179px;
+  }
+
   .sidebar-nav {
-    background: #8E8E8E;
-    padding: 20px 5px; }
-    .sidebar-nav__item {
-      text-decoration: none;
-      color: white;
-      display: block;
-      background: #414042;
-      padding: 5px 5px 5px 10px;
-      font-size: 14px;
-      margin-bottom: 5px; }
-      .sidebar-nav__item.current {
-        height: auto;
-        color: white;
-        text-transform: none;
-        text-indent: 0;
-        text-overflow: clip;
-        letter-spacing: normal;
-        white-space: pre;
-        word-spacing: normal;
-        box-shadow: none;
-        text-shadow: white 0px 0px 5px, white 0px 0px 10px, white 0px 0px 15px, cyan 0px 0px 20px, cyan 0px 0px 35px, cyan 0px 0px 40px, cyan 0px 0px 50px;
-        transform: none;
-        transform-origin: 50% 50% 0px;
-        overflow: visible;
-        border-width: initial;
-        border-style: none;
-        border-color: initial;
-        -o-border-image: initial;
-           border-image: initial;
-        transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1); }
-      @media screen and (min-width: 768px) {
-      .flex {
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: stretch; }
-      .typo p {
-        font-size: 16px; }
-      .typo a {
-        font-size: 16px; }
-      .form__row {
-        margin-bottom: 35px; }
-      .form__options {
-        margin-top: 0; }
-      .headline {
-        font-size: 30px; }
-        .headline-desc p {
-          font-size: 16px; } }
-      @media screen and (min-width: 992px) {
-      .typo h1, .typo h2, .typo h3, .typo h4, .typo h5, .typo h6 {
-        font-size: 30px; }
-      .form__inner {
-        margin-bottom: 80px; }
-        .form__options a:hover {
-          text-decoration: underline; }
-      .checkbox label:hover input ~ span:first-of-type {
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5); }
-      .headline {
-        font-size: 60px; }
-        .headline-desc p {
-          font-size: 22px; }
-      .hamb {
-        display: none; }
-      .section {
-        box-sizing: border-box;
-        padding-left: 260px; }
-      .sidebar {
-        position: absolute;
-        top: 0;
-        bottom: 60px;
-        left: 40px;
-        margin: 0;
-        justify-content: flex-end; }
-        .sidebar__elevator {
-          padding-top: 0;
-          visibility: visible;
-          transform: translateY(0);
-          overflow: visible; }
-        .sidebar__elevator-top {
-          width: 180px;
-          height: 86px;
-          position: absolute;
-          top: 0;
-          z-index: 1;
-          background: url("/assets/graphics/dynamikfabrikken/elevator-top.png") no-repeat center top; }
-        .sidebar__elevator-rope {
-          width: 180px;
-          position: fixed;
-          top: 0;
-          bottom: 70px;
-          margin: auto;
-          z-index: 0;
-          box-sizing: border-box;
-          background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAA5CAYAAACf4wE0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MUI4MkNBMkI1MTNCMTFFMjgxQzREMjkyMzQ3NUJBNzgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MUI4MkNBMkM1MTNCMTFFMjgxQzREMjkyMzQ3NUJBNzgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxQjgyQ0EyOTUxM0IxMUUyODFDNEQyOTIzNDc1QkE3OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxQjgyQ0EyQTUxM0IxMUUyODFDNEQyOTIzNDc1QkE3OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtglzYgAAACrSURBVHja7NKxCYAwEIbRxOVuJZ3ArJTpztNKbBVs3oMQSJHi5+uZ2d6IiOcHW50x52xc+5zXXme9v9c+3TrfW0yAoEHQIGgQNIIGQYOgQdAgaAQNggZBg6BB0AgaBA2CBkGDoBE0CBoEDYIGQSNoEDQIGgQNgkbQIGgQNAgaBI2gQdAgaBA0ggZBg6BB0CBoBA2CBkGDoEHQCBoEDYIGQYOgETQIGn52CDAA/bAMbx09Ux4AAAAASUVORK5CYII=) repeat-y; }
-        .sidebar__elevator {
-          bottom: 60px;
-          position: fixed;
-          width: 180px;
-          z-index: 1; }
-      .sidebar {
-        width: 179px; }
-      .sidebar-nav {
-        margin-top: -1px; } }
-  
-        /* gulp project css end */
+    margin-top: -1px;
+  }
+}
 
-
+/* gulp project css end */
 app-root {
-    height: 100%;
+  height: 100%;
 }
 
 .js-elevator.shake {
-  animation: shake 0.62s cubic-bezier(.36,.07,.19,.97) infinite;
+  animation: shake 0.62s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
@@ -966,33 +1221,33 @@ canvas {
   vertical-align: bottom;
 }
 
-#particles-js, 
+#particles-js,
 #video-container {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color:rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 1);
   z-index: 999999;
   -webkit-transition: background-color 4s ease-out;
   -moz-transition: background-color 4s ease-out;
   -o-transition: background-color 4s ease-out;
   transition: background-color 4s ease-out;
 }
-#particles-js{
+
+#particles-js {
   z-index: 999998;
   height: calc(100% - 60px);
 }
 
 #particles-js.transperant {
-  background-color:rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 #particles-js.gone {
-  background-color:transparent;
+  background-color: transparent;
 }
 
-
-#video-container.shutdown  {
+#video-container.shutdown {
   animation: shutdown 1s linear;
 }
 
@@ -1030,15 +1285,16 @@ canvas {
 }
 
 @keyframes shutdown {
-
   0% {
     transform: scale(1, 1);
     opacity: 1;
   }
+
   20% {
     transform: scale(1, 0.02);
     opacity: 0.8;
   }
+
   55%,
   100% {
     transform: scale(0, 0);
@@ -1046,21 +1302,26 @@ canvas {
   }
 }
 
-
 @keyframes shake {
-  10%, 90% {
+
+  10%,
+  90% {
     transform: translate3d(-1px, 0, 0);
   }
-  
-  20%, 80% {
+
+  20%,
+  80% {
     transform: translate3d(2px, 0, 0);
   }
 
-  30%, 50%, 70% {
+  30%,
+  50%,
+  70% {
     transform: translate3d(-4px, 0, 0);
   }
 
-  40%, 60% {
+  40%,
+  60% {
     transform: translate3d(4px, 0, 0);
   }
 }
@@ -1069,18 +1330,18 @@ canvas {
   0% {
     bottom: 0px;
   }
+
   50% {
     bottom: 0px;
   }
+
   100% {
     bottom: -70px;
     display: none;
   }
 }
 
-
 /* testemonial  */
-
 .testimonial * {
   box-sizing: border-box;
 }
@@ -1094,15 +1355,16 @@ canvas {
   .testimonial {
     width: 100%;
   }
+
   .testimonial blockquote,
   .testimonial .statment-footer .statment-sender {
     font-size: 10px !important;
   }
+
   .testimonial blockquote img {
     max-height: 40px !important;
   }
 }
-
 
 .testimonial blockquote {
   margin: 20px 45px;
@@ -1127,7 +1389,6 @@ canvas {
   right: 10px;
   margin-top: -10px;
 }
-
 
 .testimonial .statment-footer {
   display: block;

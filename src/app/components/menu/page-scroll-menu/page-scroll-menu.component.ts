@@ -1,15 +1,15 @@
-import {Component, Inject, OnDestroy, OnInit} from '@angular/core';
-import {DOCUMENT} from '@angular/common';
-import {Menu} from "../../../shared/models/menu.model";
-import {Site} from "../../../shared/models/site.model";
-import {MenuService} from "../../../shared/services/menu.service";
-import {RouteService} from "../../../shared/services/route.service";
-import {SiteConfigurationService} from "../../../shared/services/site-configuration.service";
-import {Router} from "@angular/router";
-import {ContentService} from "../../../shared/services/content.service";
-import {filter, map, takeUntil} from "rxjs/operators";
-import {PageScrollService} from "ngx-page-scroll-core";
-import {Subject} from "rxjs";
+import { Component, Inject, OnDestroy, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Menu } from "../../../shared/models/menu.model";
+import { Site } from "../../../shared/models/site.model";
+import { MenuService } from "../../../shared/services/menu.service";
+import { RouteService } from "../../../shared/services/route.service";
+import { SiteConfigurationService } from "../../../shared/services/site-configuration.service";
+import { Router } from "@angular/router";
+import { ContentService } from "../../../shared/services/content.service";
+import { filter, map, takeUntil } from "rxjs/operators";
+import { PageScrollService } from "ngx-page-scroll-core";
+import { Subject } from "rxjs";
 
 @Component({
   selector: 'app-page-scroll-menu',
@@ -22,7 +22,12 @@ export class PageScrollMenuComponent implements OnInit, OnDestroy {
 
   menus: Array<Menu>;
   configuration: Site;
-  unsubscribe$ = new Subject()
+  unsubscribe$ = new Subject();
+  elevatorSundPath: string = '../../../../assets/elevator-sound/Elevator-ding-sound-effect.mp3';
+  activeMenuItem: any;
+  @ViewChild('sideBarNav', { static: false }) sideBarNav: ElementRef<HTMLElement>;
+  @ViewChild('menuButton', { static: false }) menuButton: ElementRef<HTMLElement>;
+  @ViewChild('elevator', { static: false }) elevator: ElementRef<HTMLElement>;
 
   constructor(
     @Inject(DOCUMENT) private document: any,
@@ -35,28 +40,28 @@ export class PageScrollMenuComponent implements OnInit, OnDestroy {
   ngOnInit() {
     let locationHash = location.hash
     this.configuration = this.siteConfiguration.configuration;
-
     this.menuService.getMenu()
-    .subscribe((menus: Array<Menu>) => {
-      this.menus = menus;
-      this.routeService.setPageScrollDefaultRoute(this.siteConfiguration.configuration.content.name);
-      this.router.navigateByUrl('/')
+      .subscribe((menus: Array<Menu>) => {
+        this.menus = menus;
+        this.routeService.setPageScrollDefaultRoute(this.siteConfiguration.configuration.content.name);
+        this.router.navigateByUrl('/')
 
-      this.contentService.afterContentLoaded()
-      .pipe(
-        takeUntil(this.unsubscribe$),
-        filter(value => value),
-        map(() => {
-          return locationHash || `#${this.menus[0].path}`
-        }))
-      .subscribe((location: string) => {
-        this.router.navigate(['/'], {fragment: location.replace("#", "")});
-        // this.pageScrollService.scroll({
-        //   document: this.document,
-        //   scrollTarget: location,
-        // })
-      })
-    });
+        this.contentService.afterContentLoaded()
+          .pipe(
+            takeUntil(this.unsubscribe$),
+            filter(value => value),
+            map(() => {
+              return locationHash || `#${this.menus[0].path}`
+            }))
+          .subscribe((location: string) => {
+            this.router.navigate(['/'], { fragment: location.replace("#", "") });
+            this.activeMenuItem = this.menus[0].name;
+            // this.pageScrollService.scroll({
+            //   document: this.document,
+            //   scrollTarget: location,
+            // })
+          })
+      });
 
     window.onhashchange = () => {
       // this.pageScrollService.scroll({
@@ -65,77 +70,45 @@ export class PageScrollMenuComponent implements OnInit, OnDestroy {
       // })
     }
 
-    const script = this.document.createElement('script');
-    script.type = 'text/javascript';
-    script.text = `
-    
-    setTimeout(function(){ 
+  }
 
-      let menu = document.querySelector('.sidebar-nav'),
-      menuButton = document.querySelector('.js-hamb'),
-      overlay = document.querySelector('.js-overlay'),
-      elevator = document.querySelector('.js-elevator');
-      
-      let MenuUI = {
-      
-      initialize() {
-          this.addListener();
-      },
-      
-      addListener() {
-          menuButton.addEventListener('click', this._listeners.menuSideToggle, false); // burger action
-          
-      },
-      
-      _listeners: {
-          
-          menuSideToggle() {
-              
-              if (!menu.classList.contains('active')) {
-                  
-                  //show menu
-                  MenuUI.action.menuSideOn();
-                  
-              } else {
-                  
-                  //hide menu
-                  MenuUI.action.menuSideOff();
-              }
-          }
-      },
-      
-      action: {
-          
-          menuSideOn() {
-              // show menu action
-              menu.classList.add('active');
-              menuButton.classList.add('active');
-              overlay.classList.add('active'); // show overlay
-              document.body.classList.add('blocked'); // prevent scroll of body
-              elevator.classList.add('active', 'visible');
-              
-          },
-          
-          menuSideOff() {
-              // hide menu action
-              menuButton.classList.remove('active');
-              menu.classList.remove('active');
-              elevator.classList.remove('active');
-              setTimeout(() => {
-                  overlay.classList.remove('active'); // hide overlay
-                  elevator.classList.remove('visible');
-                  document.body.classList.remove('blocked'); // prevent scroll of body
-              }, 500)
-          }
-      }
-      };
-      
-      MenuUI.initialize();
-   }, 200);
+  dingAction(event, menu) {
+    this.activeMenuItem = menu.name;
+    let audio = new Audio();
+    audio.src = this.elevatorSundPath;
+    audio.load();
+    audio.play();
+  }
 
-    `;
-    this.document.head.appendChild(script);
+  menuSideOn() {
+    // show menu action
+    const overlay = document.querySelector('.js-overlay');
+    this.sideBarNav.nativeElement.classList.add('active');
+    this.menuButton.nativeElement.classList.add('active');
+    overlay.classList.add('active'); // show overlay
+    document.body.classList.add('blocked'); // prevent scroll of body
+    this.elevator.nativeElement.classList.add('active', 'visible');
+  }
 
+  menuSideOff() {
+    // hide menu action
+    const overlay = document.querySelector('.js-overlay');
+    this.sideBarNav.nativeElement.classList.remove('active');
+    this.menuButton.nativeElement.classList.remove('active');
+    this.elevator.nativeElement.classList.remove('active');
+    setTimeout(() => {
+      overlay.classList.remove('active'); // hide overlay
+      this.elevator.nativeElement.classList.remove('visible');
+      document.body.classList.remove('blocked'); // prevent scroll of body
+    }, 500)
+  }
+
+  menuSideToggle() {
+    if (!this.sideBarNav.nativeElement.classList.contains('active')) {
+      this.menuSideOn();
+    } else {
+      this.menuSideOff();
+    }
   }
 
   ngOnDestroy(): void {
