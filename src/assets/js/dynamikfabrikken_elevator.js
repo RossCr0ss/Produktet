@@ -26,6 +26,7 @@ function clamp(e, a, t) {
 function isInArray(e, a) {
   return a.indexOf(e) > -1
 }
+
 var pJS = function (e, a) {
   var t = document.querySelector("#" + e + " > .particles-js-canvas-el");
   this.pJS = {
@@ -686,6 +687,7 @@ player.addEventListener('play', function () {
 var elevator = document.getElementById("elevator");
 
 var scrollTimer = -1;
+
 
 function bodyScroll() {
   if (!hasClass(elevator, "shake"))
