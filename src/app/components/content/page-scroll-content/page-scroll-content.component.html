@@ -2,15 +2,14 @@
 <div id="particles-js"></div>
 
 <div id="video-container">
-  <video id="video" [autoplay]="true">
+  <video id="video" autoplay>
     <source [src]='mp4Src' type='video/mp4'>
     <source [src]='oggSrc' type='video/ogg'>
   </video>
 </div>
 
 <ng-container *ngFor="let menu of menus">
-  <section class="section" [id]="menu.path"
-    [ngClass]="{'section--footer': menu.path=='/kontakt/', 'section--top': menu.path=='/'}">
+  <section class="section" [id]="menu.path" [ngClass]="{'section--footer': menu.path=='/kontakt/', 'section--top': menu.path=='/'}">
     <ng-container *ngIf="menu.content;else noContent">
       <div class="section__content">
         <h1 class="headline">Page name: {{menu.path}}</h1>
@@ -54,16 +53,16 @@
 
             </em>
             <div class="statment-footer">
+                  <span class="statment-sender">
+                    <img alt="Aarhus Kommune - Dynamikfabrikken"
+                         src='../../../../assets/graphics/dynamikfabrikken/aak2.png'>
+                  </span>
               <span class="statment-sender">
-                <img alt="Aarhus Kommune - Dynamikfabrikken"
-                  src='../../../../assets/graphics/dynamikfabrikken/aak2.png'>
-              </span>
+                    Trine Naldal, Projektleder i Borgerdesign Aarhus
+                  </span>
               <span class="statment-sender">
-                Trine Naldal, Projektleder i Borgerdesign Aarhus
-              </span>
-              <span class="statment-sender">
-                Aarhus Kommune / Region Midtjylland
-              </span>
+                    Aarhus Kommune / Region Midtjylland
+                  </span>
             </div>
           </blockquote>
         </div>
@@ -82,16 +81,17 @@
               videre.
             </em>
             <div class="statment-footer">
+                  <span class="statment-sender">
+                    <img alt="Q-Construction - Dynamikfabrikken"
+                         src="../../../../assets/graphics/dynamikfabrikken/qconstruction.jpg"
+                         style="max-height: 80px;">
+                  </span>
               <span class="statment-sender">
-                <img alt="Q-Construction - Dynamikfabrikken"
-                  src="../../../../assets/graphics/dynamikfabrikken/qconstruction.jpg" style="max-height: 80px;">
-              </span>
+                    Charlotte Thomsen
+                  </span>
               <span class="statment-sender">
-                Charlotte Thomsen
-              </span>
-              <span class="statment-sender">
-                Kommunikationsmedarbejder, Q-Construction
-              </span>
+                    Kommunikationsmedarbejder, Q-Construction
+                  </span>
             </div>
           </blockquote>
         </div>
