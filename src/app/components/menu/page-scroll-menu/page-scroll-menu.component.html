@@ -9,7 +9,7 @@
     </div>
     <p>menu</p>
   </div>
-  <div #elevator id="elevator" class="sidebar__elevator js-elevator">
+  <div #elevator id="elevator" class="sidebar__elevator js-elevator" [ngClass]="{'shake':shakeElevator}">
     <figure class="sidebar__figure">
       <img src="/assets/graphics/dynamikfabrikken/elevator(cropped).svg" alt="">
     </figure>
@@ -17,7 +17,7 @@
       <span *ngFor="let menu of menus">
         <a pageScroll (pageScrollFinish)="dingAction($event,menu)" [routerLink]="['/']" [fragment]="menu.path"
           [href]="'#'+menu.path" *ngIf="!menu.navigationHide" class="sidebar-nav__item  js-navItem"
-          [ngClass]="{'current':menu.name === activeMenuItem}">{{menu.name}}</a>
+          [ngClass]="{'current':menu.name === activeMenuItem}" (click)="toggleShakeElevator(menu.name)">{{menu.name}}</a>
       </span>
     </nav>
   </div>
