@@ -1,3 +1,5 @@
+
+/*
 export const imageJson = {
   'defaultImage': '../../../../assets/dummyimages/spaceship-gif---straight.gif',
   'imageURL': 'https://images.unsplash.com/photo-1443890923422-7819ed4101c0?fm=jpg',
@@ -9,7 +11,7 @@ export const textJson = {
 <p>This will be simple markup from RTE
   `
 };
-
+*/
 export const gridJson = {
   'markup': `
   <div class="section no-pad-bot" id="index-banner">

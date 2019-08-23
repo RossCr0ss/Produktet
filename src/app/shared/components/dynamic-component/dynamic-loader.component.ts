@@ -30,6 +30,12 @@ export class DynamicLoaderComponent implements OnInit {
   @Input()
   nodeId: number;
 
+  @Input()
+  src: string;
+
+  @Input()
+  alt: string;
+
   public modulesMapping = modulesMapping;
 
   private componentContent: ComponentContent[] = [];
@@ -72,6 +78,8 @@ export class DynamicLoaderComponent implements OnInit {
       componentRef.instance.additionalMarkup = this.markup;
       componentRef.instance.key = this.key;
       componentRef.instance.nodeId = this.nodeId;
+      componentRef.instance.src = this.src;
+      componentRef.instance.alt = this.alt;
     });
   }
 
