@@ -55,20 +55,22 @@ export class PageScrollMenuComponent implements OnInit, OnDestroy {
               return locationHash || `#${this.menus[0].path}`
             }))
           .subscribe((location: string) => {
-            this.router.navigate(['/'],
-              { fragment: location.replace("#", "") });
+            if (location !== '#/') {
+              this.router.navigate(['/'],
+                { fragment: location.replace("#", "") });
+              this.pageScrollService.scroll({
+                document: this.document,
+                scrollTarget: location,
+              })
+            }
             this.activeMenuItem = this.menus[0].name;
-            this.pageScrollService.scroll({
-              document: this.document,
-              scrollTarget: location,
-            })
           })
       });
 
     window.onhashchange = () => {
       this.pageScrollService.scroll({
         document: this.document,
-        scrollTarget: window.location.hash,
+        scrollTarget: window.location.hash || '#/',
       })
     }
 
