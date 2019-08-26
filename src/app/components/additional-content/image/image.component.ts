@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 //import { imageJson } from '../../../../assets/mockData/testData';
 import { HttpClient } from '@angular/common/http';
+import {Image} from "../../../shared/models/additional-contenet-model/image.model";
 
 @Component({
   selector: 'app-image',
@@ -16,6 +17,7 @@ export class ImageComponent implements OnInit {
   //imageJson: {};
   src: string;
   alt: string;
+  content: Image
 
   constructor(private http: HttpClient) {
   }

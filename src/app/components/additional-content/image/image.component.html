@@ -14,6 +14,6 @@
 <div [attr.style.height]="imageSize[currentScreenSize].height">
   <img class="image responsive-img"
   [defaultImage]="defaultImage"
-  [lazyLoad]="src"
-  [alt]="alt">
+  [lazyLoad]="src || content?.src"
+  [alt]="alt || content?.alt">
 </div>

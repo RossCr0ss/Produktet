@@ -1,7 +1,8 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 //import { textJson } from '../../../../assets/mockData/testData';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {ComponentContent} from "../../../shared/models/component-content.model";
+import {Text} from "../../../shared/models/additional-contenet-model/text.model";
 
 @Component({
   selector: 'app-text',
@@ -10,12 +11,8 @@ import {ComponentContent} from "../../../shared/models/component-content.model";
 })
 export class TextComponent implements OnInit {
 
-//  additionalContent: ComponentContent[];
- // textJson: {};
- // markup : string;
- // additionalMarkup: string;
- // key: string;
- // nodeId: string;
+  additionalContent: ComponentContent[];
+  content: Text
 
   constructor(private http: HttpClient) {
   }
