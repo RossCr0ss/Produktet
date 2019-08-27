@@ -9,6 +9,7 @@ import {TextComponent} from './text.component';
   declarations: [TextComponent],
   entryComponents: [TextComponent]
 })
+
 export class TextModule {
 }
 

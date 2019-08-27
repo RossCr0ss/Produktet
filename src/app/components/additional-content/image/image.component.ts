@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { imageJson } from '../../../../assets/mockData/testData';
+//import { imageJson } from '../../../../assets/mockData/testData';
 import { HttpClient } from '@angular/common/http';
+import {Image} from "../../../shared/models/additional-contenet-model/image.model";
 
 @Component({
   selector: 'app-image',
@@ -9,16 +10,20 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ImageComponent implements OnInit {
   defaultImage: string;
-  image: string;
-  alt: string;
+  //image: string;
+  //alt: string;
   imageSize: {};
   currentScreenSize: string; // Desktop, Tablet, Mobile
-  imageJson: {};
+  //imageJson: {};
+  src: string;
+  alt: string;
+  content: Image
+
   constructor(private http: HttpClient) {
   }
 
   ngOnInit() {
-    this.imageJson = imageJson;
+    //this.imageJson = imageJson;
     // this.fetchJson('https://jsonplaceholder.typicode.com/todos/1');
     this.imageSize = {
       mobile: {
@@ -34,10 +39,12 @@ export class ImageComponent implements OnInit {
         width: 600,
       }
     };
-    this.defaultImage = this.imageJson['defaultImage'];
+
+
+    this.defaultImage = "../../../../assets/dummyimages/spaceship-gif---straight.gif"; // this.imageJson['defaultImage'];
     this.assignScreenState(window.innerWidth, window.innerHeight);
     this.appendScreenSize();
-    this.alt = this.imageJson['alt'];
+    //this.alt = this.imageJson['alt'];
   }
   @HostListener('window:resize', ['$event'])
   onResize(event) {
@@ -66,12 +73,14 @@ export class ImageComponent implements OnInit {
   appendScreenSize() {
     // this.defaultImage = `${imageJson.defaultImage}?width=${this.imageSize[this.currentScreenSize].width}
     // &height=${this.imageSize[this.currentScreenSize].height}`;
-    this.image = `${this.imageJson['imageURL']}?width=${this.imageSize[this.currentScreenSize].width}&height=${this.imageSize[this.currentScreenSize].height}`;
+    //this.image = `${this.imageJson['imageURL']}?width=${this.imageSize[this.currentScreenSize].width}&height=${this.imageSize[this.currentScreenSize].height}`;
   }
+  /*
   fetchJson(url) {
+
     this.http.get(url).subscribe(res => {
       this.imageJson = res;
     });
 
-  }
+  }*/
 }

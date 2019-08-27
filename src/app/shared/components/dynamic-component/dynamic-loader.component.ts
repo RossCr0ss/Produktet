@@ -11,6 +11,7 @@ import {
 import {ActivatedRoute} from '@angular/router';
 import modulesMapping from './modules-mapping';
 import {ComponentContent} from "../../models/component-content.model";
+import {Module} from "../../models/additional-contenet-model/module";
 
 @Component({
   selector: 'dynamic-loader',
@@ -22,13 +23,7 @@ export class DynamicLoaderComponent implements OnInit {
   moduleName: string;
 
   @Input()
-  markup: string;
-
-  @Input()
-  key: string;
-
-  @Input()
-  nodeId: number;
+  module: Module;
 
   public modulesMapping = modulesMapping;
 
@@ -38,6 +33,16 @@ export class DynamicLoaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (this.moduleName && this.module) {
+      console.warn(`You should specify only one input parameter moduleName or module. 
+      In case that both input params are specified dynamic loader component will always load module
+       specified inside module.name input param and moduleName will be ignored.`);
+    }
+
+    if (this.module) {
+      this.moduleName = this.module.name
+    }
+
     if (!this.moduleName) {
       const moduleNameFromRoute = this.route.snapshot.data['moduleName'];
       this.componentContent = this.route.snapshot.data['content'];
@@ -69,9 +74,7 @@ export class DynamicLoaderComponent implements OnInit {
       const componentFactory = moduleRef.componentFactoryResolver.resolveComponentFactory(module.entryComponent());
       const componentRef: ComponentRef<any> = this.viewRef.createComponent(componentFactory);
       componentRef.instance.additionalContent = this.componentContent;
-      componentRef.instance.additionalMarkup = this.markup;
-      componentRef.instance.key = this.key;
-      componentRef.instance.nodeId = this.nodeId;
+      componentRef.instance.content = this.module
     });
   }
 
