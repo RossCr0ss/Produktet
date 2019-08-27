@@ -1,5 +1,4 @@
 import { Component, Inject, OnInit, HostListener, Input } from '@angular/core';
-import { videoJson } from '../../../../assets/mockData/testData';
 import { HttpClient } from '@angular/common/http';
 import { DOCUMENT } from "@angular/common";
 
@@ -10,18 +9,18 @@ import { DOCUMENT } from "@angular/common";
 })
 export class VideoComponent implements OnInit {
 
+  //data to use on video component
+  /*
+    mp4Url, oggUrl, src=posterimg (not added yet)
+  */
+
   // To use: <app-video [isAutoplay]="true/false"...></app-video>
   @Input() isAutoplay: boolean;
   @Input() isLoop: boolean;
   @Input() isMuted: boolean;
   @Input() showControls: boolean;
 
-  videoJson: {};
   id: string;
-
-  imgPoster: string;
-  mp4Url: string;
-  oggUrl: string;
 
   constructor(
     @Inject(DOCUMENT) private document: any,
@@ -29,13 +28,8 @@ export class VideoComponent implements OnInit {
   }
 
 
-
   ngOnInit() {
     this.id = Math.random().toString(36).substring(7);
-    this.videoJson = videoJson;
-    this.imgPoster = this.videoJson['posterimg'];
-    this.mp4Url = this.videoJson['mp4Url'];
-    this.oggUrl = this.videoJson['oggUrl'];
   }
 
   ngAfterViewInit(): void {
@@ -51,12 +45,6 @@ export class VideoComponent implements OnInit {
     script.type = 'text/javascript';
     script.src = `../assets/js/video.js`;
     this.document.head.appendChild(script);
-  }
-
-  fetchJson(url) {
-    this.http.get(url).subscribe(res => {
-      this.videoJson = res;
-    });
   }
 
 }

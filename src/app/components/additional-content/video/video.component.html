@@ -1,12 +1,16 @@
 
-<div [id]="id" *ngIf="mp4Url || oggUrl">
+{{content?.src}}
+
+
+<div [id]="id" *ngIf="content.mp4Url || content.oggUrl">
 
   <video [autoplay]="isAutoplay" [loop]="isLoop" [muted]="isMuted">
-    <source [src]='mp4Url' *ngIf="mp4Url" type='video/mp4'>
-    <source [src]="oggUrl" *ngIf="oggUrl" type="video/ogg">
+    <source [src]='content.mp4Url' *ngIf="content.mp4Url" type='video/mp4'>
+    <source [src]="content.oggUrl" *ngIf="content.oggUrl" type="video/ogg">
   </video>
 
   <div id='controls' *ngIf="showControls">
+
     <ul>
       <li>
         <progress class='progress-bar' min='0' max='100' value='0'>0% played</progress>

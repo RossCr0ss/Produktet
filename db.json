@@ -77,6 +77,14 @@
       "favicon": "dynamikfabriokken.dk/image.png",
       "content": [
         {
+          "name": "video",
+          "mp4Url": "../assets/dummyimages/animaticv24.mp4",
+          "oggUrl": null,
+          "src": "https://fakeimg.pl/250x100/",
+          "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
+          "nodeid": 1154
+        },
+        {
           "name": "text",
           "markup": "<p>This is subpage 1 RTE from Grid</p>",
           "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
