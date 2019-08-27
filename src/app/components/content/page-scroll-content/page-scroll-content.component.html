@@ -10,121 +10,123 @@
 
 <ng-container *ngFor="let menu of menus">
   <section class="section" [id]="menu.path" [ngClass]="{'section--footer': menu.path=='/kontakt/', 'section--top': menu.path=='/'}">
-    <ng-container *ngIf="menu.content;else noContent">
-      <div class="section__content">
-        <h1 class="headline">Page name: {{menu.path}}</h1>
-        <div class="headline-desc" *ngFor="let content of menu.content">
-          <ng-container *ngIf="content.name">
-            <dynamic-loader [module]="content"></dynamic-loader>
-          </ng-container>
+    <div inViewport (inViewportAction)="changeUrl(menu.path)"  [inViewportOptions]="{ threshold: [100] }">
+      <ng-container *ngIf="menu.content;else noContent">
+        <div class="section__content">
+          <h1 class="headline">Page name: {{menu.path}}</h1>
+          <div class="headline-desc" *ngFor="let content of menu.content">
+            <ng-container *ngIf="content.name">
+              <dynamic-loader [module]="content"></dynamic-loader>
+            </ng-container>
+          </div>
         </div>
-      </div>
-    </ng-container>
+      </ng-container>
 
-    <ng-template #noContent>
+      <ng-template #noContent>
 
-      <!-- frontpage / top -->
-      <div class="section__content" *ngIf="menu.path == '/'">
-        <h1 class="headline">Dynamikfabrikken</h1>
-        <div class="headline-desc">
-          <p>Spænd hjelmen. Dynamiske webapplikationer kræver hårdt arbejde.</p>
-          <p>Vi er heldigvis ikke bange for lidt sved på panden.</p>
+        <!-- frontpage / top -->
+        <div class="section__content" *ngIf="menu.path == '/'">
+          <h1 class="headline">Dynamikfabrikken</h1>
+          <div class="headline-desc">
+            <p>Spænd hjelmen. Dynamiske webapplikationer kræver hårdt arbejde.</p>
+            <p>Vi er heldigvis ikke bange for lidt sved på panden.</p>
+          </div>
         </div>
-      </div>
 
-      <!-- anbefaliger -->
-      <div class="section__content" *ngIf="menu.path == '/anbefalinger/'">
-        <h2 class="headline">{{menu.path}}</h2>
-        <div class="testimonial">
-          <blockquote>
-            <em>
-              Vi har haft fornøjelsen af at samarbejde med Anders om to opgaver: Redesign af vores
-              hjemmeside samt opgaven med
-              at gøre os i stand til selv at redigere.
-              <br>
-              <br>
-              Samarbejdet har båret præg af stor fleksibilitet fra Anders side, hurtige leverancer
-              og kort reaktionstid!
-              dertil har han formået at gøre os selvkørende, fordi han taler et sprog, vi forstår.
-              <br>
-              <br>
-              Tak for samarbejdet :)
+        <!-- anbefaliger -->
+        <div class="section__content" *ngIf="menu.path == '/anbefalinger/'">
+          <h2 class="headline">{{menu.path}}</h2>
+          <div class="testimonial">
+            <blockquote>
+              <em>
+                Vi har haft fornøjelsen af at samarbejde med Anders om to opgaver: Redesign af vores
+                hjemmeside samt opgaven med
+                at gøre os i stand til selv at redigere.
+                <br>
+                <br>
+                Samarbejdet har båret præg af stor fleksibilitet fra Anders side, hurtige leverancer
+                og kort reaktionstid!
+                dertil har han formået at gøre os selvkørende, fordi han taler et sprog, vi forstår.
+                <br>
+                <br>
+                Tak for samarbejdet :)
 
-            </em>
-            <div class="statment-footer">
-                  <span class="statment-sender">
-                    <img alt="Aarhus Kommune - Dynamikfabrikken"
-                         src='../../../../assets/graphics/dynamikfabrikken/aak2.png'>
-                  </span>
-              <span class="statment-sender">
-                    Trine Naldal, Projektleder i Borgerdesign Aarhus
-                  </span>
-              <span class="statment-sender">
-                    Aarhus Kommune / Region Midtjylland
-                  </span>
-            </div>
-          </blockquote>
+              </em>
+              <div class="statment-footer">
+                    <span class="statment-sender">
+                      <img alt="Aarhus Kommune - Dynamikfabrikken"
+                           src='../../../../assets/graphics/dynamikfabrikken/aak2.png'>
+                    </span>
+                <span class="statment-sender">
+                      Trine Naldal, Projektleder i Borgerdesign Aarhus
+                    </span>
+                <span class="statment-sender">
+                      Aarhus Kommune / Region Midtjylland
+                    </span>
+              </div>
+            </blockquote>
+          </div>
+          <div class="testimonial">
+            <blockquote>
+              <em>
+                Vi har været glade for forløbet med Anders, han er en dygtig digital håndværker og har
+                realiseret alle vores
+                ønsker.
+                <br>
+                <br>
+                Derudover er han meget fleksibel og står altid klar til at hjælpe både med SEO og mere
+                tekniske spørgsmål.
+                <br>
+                Med et højt niveau af både service og håndværk giver vi vores bedste anbefalinger
+                videre.
+              </em>
+              <div class="statment-footer">
+                    <span class="statment-sender">
+                      <img alt="Q-Construction - Dynamikfabrikken"
+                           src="../../../../assets/graphics/dynamikfabrikken/qconstruction.jpg"
+                           style="max-height: 80px;">
+                    </span>
+                <span class="statment-sender">
+                      Charlotte Thomsen
+                    </span>
+                <span class="statment-sender">
+                      Kommunikationsmedarbejder, Q-Construction
+                    </span>
+              </div>
+            </blockquote>
+          </div>
+          <div class="button-wrapper">
+            <!--
+              <a href="#" class="button">Se mere</a>
+              <a href="#" class="button">Kontakt os</a>
+            -->
+          </div>
         </div>
-        <div class="testimonial">
-          <blockquote>
-            <em>
-              Vi har været glade for forløbet med Anders, han er en dygtig digital håndværker og har
-              realiseret alle vores
-              ønsker.
-              <br>
-              <br>
-              Derudover er han meget fleksibel og står altid klar til at hjælpe både med SEO og mere
-              tekniske spørgsmål.
-              <br>
-              Med et højt niveau af både service og håndværk giver vi vores bedste anbefalinger
-              videre.
-            </em>
-            <div class="statment-footer">
-                  <span class="statment-sender">
-                    <img alt="Q-Construction - Dynamikfabrikken"
-                         src="../../../../assets/graphics/dynamikfabrikken/qconstruction.jpg"
-                         style="max-height: 80px;">
-                  </span>
-              <span class="statment-sender">
-                    Charlotte Thomsen
-                  </span>
-              <span class="statment-sender">
-                    Kommunikationsmedarbejder, Q-Construction
-                  </span>
-            </div>
-          </blockquote>
-        </div>
-        <div class="button-wrapper">
-          <!--
-            <a href="#" class="button">Se mere</a>
-            <a href="#" class="button">Kontakt os</a>
-          -->
-        </div>
-      </div>
 
-      <!-- the movie -->
-      <div class="section__content" *ngIf="menu.path == '/the-movie/'">
-        <h1 class="headline">The movie</h1>
-        <p>Her kan du se Dynamikfabrikken - The movie. Igen og igen! god fornøjelse</p>
-        <video controls style="max-width: 100%; width: 800px;">
-          <source src='../assets/graphics/dynamikfabrikken/dynamikfabrikken.mp4' type='video/mp4'>
-          <!--
-        <source src='../assets/graphics/dynamikfabrikken/dynamikfabrikken.ogg'  type='video/ogg'>
-          -->
-        </video>
-      </div>
-
-      <!-- kontakt -->
-      <div class="section__content" *ngIf="menu.path == '/kontakt/'">
-        <div class="typo">
-          <h2>KONTAKT - DYNAMIKFABRIKKEN</h2>
-          <p>V. Anders Bak Schmidt Holm</p>
-          <p><a href="tel:+4531375043">+45 31375043</a></p>
-          <p><a href="mailto:info@dynamikfabrikken.com">info@dynamikfabrikken.com</a></p>
-          <p><a href="skype:anders.schmidt.holm?chat">Skype: anders.schmidt.holm</a></p>
+        <!-- the movie -->
+        <div class="section__content" *ngIf="menu.path == '/the-movie/'">
+          <h1 class="headline">The movie</h1>
+          <p>Her kan du se Dynamikfabrikken - The movie. Igen og igen! god fornøjelse</p>
+          <video controls style="max-width: 100%; width: 800px;">
+            <source src='../assets/graphics/dynamikfabrikken/dynamikfabrikken.mp4' type='video/mp4'>
+            <!--
+          <source src='../assets/graphics/dynamikfabrikken/dynamikfabrikken.ogg'  type='video/ogg'>
+            -->
+          </video>
         </div>
-      </div>
 
-    </ng-template>
+        <!-- kontakt -->
+        <div class="section__content" *ngIf="menu.path == '/kontakt/'">
+          <div class="typo">
+            <h2>KONTAKT - DYNAMIKFABRIKKEN</h2>
+            <p>V. Anders Bak Schmidt Holm</p>
+            <p><a href="tel:+4531375043">+45 31375043</a></p>
+            <p><a href="mailto:info@dynamikfabrikken.com">info@dynamikfabrikken.com</a></p>
+            <p><a href="skype:anders.schmidt.holm?chat">Skype: anders.schmidt.holm</a></p>
+          </div>
+        </div>
+
+      </ng-template>
+    </div>
   </section>
 </ng-container>

@@ -56,11 +56,7 @@ export class DynamicLoaderComponent implements OnInit {
 
   private loadModule() {
     import(`../../../components/${this.modulesMapping[this.moduleName]}`).then((module) => {
-      console.log("TEST:");
-      console.log(module);
       this.compileAndCreateModule(module);
-
-      //console.log(this.moduleName)
     }).catch(err => {
       console.error(`Module with name: "${this.moduleName}" does not exists!`);
     });
