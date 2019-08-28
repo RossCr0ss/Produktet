@@ -13,7 +13,9 @@
           <h1 class="headline">{{menu.name}}</h1>
           <div class="headline-desc" *ngFor="let content of menu.content">  
             <ng-container *ngIf="content.name">
-              <dynamic-loader [module]="content"></dynamic-loader>
+              <div class='headline-desc'>
+                <dynamic-loader [module]="content"></dynamic-loader>
+              </div>
             </ng-container>
              <!--
             <div class="button-wrapper">

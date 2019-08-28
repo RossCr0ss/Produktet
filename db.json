@@ -78,7 +78,7 @@
       "content": [
         {
           "name": "text",
-          "markup": "<div class='headline-desc'><p>Spænd hjelmen. Dynamiske webapplikationer kræver hårdt arbejde.</p><p>Vi er heldigvis ikke bange for lidt sved på panden.</p></div>",
+          "markup": "<p>Spænd hjelmen. Dynamiske webapplikationer kræver hårdt arbejde.</p><p>Vi er heldigvis ikke bange for lidt sved på panden.</p>",
           "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
           "nodeid": 1154
         },
