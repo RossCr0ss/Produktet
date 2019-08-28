@@ -8,12 +8,12 @@ video {
     float: right;
 }
 
-.progress-bar,
+/* .progress-bar,
 .volume-bar,
 .btnReplay,
 .btnStop{
     display: none;
-}
+} */
 
 #controls ul li {
     max-width: 400px;
