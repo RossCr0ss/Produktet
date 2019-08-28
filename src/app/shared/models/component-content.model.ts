@@ -9,6 +9,10 @@ export interface ComponentContent {
   //video
   mp4Url: string;
   oggUrl: string;
+  isAutoplay: boolean;
+  isLoop: boolean;
+  isMuted: boolean;
+  showControls: boolean;
 
   //general
   name: string;

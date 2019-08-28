@@ -1,39 +1,38 @@
-
 {{content?.src}}
 
 
-<div [id]="id" *ngIf="content.mp4Url || content.oggUrl">
+<div [id]="id" *ngIf="content?.mp4Url || content?.oggUrl">
+<!-- 
+  <video #player [autoplay]="content?.isAutoplay" [loop]="content?.isLoop" [muted]="content?.isMuted">
+    <source [src]="content?.mp4Url" *ngIf="content?.mp4Url" type='video/mp4'>
+    <source [src]="content?.oggUrl" *ngIf="content?.oggUrl" type="video/ogg">
+  </video> -->
+  <div plyr style="max-width: 50%" [plyrSources]="content?.mp4Url"></div>
 
-  <video [autoplay]="isAutoplay" [loop]="isLoop" [muted]="isMuted">
-    <source [src]='content.mp4Url' *ngIf="content.mp4Url" type='video/mp4'>
-    <source [src]="content.oggUrl" *ngIf="content.oggUrl" type="video/ogg">
-  </video>
-
-  <div id='controls' *ngIf="showControls">
+  <!-- <div id='controls' *ngIf="content?.showControls">
 
     <ul>
       <li>
         <progress class='progress-bar' min='0' max='100' value='0'>0% played</progress>
       </li>
       <li>
-          <input type="range" class="volume-bar" title="volume" min="0" max="1" step="0.1" value="1">
-        </li>
+        <input type="range" class="volume-bar" title="volume" min="0" max="1" step="0.1" value="1">
+      </li>
       <li>
         <button class='btnReplay replay' title='replay' accesskey="R" onclick='replayVideo();'>Replay</button>
       </li>
       <li>
         <button class='btnStop stop' title='stop' accesskey="X" onclick='stopVideo();'>Stop</button>
       </li>
-
       <li>
         <button class='btnMute mute' title='mute' onclick='muteVolume();'>Mute</button>
       </li>
       <li>
         <button class='btnPlayPause play' title='play' accesskey="P" onclick='playPauseVideo();'>PAUSE</button>
-        <button class='btnFullScreen fullscreen' title='toggle full screen' accesskey="T" onclick='toggleFullScreen();'>[&nbsp;&nbsp;]</button>
+        <button class='btnFullScreen fullscreen' title='toggle full screen' accesskey="T"
+          onclick='toggleFullScreen();'>[&nbsp;&nbsp;]</button>
       </li>
 
     </ul>
-  </div>
+  </div> -->
 </div>
-

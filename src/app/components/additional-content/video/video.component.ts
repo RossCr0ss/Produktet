@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, HostListener, Input } from '@angular/core';
+import { Component, Inject, OnInit, HostListener, Input, ViewChild, ElementRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DOCUMENT } from "@angular/common";
 
@@ -14,13 +14,11 @@ export class VideoComponent implements OnInit {
     mp4Url, oggUrl, src=posterimg (not added yet)
   */
 
-  // To use: <app-video [isAutoplay]="true/false"...></app-video>
-  @Input() isAutoplay: boolean;
-  @Input() isLoop: boolean;
-  @Input() isMuted: boolean;
-  @Input() showControls: boolean;
-
   id: string;
+
+  imgPoster: string;
+
+  @ViewChild('player', { static: false }) player:ElementRef<HTMLMediaElement>;
 
   constructor(
     @Inject(DOCUMENT) private document: any,
