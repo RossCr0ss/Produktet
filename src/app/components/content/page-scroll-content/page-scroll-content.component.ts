@@ -1,19 +1,39 @@
-import {AfterViewInit, Component, Inject, OnInit} from '@angular/core';
+import {AfterViewInit, Component, HostListener, Inject, OnDestroy, OnInit} from '@angular/core';
 import {Menu} from "../../../shared/models/menu.model";
 import {MenuService} from "../../../shared/services/menu.service";
 import {DOCUMENT} from "@angular/common";
 import {ContentService} from "../../../shared/services/content.service";
+import {Subject} from "rxjs";
+import {takeUntil} from "rxjs/operators";
 import {Router} from "@angular/router";
+
 
 @Component({
   selector: 'app-page-scroll-content',
   templateUrl: './page-scroll-content.component.html',
   styleUrls: ['./page-scroll-content.component.css']
 })
-export class PageScrollContentComponent implements OnInit, AfterViewInit {
+export class PageScrollContentComponent implements OnInit, AfterViewInit, OnDestroy {
   menus: Menu[];
   mp4Src: string;
   oggSrc: string;
+  contentLoaded = false;
+
+  unsubscribe$ = new Subject();
+
+  pathOnScrolling = ''
+  locationHashWhenScrolling = ''
+
+  @HostListener('window:scroll', ['$event'])
+  handleWindowScroll($event) {
+    if (this.pathOnScrolling !== this.locationHashWhenScrolling) {
+      this.locationHashWhenScrolling = this.pathOnScrolling
+      // location.href = '#' + this.pathOnScrolling
+      // console.log(this.pathOnScrolling)
+      // this.router.navigate(['/'],
+      //   {fragment: this.pathOnScrolling});
+    }
+  }
 
   constructor(@Inject(DOCUMENT) private document: any, private menuService: MenuService,
               private contentService: ContentService, private router: Router) {
@@ -28,6 +48,17 @@ export class PageScrollContentComponent implements OnInit, AfterViewInit {
     .subscribe((menus: Array<Menu>) => {
       this.menus = menus;
     });
+
+    this.contentService.afterContentLoaded()
+    .pipe(takeUntil(this.unsubscribe$))
+    .subscribe(() => {
+      this.contentLoaded = true;
+    })
+  }
+
+  changeUrl(path) {
+    this.pathOnScrolling = path;
+    console.log(path)
   }
 
   ngAfterViewInit(): void {
@@ -40,5 +71,10 @@ export class PageScrollContentComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.contentService.contentLoaded()
     }, 100)
+  }
+
+  ngOnDestroy(): void {
+    this.unsubscribe$.next()
+    this.unsubscribe$.complete()
   }
 }

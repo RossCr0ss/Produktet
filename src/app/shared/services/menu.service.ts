@@ -1,6 +1,6 @@
 import {Inject, Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {BehaviorSubject, Observable} from 'rxjs';
 import {Menu} from '../models/menu.model';
 import { map } from 'rxjs/operators';
 
@@ -16,4 +16,5 @@ export class MenuService {
     return this.http.get(`${this.backendApiUrl}menus`)
       .pipe(map(r => r as Menu[]));
   }
+
 }
