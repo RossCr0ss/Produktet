@@ -3,6 +3,7 @@ import {SiteConfigurationService} from '../../../shared/services/site-configurat
 import {Site} from '../../..//shared/models/site.model';
 import {ComponentContent} from "../../../shared/models/component-content.model";
 
+
 @Component({
   selector: 'app-basic-content',
   templateUrl: './basic-content.component.html',
@@ -14,13 +15,13 @@ export class BasicContentComponent implements OnInit {
   // Can be used to set content from the menu
   additionalContent: ComponentContent;
 
-  constructor(private siteConfigurationService: SiteConfigurationService,) {
+  constructor(private siteConfigurationService: SiteConfigurationService) {
   }
 
   ngOnInit() {
     this.configuration = this.siteConfigurationService.configuration;
 
-    console.log("Anders er sej");
+ 
   }
 
 }

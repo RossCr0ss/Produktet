@@ -605,45 +605,7 @@ Object.deepExtend = function (e, a) {
   }, i.send()
 };
 
-
-function videoFadeOut() {
-  videoContainer.className = "shutdown";
-  addClass(skipIntroBtn, "out");
-  setTimeout(function () {
-    video.pause();
-  }, 600);
-
-  setTimeout(function () {
-    videoContainer.style.display = 'none';
-
-  }, 900);
-
-  setTimeout(function () {
-    stars.className = "transperant";
-  }, 3000);
-
-  setTimeout(function () {
-    stars.className = "gone";
-  }, 6000);
-
-  setTimeout(function () {
-    var classString = allbody.className;
-    allbody.className = classString.replace(" blocked", "");
-    stars.style.display = 'none';
-  }, 10000);
-}
-
-
-var player = document.getElementById("video");
-var videoContainer = document.getElementById("video-container");
-var stars = document.getElementById("particles-js");
-var skipIntroBtn = document.getElementById("skip-intro-btn");
-
-var allbody = document.getElementsByTagName("BODY")[0];
-var classString = allbody.className;
-allbody.className = classString + " blocked";
-
-
+/* classes handeliing */
 function hasClass(ele, cls) {
   return !!ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
 }
@@ -658,50 +620,13 @@ function removeClass(ele, cls) {
     ele.className = ele.className.replace(reg, ' ');
   }
 }
+/* classes handeliing end */
+/*
+Remember this class to video:
+videoContainer.className = "shutdown";
+*/
 
-
-player.addEventListener('ended', function () {
-  videoFadeOut();
-}, false);
-
-skipIntroBtn.addEventListener("click", function () {
-  videoFadeOut();
-});
-
-
-/* click s to skip the intro */
-player.addEventListener('play', function () {
-  document.addEventListener('keydown', event => {
-    const charList = 's';
-    const key = event.key.toLowerCase();
-    if (charList.indexOf(key) === -1) return;
-    player.pause();
-    videoContainer.style.display = "none";
-    stars.style.display = "none";
-    skipIntroBtn.style.display = "none";
-    removeClass(allbody, "blocked");
-  });
-}, false);
-
-/* the elevator */
-var elevator = document.getElementById("elevator");
-
-var scrollTimer = -1;
-
-
-function bodyScroll() {
-  if (!hasClass(elevator, "shake"))
-    addClass(elevator, "shake");
-  if (scrollTimer != -1)
-    clearTimeout(scrollTimer);
-
-  scrollTimer = window.setTimeout("scrollFinished()", 500);
-}
-
-function scrollFinished() {
-  removeClass(elevator, "shake");
-}
-
+/* the stars */
 setTimeout(function () {
   allbody.style.display = 'block';
   setTimeout(function () {
@@ -818,3 +743,60 @@ setTimeout(function () {
 
   }, 100);
 }, 100);
+/* the stars end */
+
+function nightFadeOut(time) {
+  setTimeout(function () {
+    stars.className = "transperant";
+  }, time);
+  setTimeout(function () {
+    stars.className = "gone";
+    
+  addClass(skipIntroBtn, "out");
+  }, time+2000);
+
+  setTimeout(function () {
+    stars.style.display = 'none';
+  }, time+5000);
+
+  setTimeout(function () {
+    var classString = allbody.className;
+    allbody.className = classString.replace(" blocked", "");
+  }, time+6000);
+}
+
+var stars = document.getElementById("particles-js");
+var skipIntroBtn = document.getElementById("skip-intro-btn");
+var allbody = document.getElementsByTagName("BODY")[0];
+var classString = allbody.className;
+allbody.className = classString + " blocked";
+
+nightFadeOut(20000);
+skipIntroBtn.addEventListener("click",function(e){
+  nightFadeOut(0);
+},false);
+
+document.addEventListener('keydown', event => {
+  const charList = 's';
+  const key = event.key.toLowerCase();
+  if (charList.indexOf(key) === -1) return;
+  nightFadeOut(0);
+});
+
+/* the elevator */
+var elevator = document.getElementById("elevator");
+var scrollTimer = -1;
+
+function bodyScroll() {
+  if (!hasClass(elevator, "shake"))
+    addClass(elevator, "shake");
+  if (scrollTimer != -1)
+    clearTimeout(scrollTimer);
+
+  scrollTimer = window.setTimeout("scrollFinished()", 500);
+}
+
+function scrollFinished() {
+  removeClass(elevator, "shake");
+}
+
