@@ -58,7 +58,6 @@ export class PageScrollContentComponent implements OnInit, AfterViewInit, OnDest
 
   changeUrl(path) {
     this.pathOnScrolling = path;
-    console.log(path)
   }
 
   ngAfterViewInit(): void {
