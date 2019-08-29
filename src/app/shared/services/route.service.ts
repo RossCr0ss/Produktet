@@ -18,19 +18,23 @@ export class RouteService {
         path: firstLevelMenu.path, component: DynamicLoaderComponent,
         data: {moduleName: contentModuleName, content: firstLevelMenu.content}
       });
-      firstLevelMenu.subMenu.forEach((secondLevelMenu: Menu) => {
-        this.router.config.push({
-          path: `${firstLevelMenu.path}/${secondLevelMenu.path}`, component: DynamicLoaderComponent,
-          data: {moduleName: contentModuleName, content: secondLevelMenu.content}
-        });
-        secondLevelMenu.subMenu.forEach((thirdLevelMenu: Menu) => {
+      if (firstLevelMenu.subMenu) {
+        firstLevelMenu.subMenu.forEach((secondLevelMenu: Menu) => {
           this.router.config.push({
-            path: `${firstLevelMenu.path}/${secondLevelMenu.path}/${thirdLevelMenu.path}`,
-            component: DynamicLoaderComponent,
-            data: {moduleName: contentModuleName, content: thirdLevelMenu.content}
+            path: `${firstLevelMenu.path}/${secondLevelMenu.path}`, component: DynamicLoaderComponent,
+            data: {moduleName: contentModuleName, content: secondLevelMenu.content}
           });
+          if (secondLevelMenu.subMenu) {
+            secondLevelMenu.subMenu.forEach((thirdLevelMenu: Menu) => {
+              this.router.config.push({
+                path: `${firstLevelMenu.path}/${secondLevelMenu.path}/${thirdLevelMenu.path}`,
+                component: DynamicLoaderComponent,
+                data: {moduleName: contentModuleName, content: thirdLevelMenu.content}
+              });
+            });
+          }
         });
-      });
+      }
     });
     this.router.config.push({path: '**', component: ErrorLayoutComponent});
   }
