@@ -6,6 +6,8 @@ import {ContentService} from "../../../shared/services/content.service";
 import {Subject} from "rxjs";
 import {takeUntil} from "rxjs/operators";
 import {Router} from "@angular/router";
+import {SiteConfigurationService} from "../../../shared/services/site-configuration.service";
+import {Site} from "../../../shared/models/site.model";
 
 @Component({
   selector: 'app-page-scroll-content',
@@ -22,6 +24,7 @@ export class PageScrollContentComponent implements OnInit, AfterViewInit, OnDest
 
   pathOnScrolling = ''
   locationHashWhenScrolling = ''
+  configuration: Site;
 
   @HostListener('window:scroll', ['$event'])
   handleWindowScroll($event) {
@@ -33,10 +36,12 @@ export class PageScrollContentComponent implements OnInit, AfterViewInit, OnDest
   }
 
   constructor(@Inject(DOCUMENT) private document: any, private menuService: MenuService,
-              private contentService: ContentService, private router: Router) {
+              private contentService: ContentService, private router: Router, private siteConfigurationService: SiteConfigurationService) {
   }
 
   ngOnInit() {
+    this.configuration = this.siteConfigurationService.configuration;
+
 
     this.mp4Src = "/assets/graphics/dynamikfabrikken/dynamikfabrikken.mp4";
     this.oggSrc = "/assets/graphics/dynamikfabrikken/dynamikfabrikken.ogg";

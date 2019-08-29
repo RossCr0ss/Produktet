@@ -20,8 +20,6 @@ export class BasicContentComponent implements OnInit {
 
   ngOnInit() {
     this.configuration = this.siteConfigurationService.configuration;
-
-
   }
 
 }
