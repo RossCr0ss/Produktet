@@ -13,7 +13,7 @@ export class BasicContentComponent implements OnInit {
 
   configuration: Site;
   // Can be used to set content from the menu
-  additionalContent: ComponentContent[];
+  additionalContent: ComponentContent;
 
   constructor(private siteConfigurationService: SiteConfigurationService) {
   }
@@ -21,7 +21,7 @@ export class BasicContentComponent implements OnInit {
   ngOnInit() {
     this.configuration = this.siteConfigurationService.configuration;
 
- 
+
   }
 
 }

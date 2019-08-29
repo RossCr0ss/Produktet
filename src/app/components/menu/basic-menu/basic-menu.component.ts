@@ -1,13 +1,14 @@
-import {AfterViewInit, Component, Inject, OnInit, OnDestroy } from '@angular/core';
+import {AfterViewInit, Component, Inject, OnDestroy, OnInit} from '@angular/core';
 import {MenuService} from '../../../shared/services/menu.service';
 import {RouteService} from '../../../shared/services/route.service';
 import {SiteConfigurationService} from '../../../shared/services/site-configuration.service';
 import {Menu} from '../../../shared/models/menu.model';
 import {Router} from '@angular/router';
 import {Site} from '../../../shared/models/site.model';
-import { takeUntil } from 'rxjs/operators';
-import { Subject } from 'rxjs';
+import {takeUntil} from 'rxjs/operators';
+import {Subject} from 'rxjs';
 import {DOCUMENT} from "@angular/common";
+import {SeoService} from "../../../shared/services/seo.service";
 
 @Component({
   selector: 'app-basic-menu',
@@ -21,34 +22,50 @@ export class BasicMenuComponent implements OnInit, OnDestroy, AfterViewInit {
   configuration: Site;
 
   FontColor: string;
-  BgColor: string;    
+  BgColor: string;
 
   constructor(
-      @Inject(DOCUMENT) private document: any,
-      private menuService: MenuService,
-      private routeService: RouteService,
-      private siteConfiguration: SiteConfigurationService, private router: Router) { }
+    @Inject(DOCUMENT) private document: any,
+    private menuService: MenuService,
+    private routeService: RouteService,
+    private siteConfiguration: SiteConfigurationService, private router: Router,
+    private seoService: SeoService) {
+  }
 
   ngOnInit() {
     this.configuration = this.siteConfiguration.configuration;
 
     this.menuService.getMenu()
-      .pipe(takeUntil(this.cancelSubscription$))
-      .subscribe((menus: Array<Menu>) => {
-        this.menus = menus;
-        this.routeService.setRoutes(menus, this.siteConfiguration.configuration.content.name);
-        if (this.menus) {
-          if (window.location.pathname === '/') {
-            // Assume that first element is home page
-            this.router.navigateByUrl(this.menus[0].path)
-          } else {
-            this.router.navigateByUrl(window.location.pathname)
-          }
-        }
-      });
+    .pipe(takeUntil(this.cancelSubscription$))
+    .subscribe((menus: Array<Menu>) => {
+      this.menus = menus;
+      this.routeService.setRoutes(menus, this.siteConfiguration.configuration.content.name);
+      if (this.menus) {
+        if (window.location.pathname === '/') {
+          // Assume that first element is home page
+          this.router.navigateByUrl(this.menus[0].path)
+          this.setSeoValues(this.menus[0])
+        } else {
+          this.router.navigateByUrl(window.location.pathname)
+          const menu = this.menus.find((m) =>
+            m.path === window.location.pathname.substr(1)
+          )
 
-      this.FontColor = " blue-grey-text text-lighten-5";
-      this.BgColor = " blue-grey darken-3";   
+          this.setSeoValues(menu)
+        }
+      }
+    });
+
+    this.FontColor = " blue-grey-text text-lighten-5";
+    this.BgColor = " blue-grey darken-3";
+  }
+
+  setSeoValues(menu: Menu) {
+    this.seoService.setMetaElement('description', menu.metaDescription);
+    this.seoService.setMetaElement('keywords', menu.metaKeywords);
+    this.seoService.setMetaElement('metaImage', menu.metaImage);
+    this.seoService.setTitle(menu.metaTitle);
+    this.seoService.setFavIcon(menu.favicon);
   }
 
   ngAfterViewInit(): void {
