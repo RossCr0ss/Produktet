@@ -7,7 +7,6 @@ import {Subject} from "rxjs";
 import {takeUntil} from "rxjs/operators";
 import {Router} from "@angular/router";
 
-
 @Component({
   selector: 'app-page-scroll-content',
   templateUrl: './page-scroll-content.component.html',
@@ -28,10 +27,8 @@ export class PageScrollContentComponent implements OnInit, AfterViewInit, OnDest
   handleWindowScroll($event) {
     if (this.pathOnScrolling !== this.locationHashWhenScrolling) {
       this.locationHashWhenScrolling = this.pathOnScrolling
-      // location.href = '#' + this.pathOnScrolling
-      // console.log(this.pathOnScrolling)
-      // this.router.navigate(['/'],
-      //   {fragment: this.pathOnScrolling});
+      this.router.navigate(['/'],
+        {fragment: this.locationHashWhenScrolling});
     }
   }
 
