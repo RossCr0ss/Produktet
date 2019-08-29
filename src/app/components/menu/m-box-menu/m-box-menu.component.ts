@@ -1,5 +1,4 @@
 import {Component, Inject, OnInit, OnDestroy } from '@angular/core';
-import {MenuService} from '../../../shared/services/menu.service';
 import {RouteService} from '../../../shared/services/route.service';
 import {SiteConfigurationService} from '../../../shared/services/site-configuration.service';
 import {Menu} from '../../../shared/models/menu.model';
@@ -18,16 +17,14 @@ export class BasicMenuComponent implements OnInit, OnDestroy {
 
   constructor(
     @Inject(DOCUMENT) private document: any,
-    private menuService: MenuService,
     private routeService: RouteService,
     private siteConfiguration: SiteConfigurationService,
     private router: Router) { }
 
   ngOnInit() {
-    this.menuService.getMenu()
-      .subscribe((menus: Array<Menu>) => {
-        this.menus = menus;
-        this.routeService.setRoutes(menus, this.siteConfiguration.configuration.content.name);
+
+        this.menus = this.siteConfiguration.configuration.menus;
+        this.routeService.setRoutes(this.menus, this.siteConfiguration.configuration.mainComponents.content.name);
         if (this.menus) {
           if (window.location.pathname === '/') {
             // Assume that first element is home page
@@ -36,7 +33,6 @@ export class BasicMenuComponent implements OnInit, OnDestroy {
             this.router.navigateByUrl(window.location.pathname)
           }
         }
-      });
   }
 
   ngAfterViewInit(): void {

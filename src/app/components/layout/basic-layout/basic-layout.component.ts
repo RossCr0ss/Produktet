@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {SiteConfigurationService} from '../../../shared/services/site-configuration.service';
 import {Router} from '@angular/router';
-import {DataService} from '../../../shared/services/data.service';
 import {Site} from '../../../shared/models/site.model';
 
 @Component({
@@ -13,12 +12,11 @@ export class BasicLayoutComponent implements OnInit {
 
   configuration: Site;
 
-  constructor(private siteConfigurationService: SiteConfigurationService, private router: Router,
-              private dataService: DataService) {
+  constructor(private siteConfigurationService: SiteConfigurationService, private router: Router) {
   }
 
   ngOnInit() {
-    this.configuration = this.siteConfigurationService.configuration;
+    this.configuration = this.siteConfigurationService.configuration.mainComponents;
 
   }
 }
