@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "jsonserver": "json-server --watch db.json --port 3004"
+    "jsonserver": "json-server --watch db_basic.json --port 3004"
   },
   "private": true,
   "dependencies": {
@@ -21,11 +21,11 @@
     "@angular/platform-browser-dynamic": "^8.2.0",
     "@angular/router": "^8.2.0",
     "@ngu/carousel": "^1.5.5",
+    "@thisissoon/angular-inviewport": "^4.2.0",
     "core-js": "^2.5.4",
     "hammerjs": "^2.0.8",
     "intersection-observer": "^0.7.0",
     "jquery": "^3.4.1",
-    "ng-in-viewport": "^6.0.3",
     "ng-lazyload-image": "^6.0.0",
     "ngx-page-scroll": "^6.0.2",
     "ngx-page-scroll-core": "^6.0.2",

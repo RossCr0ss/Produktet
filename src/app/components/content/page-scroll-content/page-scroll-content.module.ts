@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {PageScrollContentComponent} from './page-scroll-content.component';
 import {SharedModule} from "../../../shared/shared.module";
-import {InViewportModule} from 'ng-in-viewport';
+import { InViewportModule } from '@thisissoon/angular-inviewport';
 
 
 @NgModule({

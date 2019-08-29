@@ -3,15 +3,19 @@
 <div id="particles-js"></div>
 <div id="skip-intro-btn" class="button">Skip intro</div>
 
-  
+
 <ng-container *ngFor="let menu of menus">
+  <h1>{{menu.path}}</h1>
   <section class="section" [id]="menu.path" [ngClass]="{'section--footer': menu.path=='/kontakt/', 'section--top': menu.path=='/'}">
-    <div inViewport (inViewportAction)="changeUrl(menu.path)"  [inViewportOptions]="{ threshold: [100] }">
+    <div snInViewport
+         (inViewportChange)="changeUrl(menu.path)"   [inViewportOptions]="{
+    rootMargin: '-500px 0px 0px 0px'
+  }">
       <ng-container *ngIf="menu.content;else noContent">
 
         <div class="section__content">
           <h1 class="headline">{{menu.name}}</h1>
-          <div class="headline-desc" *ngFor="let content of menu.content">  
+          <div class="headline-desc" *ngFor="let content of menu.content">
             <ng-container *ngIf="content.name">
               <div class='headline-desc'>
                 <dynamic-loader [module]="content"></dynamic-loader>
@@ -25,7 +29,7 @@
             -->
           </div>
         </div>
-        
+
       </ng-container>
 
       <ng-template #noContent>
