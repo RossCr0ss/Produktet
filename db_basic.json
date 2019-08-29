@@ -65,7 +65,7 @@
     {
       "name": "Forside",
       "subname": null,
-      "path": "/sample",
+      "path": "sample",
       "navigationHide": false,
       "menuIcon": null,
       "menuImg": null,
@@ -76,7 +76,7 @@
       "metaDescription": "Metadescription foreach page",
       "metaKeywords": "Keywords, morekeywords",
       "metaImage": "dynamikfabriokken.dk/image.png",
-      "favicon": "dynamikfabriokken.dk/image.png",
+      "favicon": "https://cdn1.iconfinder.com/data/icons/iconza-circle-social/64/697057-facebook-512.png",
       "content": [
         {
           "name": "text",
@@ -97,7 +97,7 @@
     {
       "name": "Anbefalinger",
       "subname": null,
-      "path": "/anbefalinger/",
+      "path": "anbefalinger",
       "navigationHide": false,
       "menuIcon": null,
       "menuImg": null,
@@ -113,7 +113,7 @@
     {
       "name": "The movie",
       "subname": null,
-      "path": "/the-movie/",
+      "path": "the-movie",
       "navigationHide": false,
       "menuIcon": null,
       "menuImg": null,
@@ -137,7 +137,7 @@
     {
       "name": "Kontakt",
       "subname": null,
-      "path": "/kontakt/",
+      "path": "kontakt",
       "navigationHide": false,
       "menuIcon": null,
       "menuImg": null,

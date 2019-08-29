@@ -29,25 +29,23 @@
 			<div class="line"></div>
 			<div class="line"></div>
     </div>
-    <!--
 		<div class="menu-inner">
 			<ul>
         <li *ngFor="let menu of menus">
-            <a [routerLink]="menu.path" *ngIf="!menu.navigationHide">{{menu.name}}</a>
+            <a [routerLink]="menu.path" *ngIf="!menu.navigationHide" (click)="setSeoValues(menu)">{{menu.name}}</a>
             <ul *ngIf="menu.subMenu">
               <li *ngFor="let secondMenuLayer of menu.subMenu">
-                <a [routerLink]="[menu.path, secondMenuLayer.path]" *ngIf="!secondMenuLayer.navigationHide">{{secondMenuLayer.name}}</a>
+                <a [routerLink]="[menu.path, secondMenuLayer.path]" *ngIf="!secondMenuLayer.navigationHide" (click)="setSeoValues(menu)">{{secondMenuLayer.name}}</a>
                 <ul *ngIf="secondMenuLayer.subMenu">
                   <li *ngFor="let thirdMenuLayer of secondMenuLayer.subMenu">
-                    <a [routerLink]="[menu.path, secondMenuLayer.path, thirdMenuLayer.path]" *ngIf="!thirdMenuLayer.navigationHide">{{thirdMenuLayer.name}}</a>
+                    <a [routerLink]="[menu.path, secondMenuLayer.path, thirdMenuLayer.path]" *ngIf="!thirdMenuLayer.navigationHide" (click)="setSeoValues(menu)">{{thirdMenuLayer.name}}</a>
                   </li>
                 </ul>
               </li>
             </ul>
           </li>
-      </ul>      
+      </ul>
     </div>
-    -->
     <svg version="1.1" id="blob"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <path id="blob-path" d="M60,500H0V0h60c0,0,20,172,20,250S60,900,60,500z"/>
     </svg>
