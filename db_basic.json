@@ -18,7 +18,7 @@
       "content": []
     },
     "content": {
-      "name": "basiccontent",
+      "name": "basic-content",
       "content": []
     },
     "scripts": [],
@@ -65,7 +65,7 @@
     {
       "name": "Forside",
       "subname": null,
-      "path": "/sample",
+      "path": "sample",
       "navigationHide": false,
       "menuIcon": null,
       "menuImg": null,
@@ -97,7 +97,7 @@
     {
       "name": "Anbefalinger",
       "subname": null,
-      "path": "/anbefalinger/",
+      "path": "anbefalinger",
       "navigationHide": false,
       "menuIcon": null,
       "menuImg": null,
@@ -113,7 +113,7 @@
     {
       "name": "The movie",
       "subname": null,
-      "path": "/the-movie/",
+      "path": "the-movie",
       "navigationHide": false,
       "menuIcon": null,
       "menuImg": null,
@@ -137,7 +137,7 @@
     {
       "name": "Kontakt",
       "subname": null,
-      "path": "/kontakt/",
+      "path": "kontakt",
       "navigationHide": false,
       "menuIcon": null,
       "menuImg": null,
