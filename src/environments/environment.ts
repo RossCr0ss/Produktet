@@ -6,8 +6,16 @@ export const environment = {
   production: false,
   // backendApi: 'http://localhost:3004/',
   backendApi: 'https://produktetcms.dynamikfabrikken.com/umbraco/api/',
-  hostName: 'basic.com'
+  hostName: 'scroll.com'
 };
+
+/*
+hostnames now:
+basic.com
+scroll.com
+dynamikfabrikken.com
+*/
+
 
 /*
  * In development mode, to ignore zone related error stack frames such as

@@ -1,13 +1,13 @@
 export interface ComponentContent {
 
   //text
-  markup: string;
+ // markup: string;
   //image
-  src: string;
-  alt: string;
+ // src: string;
+ // alt: string;
 
   //general
-  name: string;
-  key: string;
-  nodeid: number;
+ // name: string;
+ // key: string;
+ // nodeid: number;
 }

@@ -11,12 +11,8 @@
 
 
 <ng-container *ngFor="let menu of menus">
-  <h1>{{menu.path}}</h1>
   <section class="section" [id]="menu.path" [ngClass]="{'section--footer': menu.path=='/kontakt/', 'section--top': menu.path=='/'}">
-    <div snInViewport
-         (inViewportChange)="changeUrl(menu.path)"   [inViewportOptions]="{
-    rootMargin: '-500px 0px 0px 0px'
-  }">
+    <div snInViewport (inViewportChange)="changeUrl(menu.path)"   [inViewportOptions]="{rootMargin: '-500px 0px 0px 0px'}">
       <ng-container *ngIf="menu.content;else noContent">
 
         <div class="section__content">
