@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { PlyrComponent } from 'ngx-plyr';
 
 @Component({
   selector: 'app-banner',
@@ -6,10 +7,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
+  public videoUrlMP4 = 'https://www.olavdelinde.dk/media/2049/film-til-forside-af-web_2.mp4';
+  // public videoUrlMP4 = null;
+  public videoUrlOGG = null;
+  // public imgSrc = 'http://qnimate.com/wp-content/uploads/2014/03/images2.jpg';
+  public imgSrc = null;
+  public plyrOptions: any;
+  public bgHexColor = '#666';
+  public overlayHexColor = '#000';
+  public overlayText = 'Some text inside overlay!'
+  // public bannerPaddingRight = '100px';
+  public bannerPaddingRight = '0';
+  // public bannerPaddingLeft = '100px';
+  public bannerPaddingLeft = '0';
+  public isSmallOverlay = true;
+  @ViewChild(PlyrComponent, { static: false }) plyr: PlyrComponent;
 
   constructor() { }
 
   ngOnInit() {
+    this.plyrOptions = {
+      autoplay: true,
+      muted: true,
+      loop: { active: true },
+      controls: []
+    }
   }
 
 }
