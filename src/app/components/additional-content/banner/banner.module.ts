@@ -1,9 +1,11 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {BannerComponent} from './banner.component';
+import { PlyrModule } from 'ngx-plyr';
 
 @NgModule({
   imports: [
+    PlyrModule,
     CommonModule
   ],
   declarations: [BannerComponent],

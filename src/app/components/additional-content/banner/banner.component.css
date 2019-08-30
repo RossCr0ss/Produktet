@@ -1,0 +1,85 @@
+.background-container {
+  position: relative;
+  max-width: 100% !important;
+  height: 60vh !important;
+}
+
+.background-container ::ng-deep .plyr video {
+  height: 60vh !important;
+  width: 100% !important;
+  object-fit: cover;
+}
+
+.image-background {
+  width: 100% !important;
+}
+
+.image-background img {
+  height: 60vh !important;
+  width: 100% !important;
+  object-fit: cover;
+}
+
+.color-background {
+  background-color: aqua;
+  height: 60vh !important;
+  width: 100% !important;
+}
+
+.overlay-content-small {
+  width: 400px;
+  height: 150px;
+  position: absolute;
+  top: 25%;
+  left: calc(100% - 400px);
+  background-blend-mode: multiply;
+  display: table;
+}
+
+.overlay-content-fullsize {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-blend-mode: multiply;
+  display: table;
+}
+
+.overlay-content-small .overlay {
+  width: 100%;
+  height: 150px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: overlay;
+}
+
+.overlay-content-fullsize .overlay {
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  font-size: 1.7em;
+  font-weight: 500;
+  font-family: Quicksand, -apple-system, BlinkMacSystemFont, Segoe UI, Ubuntu, Roboto, Helvetica Neue, Arial, sans-serif;
+  display: table-cell;
+  text-align: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  vertical-align: middle;
+}
+
+@media screen and (max-width:600px) {
+
+  .overlay-content-small {
+    width: 200px;
+    left: calc(100% - 200px);
+  }
+}
