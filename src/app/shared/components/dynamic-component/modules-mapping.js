@@ -7,12 +7,14 @@ export default {
   'basic-content': 'content/basic-content/basic-content.module',
   'm-box-content': 'content/m-box-content/m-box-content.module',
   'page-scroll-content': 'content/page-scroll-content/page-scroll-content.module',
+  'dynamikfabrikken-content': 'content/dynamikfabrikken-content/dynamikfabrikken-content.module',
 
   'basic-header': 'header/basic-header/basic-header.module',
   
   'basic-menu': 'menu/basic-menu/basic-menu.module',
   'm-box-menu': 'menu/m-box-menu/m-box-menu.module',
   'page-scroll-menu': 'menu/page-scroll-menu/page-scroll-menu.module',
+  'dynamikfabrikken-menu': 'menu/dynamikfabrikken-menu/dynamikfabrikken-menu.module',
 
   'basic-footer': 'footer/basic-footer/basic-footer.module',
   

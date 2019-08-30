@@ -1,8 +1,3 @@
-
-<!-- only for dynamikfabrikken.com site-->
-<div id="particles-js"></div>
-<div id="skip-intro-btn" class="button">Skip intro</div>
-
 <ng-container *ngIf="configuration.content && configuration.content.content">
   <ng-container *ngFor="let module of configuration.content.content">
     <dynamic-loader [module]="module"></dynamic-loader>
@@ -11,27 +6,15 @@
 
 
 <ng-container *ngFor="let menu of menus">
-  <section class="section" [id]="menu.path" [ngClass]="{'section--footer': menu.path=='/kontakt/', 'section--top': menu.path=='/'}">
-    <div snInViewport (inViewportChange)="changeUrl(menu.path)"   [inViewportOptions]="{rootMargin: '-500px 0px 0px 0px'}">
+  <section [id]="menu.path" style="height: 100%; border: 1px solid red;">
+    <div snInViewport (inViewportChange)="changeUrl(menu.path)">
       <ng-container *ngIf="menu.content;else noContent">
-
-        <div class="section__content">
-          <h1 class="headline">{{menu.name}}</h1>
-          <div class="headline-desc" *ngFor="let content of menu.content">
-            <ng-container *ngIf="content.name">
-              <div class='headline-desc'>
-                <dynamic-loader [module]="content"></dynamic-loader>
-              </div>
-            </ng-container>
-             <!--
-            <div class="button-wrapper">
-                <a href="#" class="button">Se mere</a>
-                <a href="#" class="button">Kontakt os</a>
-            </div>
-            -->
-          </div>
+        <h1 class="headline">{{menu.name}}</h1>
+        <div *ngFor="let content of menu.content">
+          <ng-container *ngIf="content.name">
+              <dynamic-loader [module]="content"></dynamic-loader>
+          </ng-container>
         </div>
-
       </ng-container>
 
       <ng-template #noContent>

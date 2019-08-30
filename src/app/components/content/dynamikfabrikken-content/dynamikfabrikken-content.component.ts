@@ -10,8 +10,8 @@ import {Site} from "../../../shared/models/site.model";
 
 @Component({
   selector: 'app-page-scroll-content',
-  templateUrl: './page-scroll-content.component.html',
-  styleUrls: ['./page-scroll-content.component.css']
+  templateUrl: './dynamikfabrikken-content.component.html',
+  styleUrls: ['./dynamikfabrikken-content.component.css']
 })
 export class PageScrollContentComponent implements OnInit, AfterViewInit, OnDestroy {
   menus: Menu[];
@@ -59,6 +59,11 @@ export class PageScrollContentComponent implements OnInit, AfterViewInit, OnDest
   }
 
   ngAfterViewInit(): void {
+
+    const script = this.document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = `../assets/js/dynamikfabrikken_elevator.js`;
+    this.document.head.appendChild(script);
 
     setTimeout(() => {
       this.contentService.contentLoaded()
