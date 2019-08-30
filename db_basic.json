@@ -1,154 +1,164 @@
 {
   "localhost": {
-    "pageId": 1152,
-    "menu": {
-      "name": "basic-menu",
-      "content": []
-    },
-    "layout": {
-      "name": "basic-layout",
-      "content": []
-    },
-    "header": {
-      "name": "basic-header",
-      "content": []
-    },
-    "footer": {
-      "name": "basic-footer",
-      "content": []
-    },
-    "content": {
-      "name": "basic-content",
-      "content": []
-    },
-    "scripts": [],
-    "styles": [
-      "https://fonts.googleapis.com/icon?family=Material+Icons",
-      "../assets/css/materialize.css",
-      "../assets/css/basic.css"
-    ]
-  },
-  "getgeneralData": {
-    "CompanyName": "Dynamikfabrikken",
-    "CompanyAddress": "Sjællandsgade 36",
-    "CompanyAddress2": "8000 Aarhus C",
-    "CompanyPhone": "+45 31375043",
-    "CompanyEmail": "info@dynamikfabrikken.com",
-    "MainLogo": "/media/ku1leoeu/logobrevpapir.jpg",
-    "CompanyFacebook": "",
-    "CompanyLinkedin": "https://www.linkedin.com/in/anders-bak-schmidt-holm-bb428b49/?originalSubdomain=dk",
-    "CompanyInstagram": "",
-    "CompanyTwitter": "",
-    "CompanyDescription": "Dynamikfabrikken ændre internettet - En side af gangen.",
-    "FooterLinks": [
-      {
-        "Name": "Til google",
-        "Url": "https://google.com",
-        "Target": "_blank"
+    "mainComponents": {
+      "pageId": 1152,
+      "menu": {
+        "name": "basic-menu",
+        "content": []
       },
-      {
-        "Name": "Test-page",
-        "Url": "/",
-        "Target": null
+      "layout": {
+        "name": "basic-layout",
+        "content": []
       },
-      {
-        "Name": "Til Facebook",
-        "Url": "https://facebook.com",
-        "Target": "_blank"
-      }
-    ],
-    "ScriptHead": [],
-    "ScriptBodyTop": [],
-    "ScriptBodyBottom": []
-  },
-  "menus": [
-    {
-      "name": "Forside",
-      "subname": null,
-      "path": "sample",
-      "navigationHide": false,
-      "menuIcon": null,
-      "menuImg": null,
-      "menuMp4": null,
-      "menuWebm": null,
-      "subMenu": null,
-      "metaTitle": "This will be title foreach page",
-      "metaDescription": "Metadescription foreach page",
-      "metaKeywords": "Keywords, morekeywords",
-      "metaImage": "dynamikfabriokken.dk/image.png",
-      "favicon": "https://cdn1.iconfinder.com/data/icons/iconza-circle-social/64/697057-facebook-512.png",
-      "content": [
+      "header": {
+        "name": "basic-header",
+        "content": []
+      },
+      "footer": {
+        "name": "basic-footer",
+        "content": []
+      },
+      "content": {
+        "name": "basic-content",
+        "content": [
+          {
+            "name": "image",
+            "src": "https://fakeimg.pl/250x100/",
+            "alt": "Alternative image string",
+            "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
+            "nodeid": 1154
+          }
+        ]
+      },
+      "scripts": [],
+      "styles": [
+        "https://fonts.googleapis.com/icon?family=Material+Icons",
+        "../assets/css/materialize.css",
+        "../assets/css/basic.css"
+      ]
+    },
+    "generalData": {
+      "CompanyName": "Dynamikfabrikken",
+      "CompanyAddress": "Sjællandsgade 36",
+      "CompanyAddress2": "8000 Aarhus C",
+      "CompanyPhone": "+45 31375043",
+      "CompanyEmail": "info@dynamikfabrikken.com",
+      "MainLogo": "/media/ku1leoeu/logobrevpapir.jpg",
+      "CompanyFacebook": "",
+      "CompanyLinkedin": "https://www.linkedin.com/in/anders-bak-schmidt-holm-bb428b49/?originalSubdomain=dk",
+      "CompanyInstagram": "",
+      "CompanyTwitter": "",
+      "CompanyDescription": "Dynamikfabrikken ændre internettet - En side af gangen.",
+      "FooterLinks": [
         {
-          "name": "text",
-          "markup": "<p>This is subpage 1 RTE from Grid</p>",
-          "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
-          "nodeid": 1154
+          "Name": "Til google",
+          "Url": "https://google.com",
+          "Target": "_blank"
         },
         {
-          "name": "image",
-          "src": "https://fakeimg.pl/250x100/",
-          "alt": "Alternative image string",
-          "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
-          "nodeid": 1154
-        }
-      ]
-    },
-    {
-      "name": "Anbefalinger",
-      "subname": null,
-      "path": "anbefalinger",
-      "navigationHide": false,
-      "menuIcon": null,
-      "menuImg": null,
-      "menuMp4": null,
-      "menuWebm": null,
-      "subMenu": null,
-      "metaTitle": "Anbefalinger This will be title foreach page",
-      "metaDescription": "Anbefalinger Metadescription foreach page",
-      "metaKeywords": "Anbefalinger Keywords, morekeywords",
-      "metaImage": "dynamikfabriokken.dk/image.png",
-      "favicon": "dynamikfabriokken.dk/image.png"
-    },
-    {
-      "name": "The movie",
-      "subname": null,
-      "path": "the-movie",
-      "navigationHide": false,
-      "menuIcon": null,
-      "menuImg": null,
-      "menuMp4": null,
-      "menuWebm": null,
-      "subMenu": [],
-      "metaTitle": "The movie This will be title foreach page",
-      "metaDescription": "The movie Metadescription foreach page",
-      "metaKeywords": "The movieKeywords, morekeywords",
-      "metaImage": "dynamikfabriokken.dk/image.png",
-      "favicon": "dynamikfabriokken.dk/image.png",
-      "content": [
+          "Name": "Test-page",
+          "Url": "/",
+          "Target": null
+        },
         {
-          "name": "text",
-          "markup": "<p>This is content for THE MOVIE PAGE take a look at db.json</p>",
-          "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcb66",
-          "nodeid": 1154
+          "Name": "Til Facebook",
+          "Url": "https://facebook.com",
+          "Target": "_blank"
         }
-      ]
+      ],
+      "ScriptHead": [],
+      "ScriptBodyTop": [],
+      "ScriptBodyBottom": []
     },
-    {
-      "name": "Kontakt",
-      "subname": null,
-      "path": "kontakt",
-      "navigationHide": false,
-      "menuIcon": null,
-      "menuImg": null,
-      "menuMp4": null,
-      "menuWebm": null,
-      "subMenu": [],
-      "metaTitle": "This will be title foreach page",
-      "metaDescription": "Metadescription foreach page",
-      "metaKeywords": "Keywords, morekeywords",
-      "metaImage": "dynamikfabriokken.dk/image.png",
-      "favicon": "dynamikfabriokken.dk/image.png",
-      "content": []
-    }
-  ]
+    "menus": [
+      {
+        "name": "Forside",
+        "subname": null,
+        "path": "sample",
+        "navigationHide": false,
+        "menuIcon": null,
+        "menuImg": null,
+        "menuMp4": null,
+        "menuWebm": null,
+        "subMenu": null,
+        "metaTitle": "This will be title foreach page",
+        "metaDescription": "Metadescription foreach page",
+        "metaKeywords": "Keywords, morekeywords",
+        "metaImage": "dynamikfabriokken.dk/image.png",
+        "favicon": "https://cdn1.iconfinder.com/data/icons/iconza-circle-social/64/697057-facebook-512.png",
+        "content": [
+          {
+            "name": "text",
+            "markup": "<p>This is subpage 1 RTE from Grid</p>",
+            "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
+            "nodeid": 1154
+          },
+          {
+            "name": "image",
+            "src": "https://fakeimg.pl/250x100/",
+            "alt": "Alternative image string",
+            "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
+            "nodeid": 1154
+          }
+        ]
+      },
+      {
+        "name": "Anbefalinger",
+        "subname": null,
+        "path": "anbefalinger",
+        "navigationHide": false,
+        "menuIcon": null,
+        "menuImg": null,
+        "menuMp4": null,
+        "menuWebm": null,
+        "subMenu": null,
+        "metaTitle": "This will be title foreach page",
+        "metaDescription": "Metadescription foreach page",
+        "metaKeywords": "Keywords, morekeywords",
+        "metaImage": "dynamikfabriokken.dk/image.png",
+        "favicon": "dynamikfabriokken.dk/image.png"
+      },
+      {
+        "name": "The movie",
+        "subname": null,
+        "path": "the-movie",
+        "navigationHide": false,
+        "menuIcon": null,
+        "menuImg": null,
+        "menuMp4": null,
+        "menuWebm": null,
+        "subMenu": [],
+        "metaTitle": "This will be title foreach page",
+        "metaDescription": "Metadescription foreach page",
+        "metaKeywords": "Keywords, morekeywords",
+        "metaImage": "dynamikfabriokken.dk/image.png",
+        "favicon": "dynamikfabriokken.dk/image.png",
+        "content": [
+          {
+            "name": "text",
+            "markup": "<p>This is content for THE MOVIE PAGE take a look at db.json</p>",
+            "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcb66",
+            "nodeid": 1154
+          }
+        ]
+      },
+      {
+        "name": "Kontakt",
+        "subname": null,
+        "path": "kontakt",
+        "navigationHide": false,
+        "menuIcon": null,
+        "menuImg": null,
+        "menuMp4": null,
+        "menuWebm": null,
+        "subMenu": [],
+        "metaTitle": "This will be title foreach page",
+        "metaDescription": "Metadescription foreach page",
+        "metaKeywords": "Keywords, morekeywords",
+        "metaImage": "dynamikfabriokken.dk/image.png",
+        "favicon": "dynamikfabriokken.dk/image.png",
+        "content": []
+      }
+    ]
+  }
 }

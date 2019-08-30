@@ -17,7 +17,7 @@ export class MBoxContentComponent implements OnInit {
 
   ngOnInit() {
     this.componentPath = window.location.pathname;
-    this.configuration = this.siteConfigurationService.configuration;
+    this.configuration = this.siteConfigurationService.configuration.mainComponents;
   }
 
 }

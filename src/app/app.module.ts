@@ -25,7 +25,8 @@ import {SlickCarouselModule} from 'ngx-slick-carousel';
     SlickCarouselModule
   ],
   providers: [
-    {provide: 'BACKEND_API_URL', useValue: environment.backendApi}
+    {provide: 'BACKEND_API_URL', useValue: environment.backendApi},
+    {provide: 'DEV_HOST_NAME', useValue: environment.hostName}
   ],
   bootstrap: [AppComponent]
 })

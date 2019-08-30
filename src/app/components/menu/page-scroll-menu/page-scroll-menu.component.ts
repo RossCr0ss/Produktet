@@ -2,7 +2,6 @@ import {Component, ElementRef, Inject, OnDestroy, OnInit, ViewChild} from '@angu
 import {DOCUMENT} from '@angular/common';
 import {Menu} from "../../../shared/models/menu.model";
 import {Site} from "../../../shared/models/site.model";
-import {MenuService} from "../../../shared/services/menu.service";
 import {RouteService} from "../../../shared/services/route.service";
 import {SiteConfigurationService} from "../../../shared/services/site-configuration.service";
 import {Router} from "@angular/router";
@@ -32,7 +31,6 @@ export class PageScrollMenuComponent implements OnInit, OnDestroy {
 
   constructor(
     @Inject(DOCUMENT) private document: any,
-    private menuService: MenuService,
     private routeService: RouteService,
     private siteConfiguration: SiteConfigurationService, private router: Router,
     private contentService: ContentService, private pageScrollService: PageScrollService) {
@@ -40,11 +38,9 @@ export class PageScrollMenuComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     let locationHash = location.hash
-    this.configuration = this.siteConfiguration.configuration;
-    this.menuService.getMenu()
-    .subscribe((menus: Array<Menu>) => {
-      this.menus = menus;
-      this.routeService.setPageScrollDefaultRoute(this.siteConfiguration.configuration.content.name);
+    this.configuration = this.siteConfiguration.configuration.mainComponents;
+      this.menus = this.siteConfiguration.configuration.menus;
+      this.routeService.setPageScrollDefaultRoute(this.siteConfiguration.configuration.mainComponents.content.name);
       this.router.navigateByUrl('/')
 
       this.contentService.afterContentLoaded()
@@ -65,7 +61,6 @@ export class PageScrollMenuComponent implements OnInit, OnDestroy {
         }
         this.activeMenuItem = this.menus[0].name;
       })
-    });
 
     window.onhashchange = () => {
       this.pageScrollService.scroll({

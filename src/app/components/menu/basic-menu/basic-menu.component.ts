@@ -1,5 +1,4 @@
 import {AfterViewInit, Component, Inject, OnDestroy, OnInit} from '@angular/core';
-import {MenuService} from '../../../shared/services/menu.service';
 import {RouteService} from '../../../shared/services/route.service';
 import {SiteConfigurationService} from '../../../shared/services/site-configuration.service';
 import {Menu} from '../../../shared/models/menu.model';
@@ -26,20 +25,16 @@ export class BasicMenuComponent implements OnInit, OnDestroy, AfterViewInit {
 
   constructor(
     @Inject(DOCUMENT) private document: any,
-    private menuService: MenuService,
     private routeService: RouteService,
     private siteConfiguration: SiteConfigurationService, private router: Router,
     private seoService: SeoService) {
   }
 
   ngOnInit() {
-    this.configuration = this.siteConfiguration.configuration;
+    this.configuration = this.siteConfiguration.configuration.mainComponents;
 
-    this.menuService.getMenu()
-    .pipe(takeUntil(this.cancelSubscription$))
-    .subscribe((menus: Array<Menu>) => {
-      this.menus = menus;
-      this.routeService.setRoutes(menus, this.siteConfiguration.configuration.content.name);
+      this.menus = this.siteConfiguration.configuration.menus;
+      this.routeService.setRoutes(this.menus, this.siteConfiguration.configuration.mainComponents.content.name);
       if (this.menus) {
         if (window.location.pathname === '/') {
           // Assume that first element is home page
@@ -54,7 +49,6 @@ export class BasicMenuComponent implements OnInit, OnDestroy, AfterViewInit {
           this.setSeoValues(menu)
         }
       }
-    });
 
     this.FontColor = " blue-grey-text text-lighten-5";
     this.BgColor = " blue-grey darken-3";

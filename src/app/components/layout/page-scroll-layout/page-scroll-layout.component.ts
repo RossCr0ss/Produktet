@@ -2,7 +2,6 @@ import {Component, OnInit, Inject} from '@angular/core';
 import {Site} from "../../../shared/models/site.model";
 import {SiteConfigurationService} from "../../../shared/services/site-configuration.service";
 import {Router} from "@angular/router";
-import {DataService} from "../../../shared/services/data.service";
 import {SeoService} from "../../../shared/services/seo.service";
 import {DOCUMENT} from "@angular/common";
 
@@ -16,21 +15,11 @@ export class PageScrollLayoutComponent implements OnInit {
   configuration: Site;
   pageData: any;
 
-  constructor(@Inject(DOCUMENT) private document: any,private siteConfigurationService: SiteConfigurationService, private router: Router,
-              private dataService: DataService, private seoService: SeoService) {
+  constructor(@Inject(DOCUMENT) private document: any,private siteConfigurationService: SiteConfigurationService) {
   }
 
   ngOnInit() {
-    this.configuration = this.siteConfigurationService.configuration;
-
-/*    this.dataService.getData(this.router.url)
-    .subscribe((pageData: any) => {
-      this.pageData = pageData;
-      this.seoService.setMetaElement('metaDescription', this.pageData.data.metaDescription);
-      this.seoService.setMetaElement('metaKeywords', this.pageData.data.metaKeywords);
-      this.seoService.setTitle(this.pageData.data.title);
-    });*/
-
+    this.configuration = this.siteConfigurationService.configuration.mainComponents;
   }
 
   ngAfterViewInit(): void {

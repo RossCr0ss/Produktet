@@ -3,6 +3,12 @@
 <div id="particles-js"></div>
 <div id="skip-intro-btn" class="button">Skip intro</div>
 
+<ng-container *ngIf="configuration.content && configuration.content.content">
+  <ng-container *ngFor="let module of configuration.content.content">
+    <dynamic-loader [module]="module"></dynamic-loader>
+  </ng-container>
+</ng-container>
+
 
 <ng-container *ngFor="let menu of menus">
   <h1>{{menu.path}}</h1>

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { DOCUMENT } from "@angular/common";
 import { PlyrComponent } from 'ngx-plyr';
 import {Video} from "../../../shared/models/additional-contenet-model/video.model";
+import {SiteConfigurationService} from "../../../shared/services/site-configuration.service";
 
 @Component({
   selector: 'app-video',
@@ -24,7 +25,7 @@ export class VideoComponent implements OnInit {
   constructor(
     @Inject('BACKEND_API_URL') private backendApiUrl: string,
     @Inject(DOCUMENT) private document: any,
-    private http: HttpClient) {
+    private http: HttpClient, private siteConfigurationService: SiteConfigurationService) {
   }
 
 
@@ -51,6 +52,7 @@ export class VideoComponent implements OnInit {
 /*
     this.http.get(`${this.backendApiUrl}menus`).subscribe((_: any[]) => {
       _.forEach(element => {
+    this.siteConfigurationService.configuration.menus.forEach(element => {
         let content = [];
         if (element) {
           content = element.content as Array<any>;

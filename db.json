@@ -1,177 +1,188 @@
 {
   "localhost": {
-    "pageId": 1152,
-    "menu": {
-      "name": "page-scroll-menu",
-      "content": []
+    "mainComponents": {
+      "pageId": 1152,
+      "menu": {
+        "name": "page-scroll-menu",
+        "content": []
+      },
+      "layout": {
+        "name": "page-scroll-layout",
+        "content": []
+      },
+      "header": {
+        "name": "basic-header",
+        "content": []
+      },
+      "footer": {
+        "name": "basic-footer",
+        "content": []
+      },
+      "content": {
+        "name": "page-scroll-content",
+        "content": [
+          {
+            "name": "text",
+            "markup": "<h1>this is additional content component</h1>",
+            "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
+            "nodeid": 1154
+          }
+        ]
+      },
+      "scripts": [],
+      "styles": [
+        "../assets/css/dynamikfabrikken_elevator.css"
+      ]
     },
-    "layout": {
-      "name": "page-scroll-layout",
-      "content": []
+    "generalData": {
+      "CompanyName": "Dynamikfabrikken",
+      "CompanyAddress": "Sjællandsgade 36",
+      "CompanyAddress2": "8000 Aarhus C",
+      "CompanyPhone": "+45 31375043",
+      "CompanyEmail": "info@dynamikfabrikken.com",
+      "MainLogo": "/media/ku1leoeu/logobrevpapir.jpg",
+      "CompanyFacebook": "",
+      "CompanyLinkedin": "https://www.linkedin.com/in/anders-bak-schmidt-holm-bb428b49/?originalSubdomain=dk",
+      "CompanyInstagram": "",
+      "CompanyTwitter": "",
+      "CompanyDescription": "Dynamikfabrikken ændre internettet - En side af gangen.",
+      "FooterLinks": [
+        {
+          "Name": "Til google",
+          "Url": "https://google.com",
+          "Target": "_blank"
+        },
+        {
+          "Name": "Test-page",
+          "Url": "/",
+          "Target": null
+        },
+        {
+          "Name": "Til Facebook",
+          "Url": "https://facebook.com",
+          "Target": "_blank"
+        }
+      ],
+      "ScriptHead": [],
+      "ScriptBodyTop": [],
+      "ScriptBodyBottom": []
     },
-    "header": {
-      "name": "basic-header",
-      "content": []
-    },
-    "footer": {
-      "name": "basic-footer",
-      "content": []
-    },
-    "content": {
-      "name": "page-scroll-content",
-      "content": []
-    },
-    "scripts": [],
-    "styles": [
-      "../assets/css/dynamikfabrikken_elevator.css"
-    ]
-  },
-  "getgeneralData": {
-    "CompanyName": "Dynamikfabrikken",
-    "CompanyAddress": "Sjællandsgade 36",
-    "CompanyAddress2": "8000 Aarhus C",
-    "CompanyPhone": "+45 31375043",
-    "CompanyEmail": "info@dynamikfabrikken.com",
-    "MainLogo": "/media/ku1leoeu/logobrevpapir.jpg",
-    "CompanyFacebook": "",
-    "CompanyLinkedin": "https://www.linkedin.com/in/anders-bak-schmidt-holm-bb428b49/?originalSubdomain=dk",
-    "CompanyInstagram": "",
-    "CompanyTwitter": "",
-    "CompanyDescription": "Dynamikfabrikken ændre internettet - En side af gangen.",
-    "FooterLinks": [
+    "menus": [
       {
-        "Name": "Til google",
-        "Url": "https://google.com",
-        "Target": "_blank"
+        "name": "DYNAMIKFABRIKKEN",
+        "subname": null,
+        "path": "/",
+        "navigationHide": false,
+        "menuIcon": null,
+        "menuImg": null,
+        "menuMp4": null,
+        "menuWebm": null,
+        "subMenu": null,
+        "metaTitle": "This will be title foreach page",
+        "metaDescription": "Metadescription foreach page",
+        "metaKeywords": "Keywords, morekeywords",
+        "metaImage": "dynamikfabriokken.dk/image.png",
+        "favicon": "dynamikfabriokken.dk/image.png",
+        "content": [
+          {
+            "name": "text",
+            "markup": "<p>Spænd hjelmen. Dynamiske webapplikationer kræver hårdt arbejde.</p><p>Vi er heldigvis ikke bange for lidt sved på panden.</p>",
+            "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
+            "nodeid": 1154
+          },
+          {
+            "name": "image",
+            "src": "https://fakeimg.pl/250x100/",
+            "alt": "Alternative image string",
+            "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
+            "nodeid": 1154
+          }
+        ]
       },
       {
-        "Name": "Test-page",
-        "Url": "/",
-        "Target": null
+        "name": "Anbefalinger",
+        "subname": null,
+        "path": "/anbefalinger/",
+        "navigationHide": false,
+        "menuIcon": null,
+        "menuImg": null,
+        "menuMp4": null,
+        "menuWebm": null,
+        "subMenu": null,
+        "metaTitle": "This will be title foreach page",
+        "metaDescription": "Metadescription foreach page",
+        "metaKeywords": "Keywords, morekeywords",
+        "metaImage": "dynamikfabriokken.dk/image.png",
+        "favicon": "dynamikfabriokken.dk/image.png",
+        "content": [
+          {
+            "name": "text",
+            "markup": " <div class='testimonial'> <blockquote> <em> Vi har haft fornøjelsen af at samarbejde med Anders om to opgaver: Redesign af vores hjemmeside samt opgaven med at gøre os i stand til selv at redigere. <br> <br> Samarbejdet har båret præg af stor fleksibilitet fra Anders side, hurtige leverancer og kort reaktionstid! dertil har han formået at gøre os selvkørende, fordi han taler et sprog, vi forstår. <br> <br> Tak for samarbejdet :) </em> <div class='statment-footer'> <span class='statment-sender'> <img alt='Aarhus Kommune - Dynamikfabrikken' src='../../../../assets/graphics/dynamikfabrikken/aak2.png'> </span> <span class='statment-sender'> Trine Naldal, Projektleder i Borgerdesign Aarhus </span> <span class='statment-sender'> Aarhus Kommune / Region Midtjylland </span> </div> </blockquote> </div> <div class='testimonial'> <blockquote> <em> Vi har været glade for forløbet med Anders, han er en dygtig digital håndværker og har realiseret alle vores ønsker. <br> <br> Derudover er han meget fleksibel og står altid klar til at hjælpe både med SEO og mere tekniske spørgsmål. <br> Med et højt niveau af både service og håndværk giver vi vores bedste anbefalinger videre. </em> <div class='statment-footer'> <span class='statment-sender'> <img alt='Q-Construction - Dynamikfabrikken' src='../../../../assets/graphics/dynamikfabrikken/qconstruction.jpg' style='max-height: 80px;'> </span> <span class='statment-sender'> Charlotte Thomsen </span> <span class='statment-sender'> Kommunikationsmedarbejder, Q-Construction </span> </div> </blockquote> </div>",
+            "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcb66",
+            "nodeid": 1154
+          }
+        ]
       },
       {
-        "Name": "Til Facebook",
-        "Url": "https://facebook.com",
-        "Target": "_blank"
+        "name": "The movie",
+        "subname": null,
+        "path": "/the-movie/",
+        "navigationHide": false,
+        "menuIcon": null,
+        "menuImg": null,
+        "menuMp4": null,
+        "menuWebm": null,
+        "subMenu": [],
+        "metaTitle": "This will be title foreach page",
+        "metaDescription": "Metadescription foreach page",
+        "metaKeywords": "Keywords, morekeywords",
+        "metaImage": "dynamikfabriokken.dk/image.png",
+        "favicon": "dynamikfabriokken.dk/image.png",
+        "content": [
+          {
+            "name": "text",
+            "markup": "<p>Her kan du se Dynamikfabrikken - The movie. Igen og igen! god fornøjelse</p>",
+            "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcb66",
+            "nodeid": 1154
+          },
+          {
+            "name": "video",
+            "mp4Url": "../assets/graphics/dynamikfabrikken/dynamikfabrikken.mp4",
+            "oggUrl": null,
+            "src": "https://fakeimg.pl/250x100/",
+            "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
+            "nodeid": 1154,
+            "isAutoplay": true,
+            "isLoop": false,
+            "isMuted": true,
+            "showControls": true
+          }
+        ]
+      },
+      {
+        "name": "Kontakt",
+        "subname": null,
+        "path": "/kontakt/",
+        "navigationHide": false,
+        "menuIcon": null,
+        "menuImg": null,
+        "menuMp4": null,
+        "menuWebm": null,
+        "subMenu": [],
+        "metaTitle": "This will be title foreach page",
+        "metaDescription": "Metadescription foreach page",
+        "metaKeywords": "Keywords, morekeywords",
+        "metaImage": "dynamikfabriokken.dk/image.png",
+        "favicon": "dynamikfabriokken.dk/image.png",
+        "content": [
+          {
+            "name": "text",
+            "markup": "<div class='typo'> <h2>DYNAMIKFABRIKKEN</h2> <p>V. Anders Bak Schmidt Holm</p> <p><a href='tel:+4531375043'>+45 31375043</a></p> <p><a href='mailto:info@dynamikfabrikken.com'>info@dynamikfabrikken.com</a></p> <p><a href='skype:anders.schmidt.holm?chat'>Skype: anders.schmidt.holm</a></p> </div>",
+            "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcb66",
+            "nodeid": 1154
+          }
+        ]
       }
-    ],
-    "ScriptHead": [],
-    "ScriptBodyTop": [],
-    "ScriptBodyBottom": []
-  },
-  "menus": [
-    {
-      "name": "DYNAMIKFABRIKKEN",
-      "subname": null,
-      "path": "/",
-      "navigationHide": false,
-      "menuIcon": null,
-      "menuImg": null,
-      "menuMp4": null,
-      "menuWebm": null,
-      "subMenu": null,
-      "metaTitle": "This will be title foreach page",
-      "metaDescription": "Metadescription foreach page",
-      "metaKeywords": "Keywords, morekeywords",
-      "metaImage": "dynamikfabriokken.dk/image.png",
-      "favicon": "dynamikfabriokken.dk/image.png",
-      "content": [
-        {
-          "name": "text",
-          "markup": "<p>Spænd hjelmen. Dynamiske webapplikationer kræver hårdt arbejde.</p><p>Vi er heldigvis ikke bange for lidt sved på panden.</p>",
-          "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
-          "nodeid": 1154
-        },
-        {
-          "name": "image",
-          "src": "https://fakeimg.pl/250x100/",
-          "alt": "Alternative image string",
-          "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
-          "nodeid": 1154
-        }
-      ]
-    },
-    {
-      "name": "Anbefalinger",
-      "subname": null,
-      "path": "/anbefalinger/",
-      "navigationHide": false,
-      "menuIcon": null,
-      "menuImg": null,
-      "menuMp4": null,
-      "menuWebm": null,
-      "subMenu": null,
-      "metaTitle": "This will be title foreach page",
-      "metaDescription": "Metadescription foreach page",
-      "metaKeywords": "Keywords, morekeywords",
-      "metaImage": "dynamikfabriokken.dk/image.png",
-      "favicon": "dynamikfabriokken.dk/image.png",
-      "content": [
-        {
-          "name": "text",
-          "markup": " <div class='testimonial'> <blockquote> <em> Vi har haft fornøjelsen af at samarbejde med Anders om to opgaver: Redesign af vores hjemmeside samt opgaven med at gøre os i stand til selv at redigere. <br> <br> Samarbejdet har båret præg af stor fleksibilitet fra Anders side, hurtige leverancer og kort reaktionstid! dertil har han formået at gøre os selvkørende, fordi han taler et sprog, vi forstår. <br> <br> Tak for samarbejdet :) </em> <div class='statment-footer'> <span class='statment-sender'> <img alt='Aarhus Kommune - Dynamikfabrikken' src='../../../../assets/graphics/dynamikfabrikken/aak2.png'> </span> <span class='statment-sender'> Trine Naldal, Projektleder i Borgerdesign Aarhus </span> <span class='statment-sender'> Aarhus Kommune / Region Midtjylland </span> </div> </blockquote> </div> <div class='testimonial'> <blockquote> <em> Vi har været glade for forløbet med Anders, han er en dygtig digital håndværker og har realiseret alle vores ønsker. <br> <br> Derudover er han meget fleksibel og står altid klar til at hjælpe både med SEO og mere tekniske spørgsmål. <br> Med et højt niveau af både service og håndværk giver vi vores bedste anbefalinger videre. </em> <div class='statment-footer'> <span class='statment-sender'> <img alt='Q-Construction - Dynamikfabrikken' src='../../../../assets/graphics/dynamikfabrikken/qconstruction.jpg' style='max-height: 80px;'> </span> <span class='statment-sender'> Charlotte Thomsen </span> <span class='statment-sender'> Kommunikationsmedarbejder, Q-Construction </span> </div> </blockquote> </div>",
-          "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcb66",
-          "nodeid": 1154
-        }
-      ]
-    },
-    {
-      "name": "The movie",
-      "subname": null,
-      "path": "/the-movie/",
-      "navigationHide": false,
-      "menuIcon": null,
-      "menuImg": null,
-      "menuMp4": null,
-      "menuWebm": null,
-      "subMenu": [],
-      "metaTitle": "This will be title foreach page",
-      "metaDescription": "Metadescription foreach page",
-      "metaKeywords": "Keywords, morekeywords",
-      "metaImage": "dynamikfabriokken.dk/image.png",
-      "favicon": "dynamikfabriokken.dk/image.png",
-      "content": [
-        {
-          "name": "text",
-          "markup": "<p>Her kan du se Dynamikfabrikken - The movie. Igen og igen! god fornøjelse</p>",
-          "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcb66",
-          "nodeid": 1154
-        },
-        {
-          "name": "video",
-          "mp4Url": "../assets/dummyimages/animaticv24.mp4",
-          "oggUrl": null,
-          "src": "https://fakeimg.pl/250x100/",
-          "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcbeb",
-          "nodeid": 1154,
-          "isAutoplay": true,
-          "isLoop": false,
-          "isMuted": true,
-          "showControls": true
-        }
-      ]
-    },
-    {
-      "name": "Kontakt",
-      "subname": null,
-      "path": "/kontakt/",
-      "navigationHide": false,
-      "menuIcon": null,
-      "menuImg": null,
-      "menuMp4": null,
-      "menuWebm": null,
-      "subMenu": [],
-      "metaTitle": "This will be title foreach page",
-      "metaDescription": "Metadescription foreach page",
-      "metaKeywords": "Keywords, morekeywords",
-      "metaImage": "dynamikfabriokken.dk/image.png",
-      "favicon": "dynamikfabriokken.dk/image.png",
-      "content": [ {
-        "name": "text",
-        "markup": "<div class='typo'> <h2>DYNAMIKFABRIKKEN</h2> <p>V. Anders Bak Schmidt Holm</p> <p><a href='tel:+4531375043'>+45 31375043</a></p> <p><a href='mailto:info@dynamikfabrikken.com'>info@dynamikfabrikken.com</a></p> <p><a href='skype:anders.schmidt.holm?chat'>Skype: anders.schmidt.holm</a></p> </div>",
-        "key": "18e6cd44-e207-4994-bfe0-f2a5d82fcb66",
-        "nodeid": 1154
-      }]
-    }
-  ]
+    ]
+  }
 }
