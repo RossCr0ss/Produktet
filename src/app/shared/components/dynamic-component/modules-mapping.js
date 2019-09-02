@@ -18,7 +18,8 @@ export default {
 
   'basic-footer': 'footer/basic-footer/basic-footer.module',
   
-  'banner': 'additional-content/teaser/teaser.module',
+  'banner': 'additional-content/banner/banner.module',
+  'teaser': 'additional-content/teaser/teaser.module',
   'text': 'additional-content/text/text.module',
   'image': 'additional-content/image/image.module',
   'basicgallery': 'additional-content/basicgallery/basicgallery.module',

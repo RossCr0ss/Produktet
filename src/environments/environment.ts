@@ -14,6 +14,11 @@ hostnames now:
 basic.com
 scroll.com
 dynamikfabrikken.com
+
+
+http://localhost:52558/
+https://produktetcms.dynamikfabrikken.com/umbraco/api/
+
 */
 
 

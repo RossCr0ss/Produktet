@@ -1,32 +1,27 @@
 <div class="background-container"
   [ngStyle]="{'padding-left' : bannerPaddingLeft , 'padding-right' : bannerPaddingRight }">
   <div class="overlay-container">
-    <div class="video-background" plyr [plyrOptions]="plyrOptions" [plyrSources]="videoUrlMP4 || videoUrlOGG"
-      *ngIf="videoUrlMP4 !== null || videoUrlOGG !== null">
+    <div class="video-background" plyr [plyrOptions]="plyrOptions" [plyrSources]="content.mp4Url || content.oggUrl"
+      *ngIf="content.mp4Url !== null || content.oggUrl !== null">
     </div>
-    <div class="image-background" *ngIf="imgSrc !==null">
-      <img [src]="imgSrc">
+    <div class="image-background" *ngIf="content.src">
+      <img [src]="content.src">
     </div>
 
-    <div *ngIf="imgSrc === null && (videoUrlMP4 === null && videoUrlOGG === null)"
+    <div *ngIf="content.src === null && (content.mp4Url === null && content.oggUrl === null)"
       [ngStyle]="{'background-color' : bgHexColor }" class=" color-background">
     </div>
     <div class="overlay-content-fullsize" *ngIf="!isSmallOverlay">
       <span class="text">
-        {{overlayText}}
+        {{content.overlayMarkup}}
       </span>
       <div class="overlay" [ngStyle]="{'background-color' : overlayHexColor }"></div>
     </div>
     <div class="overlay-content-small" *ngIf="isSmallOverlay">
-      <span class="text">
-        {{overlayText}}
+      <span class="text" >
+        {{content.overlayMarkup}}
       </span>
       <div class="overlay" [ngStyle]="{'background-color' : overlayHexColor }"></div>
     </div>
   </div>
-
 </div>
-
-<p>
-  Here you will be able to work on banner component! :-) Awsome!!
-</p>
