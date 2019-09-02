@@ -17,21 +17,23 @@ export class BannerComponent implements OnInit {
   public overlayHexColor = '#000';
   public overlayText = '<p>Some text inside overlay!</p>'
   // public bannerPaddingRight = '100px';
-  public bannerPaddingRight = '100px';
+  public bannerPaddingRight = '10%';
   // public bannerPaddingLeft = '100px';
-  public bannerPaddingLeft = '100px';
+  public bannerPaddingLeft = '10%';
   public isSmallOverlay = true;
   @ViewChild(PlyrComponent, { static: false }) plyr: PlyrComponent;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
     this.plyrOptions = {
       autoplay: true,
       muted: true,
       loop: { active: true },
       controls: []
     }
+  }
+
+  ngOnInit() {
+
   }
 
 }

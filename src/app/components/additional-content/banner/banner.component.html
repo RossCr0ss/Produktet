@@ -1,29 +1,31 @@
 <div class="background-container"
   [ngStyle]="{'padding-left' : bannerPaddingLeft , 'padding-right' : bannerPaddingRight }">
-  <div class="video-background" plyr [plyrOptions]="plyrOptions" [plyrSources]="videoUrlMP4 || videoUrlOGG"
-    *ngIf="videoUrlMP4 !== null || videoUrlOGG !== null">
-  </div>
-  <div class="image-background" *ngIf="imgSrc !==null">
-    <img [src]="imgSrc">
+  <div class="overlay-container">
+    <div class="video-background" plyr [plyrOptions]="plyrOptions" [plyrSources]="videoUrlMP4 || videoUrlOGG"
+      *ngIf="videoUrlMP4 !== null || videoUrlOGG !== null">
+    </div>
+    <div class="image-background" *ngIf="imgSrc !==null">
+      <img [src]="imgSrc">
+    </div>
+
+    <div *ngIf="imgSrc === null && (videoUrlMP4 === null && videoUrlOGG === null)"
+      [ngStyle]="{'background-color' : bgHexColor }" class=" color-background">
+    </div>
+    <div class="overlay-content-fullsize" *ngIf="!isSmallOverlay">
+      <span class="text">
+        {{overlayText}}
+      </span>
+      <div class="overlay" [ngStyle]="{'background-color' : overlayHexColor }"></div>
+    </div>
+    <div class="overlay-content-small" *ngIf="isSmallOverlay">
+      <span class="text">
+        {{overlayText}}
+      </span>
+      <div class="overlay" [ngStyle]="{'background-color' : overlayHexColor }"></div>
+    </div>
   </div>
 
-  <div *ngIf="imgSrc === null && (videoUrlMP4 === null && videoUrlOGG === null)"
-    [ngStyle]="{'background-color' : bgHexColor }" class=" color-background">
-  </div>
-  <div class="overlay-content-fullsize" *ngIf="!isSmallOverlay">
-    <span class="text">
-      {{overlayText}}
-    </span>
-    <div class="overlay" [ngStyle]="{'background-color' : overlayHexColor }"></div>
-  </div>
 </div>
-<div class="overlay-content-small" *ngIf="isSmallOverlay">
-  <span class="text">
-    {{overlayText}}
-  </span>
-  <div class="overlay" [ngStyle]="{'background-color' : overlayHexColor }"></div>
-</div>
-
 
 <p>
   Here you will be able to work on banner component! :-) Awsome!!
