@@ -13,13 +13,13 @@ export class BannerComponent implements OnInit {
   // public imgSrc = 'http://qnimate.com/wp-content/uploads/2014/03/images2.jpg';
   public imgSrc = null;
   public plyrOptions: any;
-  public bgHexColor = '#666';
+  public bgHexColor = '#00ff00';
   public overlayHexColor = '#000';
-  public overlayText = 'Some text inside overlay!'
+  public overlayText = '<p>Some text inside overlay!</p>'
   // public bannerPaddingRight = '100px';
-  public bannerPaddingRight = '0';
+  public bannerPaddingRight = '100px';
   // public bannerPaddingLeft = '100px';
-  public bannerPaddingLeft = '0';
+  public bannerPaddingLeft = '100px';
   public isSmallOverlay = true;
   @ViewChild(PlyrComponent, { static: false }) plyr: PlyrComponent;
 

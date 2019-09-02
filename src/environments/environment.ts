@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   // backendApi: 'http://localhost:3004/',
   backendApi: 'https://produktetcms.dynamikfabrikken.com/umbraco/api/',
-  hostName: 'scroll.com'
+  hostName: 'basic.com'
 };
 
 /*
