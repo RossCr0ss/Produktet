@@ -6,7 +6,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./teaser.component.css']
 })
 export class TeaserComponent implements OnInit {
-
+  public orderFirst = '0';
+  public orderSecond = '1';
+  public imgSrc = '../../assets/graphics/dynamikfabrikken/dynamikfabrikken.jpg';
 
   constructor() {
   }
