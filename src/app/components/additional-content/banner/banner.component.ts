@@ -10,13 +10,10 @@ import { Content } from '@angular/compiler/src/render3/r3_ast';
 })
 export class BannerComponent implements OnInit {
 
-  content: Banner;
-
-  public imgSrc = null;
-  
+  content: Banner;  
   public plyrOptions: any;
-
   public bgHexColor = '#00ff00';
+
 
   public FontColor = " blue-grey-text text-lighten-5";
   public BgColor = " blue-grey darken-3";
@@ -25,8 +22,15 @@ export class BannerComponent implements OnInit {
   public bannerPaddingRight = '10%';
   // public bannerPaddingLeft = '100px';
   public bannerPaddingLeft = '10%';
-
   public isSmallOverlay = true;
+
+
+  // Mangler
+  // posterimage for video start
+  // background color
+  // DisplayOverlay
+  // Full Overlay
+
   @ViewChild(PlyrComponent, { static: false }) plyr: PlyrComponent;
 
   constructor() {

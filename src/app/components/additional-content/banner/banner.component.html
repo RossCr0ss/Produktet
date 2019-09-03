@@ -1,15 +1,14 @@
-<div class="background-container"
-  [ngStyle]="{'padding-left' : bannerPaddingLeft , 'padding-right' : bannerPaddingRight }">
+<div class="background-container" [ngStyle]="{'padding-left' : bannerPaddingLeft , 'padding-right' : bannerPaddingRight }">
   <div class="overlay-container">
-    <div class="video-background" plyr [plyrOptions]="plyrOptions" [plyrSources]="content.mp4Url || content.oggUrl"
-      *ngIf="content.mp4Url !== null || content.oggUrl !== null">
+    
+    <div class="video-background" plyr [plyrOptions]="plyrOptions" [plyrSources]="content.mp4Url || content.oggUrl" *ngIf="content.mp4Url || content.oggUrl">
     </div>
+
     <div class="image-background" *ngIf="content.src">
-      <img [src]="content.src">
+        <img [src]="content.src">
     </div>
-    <div *ngIf="content.src === null && (content.mp4Url === null && content.oggUrl === null)"
-      [ngStyle]="{'background-color' : bgHexColor }" class=" color-background">
-    </div>
+
+    <div *ngIf="!content.src && (!content.mp4Url || !content.oggUrl)" [ngStyle]="{'background-color' : bgHexColor }" class="color-background"></div>
     
     <div class="overlay-content-fullsize" *ngIf="!isSmallOverlay">
       <span class="text" [innerHTML]="content.overlayMarkup"></span>
@@ -20,5 +19,6 @@
       <span class="text" [innerHTML]="content.overlayMarkup"></span>
       <div [ngClass]="'overlay ' + BgColor"></div>
     </div>
+
   </div>
 </div>
