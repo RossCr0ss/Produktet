@@ -28,10 +28,13 @@ export class BannerComponent implements OnInit {
 
   constructor() {
     this.plyrOptions = {
-      autoplay: true,
       muted: true,
+      autoplay: true,
+      clickToPlay: false,
       loop: { active: true },
-      controls: []
+      controls: [],
+      volume: 0,
+      fullscreen: { enabled: false }
     }
   }
 

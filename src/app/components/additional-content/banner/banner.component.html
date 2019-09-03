@@ -12,14 +12,12 @@
       [ngStyle]="{'background-color' : bgHexColor }" class=" color-background">
     </div>
     <div class="overlay-content-fullsize" *ngIf="!isSmallOverlay">
-      <span class="text">
-        {{content.overlayMarkup}}
+      <span class="text" [innerHTML]="content.overlayMarkup">
       </span>
       <div class="overlay" [ngStyle]="{'background-color' : overlayHexColor }"></div>
     </div>
     <div class="overlay-content-small" *ngIf="isSmallOverlay">
-      <span class="text" >
-        {{content.overlayMarkup}}
+      <span class="text" [innerHTML]="content.overlayMarkup">
       </span>
       <div class="overlay" [ngStyle]="{'background-color' : overlayHexColor }"></div>
     </div>
