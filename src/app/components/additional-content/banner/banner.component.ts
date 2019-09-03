@@ -22,7 +22,7 @@ export class BannerComponent implements OnInit {
   public bannerPaddingRight = '10%';
   // public bannerPaddingLeft = '100px';
   public bannerPaddingLeft = '10%';
-  public isSmallOverlay = true;
+  public isSmallOverlay = false;
 
 
   // Mangler
