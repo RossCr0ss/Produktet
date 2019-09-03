@@ -17,7 +17,10 @@ export class BannerComponent implements OnInit {
   public plyrOptions: any;
 
   public bgHexColor = '#00ff00';
-  public overlayHexColor = '#000';
+
+  public FontColor = " blue-grey-text text-lighten-5";
+  public BgColor = " blue-grey darken-3";
+
   // public bannerPaddingRight = '100px';
   public bannerPaddingRight = '10%';
   // public bannerPaddingLeft = '100px';

@@ -7,19 +7,18 @@
     <div class="image-background" *ngIf="content.src">
       <img [src]="content.src">
     </div>
-
     <div *ngIf="content.src === null && (content.mp4Url === null && content.oggUrl === null)"
       [ngStyle]="{'background-color' : bgHexColor }" class=" color-background">
     </div>
+    
     <div class="overlay-content-fullsize" *ngIf="!isSmallOverlay">
-      <span class="text" [innerHTML]="content.overlayMarkup">
-      </span>
-      <div class="overlay" [ngStyle]="{'background-color' : overlayHexColor }"></div>
+      <span class="text" [innerHTML]="content.overlayMarkup"></span>
+      <div [ngClass]="'overlay ' + BgColor"></div>
     </div>
+
     <div class="overlay-content-small" *ngIf="isSmallOverlay">
-      <span class="text" [innerHTML]="content.overlayMarkup">
-      </span>
-      <div class="overlay" [ngStyle]="{'background-color' : overlayHexColor }"></div>
+      <span class="text" [innerHTML]="content.overlayMarkup"></span>
+      <div [ngClass]="'overlay ' + BgColor"></div>
     </div>
   </div>
 </div>
