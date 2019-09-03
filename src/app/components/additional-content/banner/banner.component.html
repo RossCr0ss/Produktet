@@ -1,3 +1,4 @@
+<h1>HER: {{content.posterSrc}}</h1>
 <div class="background-container" [ngStyle]="{'padding-left' : bannerPaddingLeft , 'padding-right' : bannerPaddingRight }">
   <div class="overlay-container">
     
@@ -8,14 +9,14 @@
         <img [src]="content.src">
     </div>
 
-    <div *ngIf="!content.src && (!content.mp4Url || !content.oggUrl)" [ngStyle]="{'background-color' : bgHexColor }" class="color-background"></div>
+    <div *ngIf="!content.src && !content.mp4Url && !content.oggUrl" [ngStyle]="{'background-color' : content.bgColor }" class="color-background"></div>
     
-    <div class="overlay-content-fullsize" *ngIf="!isSmallOverlay">
+    <div class="overlay-content-fullsize" *ngIf="content.fullOverlay && !content.displayOverlay">
       <span class="text" [innerHTML]="content.overlayMarkup"></span>
       <div [ngClass]="'overlay ' + BgColor"></div>
     </div>
 
-    <div class="overlay-content-small" *ngIf="isSmallOverlay">
+    <div class="overlay-content-small" *ngIf="!content.fullOverlay && !content.displayOverlay">
       <span class="text" [innerHTML]="content.overlayMarkup"></span>
       <div [ngClass]="'overlay ' + BgColor"></div>
     </div>
