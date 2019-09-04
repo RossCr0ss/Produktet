@@ -18,7 +18,7 @@ export default {
 
   'basic-footer': 'footer/basic-footer/basic-footer.module',
   
-  'banner': 'additional-content/teaser/teaser.module',
+  'banner': 'additional-content/banner/banner.module',
   'teaser': 'additional-content/teaser/teaser.module',
   'text': 'additional-content/text/text.module',
   'image': 'additional-content/image/image.module',
@@ -27,4 +27,7 @@ export default {
   'video': 'additional-content/video/video.module',
   'slider': 'additional-content/slider/slider.module',
   'grid': 'additional-content/grid/grid.module'
+
+
+  
 }
