@@ -22,10 +22,6 @@ export class BannerComponent implements OnInit {
   @ViewChild(PlyrComponent, { static: false }) plyr: PlyrComponent;
 
   constructor() {
-
-    
-    
-
     this.plyrOptions = {
       poster: 'https://dummyimage.com/600x400/000/fff',
       muted: true,
@@ -37,7 +33,7 @@ export class BannerComponent implements OnInit {
       fullscreen: { enabled: false }
     }
   }
-  
+
   ngOnInit() {
     console.log("Var to poster image");
     console.log(this.content.posterSrc);

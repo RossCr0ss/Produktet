@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   // backendApi: 'http://localhost:3004/',
-  backendApi: 'http://localhost:52558/umbraco/api/',
+  backendApi: 'https://produktetcms.dynamikfabrikken.com/umbraco/api/',
   hostName: 'basic.com'
 };
 
