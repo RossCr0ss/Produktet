@@ -6,6 +6,7 @@ import {HttpClient} from '@angular/common/http';
   templateUrl: './text.component.html',
   styleUrls: ['./text.component.css']
 })
+
 export class TextComponent implements OnInit {
 
   constructor(private http: HttpClient) {

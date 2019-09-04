@@ -21,16 +21,15 @@
 }
 
 .color-background {
-  background-color: aqua;
   height: 60vh !important;
   width: 100% !important;
 }
 
 .overlay-content-small {
-  width: 800px;
+  width: 700px;
   position: absolute;
   top: 20%;
-  left: calc(100% - 740px);
+  right: 0;
   display: table;
 }
 
@@ -64,9 +63,12 @@
   display: table-cell;
   position: relative;
   width: 100%;
-  color: #fff;
   vertical-align: middle;
   z-index: 2;
+}
+
+.text p {
+  color: #fff;
 }
 
 .overlay-content-fullsize .text {
@@ -74,7 +76,7 @@
 }
 
 .overlay-content-small .text {
-  padding: 0px 40px 40px;
+  padding: 20px
 }
 
 
