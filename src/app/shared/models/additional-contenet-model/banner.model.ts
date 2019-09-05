@@ -5,4 +5,8 @@ export interface Banner extends Module {
   oggUrl: string;
   src: string;
   overlayMarkup: string;
+  bgColor: string;
+  posterSrc: string;
+  displayOverlay: boolean;
+  fullOverlay: boolean;
 }

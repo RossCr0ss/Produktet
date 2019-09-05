@@ -27,4 +27,7 @@ export default {
   'video': 'additional-content/video/video.module',
   'slider': 'additional-content/slider/slider.module',
   'grid': 'additional-content/grid/grid.module'
+
+
+  
 }

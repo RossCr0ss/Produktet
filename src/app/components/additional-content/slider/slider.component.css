@@ -1,23 +1,19 @@
 .item {
-  padding: 10px;
   box-sizing: border-box;
 }
 
 .content {
-  background-color: #ccc;
-  background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
 
 .left-btn {
   position: absolute;
   margin: auto;
-  bottom: 34px;
+  top: 125px;
   border-radius: 999px;
-  left: 120px;
+  right: 60px;
   z-index: 100;
   font-size: 48px;
   cursor: pointer;
@@ -26,14 +22,13 @@
 .right-btn {
   position: absolute;
   margin: auto;
-  bottom: 34px;
+  top: 125px;
   border-radius: 999px;
-  left: 160px;
+  right: 10px;
   z-index: 100;
   font-size: 48px;
   cursor: pointer;
 }
-
 
 .point {
   left: 0px;
@@ -49,6 +44,7 @@
   right: 0px;
   cursor: pointer;
 }
+
 .point  li {
   display: inline-block;
   border-radius: 50%;
@@ -65,9 +61,9 @@
 
 .overlay {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  width: 190px;
+  top: 100px;
+  right: 0px;
+  width: 100px;
   height: 72px;
   font-size: 2em;
   color: #ccc;

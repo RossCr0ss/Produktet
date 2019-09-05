@@ -1,14 +1,17 @@
-<div style="position: relative">
-  <ngu-carousel #slider [inputs]="carouselConfig" [dataSource]="images" style="transition: none !important">
-    <div *nguCarouselDef="let item;" class="item" style="transition: none !important">
-      <div class="content" style="transition: none !important"><img src="{{item}}" alt="" height="600"></div>
+<div style="position: relative" *ngIf="content.images.length > 0">
+
+  <ngu-carousel #slider [inputs]="carouselConfig" [dataSource]="content.images">
+    <div *nguCarouselDef="let item;" class="item">
+      <div class="content"><img src="{{item}}" alt="" height="600"></div>
     </div>
-    <img src="/assets/svg/left.svg" class="left-btn" [ngClass] = 'FontColor' NguCarouselPrev>
-    <img src="/assets/svg/right.svg" class="right-btn" [ngClass] = 'FontColor' NguCarouselNext>
-    <ul class="point" NguCarouselPoint>
-      <li *ngFor="let j of slider.pointNumbers; let j = index" [class.active]="j==slider.activePoint" (click)="slider.moveTo(j,true)"></li>
+
+    <img src="/assets/svg/left.svg" class="left-btn" [ngClass]='FontColor' NguCarouselPrev>
+    <img src="/assets/svg/right.svg" class="right-btn" [ngClass]='FontColor' NguCarouselNext>
+    <ul class="point" *ngIf="content.displayDots" NguCarouselPoint>
+      <li *ngFor="let j of slider.pointNumbers; let j = index" [class.active]="j==slider.activePoint" (click)="slider.moveTo(j)"></li>
     </ul>
   </ngu-carousel>
     
-  <div [ngClass] = 'BgColor' class="overlay">{{slider.activePoint + 1}} / {{slider.pointNumbers.length}}</div>
+  <div *ngIf="content.displayArrows" [ngClass]='BgColor' class="overlay"></div>
+  
 </div>
