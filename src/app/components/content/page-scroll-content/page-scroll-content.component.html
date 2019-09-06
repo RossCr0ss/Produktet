@@ -7,7 +7,6 @@
 
 <ng-container *ngFor="let menu of menus">
   <section [id]="menu.path" style="height: 100%; border: 1px solid red;">
-    <div snInViewport (inViewportChange)="changeUrl(menu.path)">
       <ng-container *ngIf="menu.content;else noContent">
         <h1 class="headline">{{menu.name}}</h1>
         <div *ngFor="let content of menu.content">
@@ -21,6 +20,5 @@
         <h1>No content!</h1>
       </ng-template>
 
-    </div>
   </section>
 </ng-container>

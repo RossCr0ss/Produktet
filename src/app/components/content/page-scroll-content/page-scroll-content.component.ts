@@ -20,19 +20,7 @@ export class PageScrollContentComponent implements OnInit, AfterViewInit, OnDest
   contentLoaded = false;
 
   unsubscribe$ = new Subject();
-
-  pathOnScrolling = ''
-  locationHashWhenScrolling = ''
   configuration: Site;
-
-  @HostListener('window:scroll', ['$event'])
-  handleWindowScroll($event) {
-    if (this.pathOnScrolling !== this.locationHashWhenScrolling) {
-      this.locationHashWhenScrolling = this.pathOnScrolling
-      this.router.navigate(['/'],
-        {fragment: this.locationHashWhenScrolling});
-    }
-  }
 
   constructor(@Inject(DOCUMENT) private document: any, private contentService: ContentService,
               private router: Router, private siteConfigurationService: SiteConfigurationService) {
@@ -52,10 +40,6 @@ export class PageScrollContentComponent implements OnInit, AfterViewInit, OnDest
     .subscribe(() => {
       this.contentLoaded = true;
     })
-  }
-
-  changeUrl(path) {
-    this.pathOnScrolling = path;
   }
 
   ngAfterViewInit(): void {
