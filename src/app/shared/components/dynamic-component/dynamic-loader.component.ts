@@ -10,7 +10,6 @@ import {
 } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import modulesMapping from './modules-mapping';
-import {ComponentContent} from "../../models/component-content.model";
 import {Module} from "../../models/additional-contenet-model/module";
 
 @Component({
@@ -27,7 +26,7 @@ export class DynamicLoaderComponent implements OnInit {
 
   public modulesMapping = modulesMapping;
 
-  private componentContent: ComponentContent[] = [];
+  private componentContent: Module[] = [];
 
   constructor(private compiler: Compiler, private viewRef: ViewContainerRef, private injector: Injector, private route: ActivatedRoute) {
   }

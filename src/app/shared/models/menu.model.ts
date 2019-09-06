@@ -1,4 +1,4 @@
-import {ComponentContent} from "./component-content.model";
+import {Module} from "./additional-contenet-model/module";
 
 export class Menu {
   name: string;
@@ -15,7 +15,7 @@ export class Menu {
   metaKeywords: string;
   metaImage: string;
   favicon: string;
-  content: ComponentContent[];
+  content: Module[];
 
   constructor(menu?: any) {
     this.name = menu && menu.name || '';
