@@ -13,7 +13,7 @@ import {FormsModule} from "@angular/forms";
   exports: [SliderComponent],
   entryComponents: [SliderComponent]
 })
-export class SliderModule { }
+export class SliderModule {}
 
 export function moduleName() {
   return 'SliderModule';
