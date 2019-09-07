@@ -1,11 +1,11 @@
-<div class="feature-block" [ngStyle]="{'background-color': bgColor, 'color': textColor}">
+<div class="testimonial-block" [ngStyle]="{'background-color': bgColor, 'color': textColor}">
     <div class="container">
-        <h2 [ngStyle]="{'color': headingColor}">KUNDEUDTALELSER</h2>
         <div class="two-blocks">
-            <div class="image-block"></div>
-            <div class="text-block" [ngStyle]="{'background-color': textBlockBg}">
+            <div class="image-wrap" [ngStyle]="{'background-image': 'url('+ content.src + ')', 'order': orderSecond}">
+            </div>
+            <div class="text-block" [ngStyle]="{'background-color': textBlockBg, 'border-bottom': borderBottom}">
                 <blockquote>
-                    <q>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et nobis quam sapiente sequi eligendi. Assumenda cumque esse reiciendis laudantium praesentium.</q>
+                    <q><span class="material-icons" [ngStyle]="{'color':iconColor}">format_quote</span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et nobis quam sapiente sequi eligendi. Assumenda cumque esse reiciendis laudantium praesentium.</q>
                     <cite>
                         <strong class="name">Test name</strong>
                         <span class="designation">Manager</span>
