@@ -6,18 +6,36 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./testimonial.component.css']
 })
 export class TestimonialComponent implements OnInit {
-  public iconColor = '#1de9c3';
-  public bgColor = '#e7e7e7';
-  public headingColor = '#fff';
-  public textColor = '#302c2f';
-  public textBlockBg = '#fff';
-  public iconSize = '35px';
-  public borderBottom = '3px solid #b40095';
+
+  // From here we will be able to set some simple values from API
+  // The colClass - (Site "base color")
+  // revertCol - Will it be white background or the "base color" as background
+  // Setting If there will be container
+
+  public colClass = "blue-grey"; // "base colors" class from materilize css
+  public revertCol = false;
+
+  public bgColClass  = " " + this.colClass + " darken-1";
+  public fontColClass = " " + this.colClass + "-text text-lighten-5";
+  public iconBorderColClass = this.fontColClass;
+
+  public containerClass = " container"; // or ""
+  public borderBottom = '3px solid'; // Will NOT be dynamic for now
+  public iconSize = '35px'; // Will not be dynamic for now
+
+  public orderSecond = '0'; // 1 or 0
 
   constructor() {
   }
 
   ngOnInit() {
+
+    if(this.revertCol){
+      this.bgColClass  = "";
+      this.fontColClass = " " + this.colClass + "-text";
+      this.iconBorderColClass = " " + this.colClass + "-text text-darken-3";
+    }
+
   }
 
 }

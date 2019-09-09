@@ -8,6 +8,9 @@ import {HttpClient} from '@angular/common/http';
 })
 
 export class TextComponent implements OnInit {
+  public bgColClass  = " blue-grey darken-3";
+  public fontColClass = " blue-grey-text text-lighten-5";
+  public containerClass = " container";
 
   constructor(private http: HttpClient) {
   }

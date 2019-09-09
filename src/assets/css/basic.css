@@ -12,6 +12,7 @@ body.menu-basic-menu  {
 }
 
 
-section {
-    margin-bottom: 60px;
+.ad-comp {
+    margin-bottom: 20px;
+    padding: 20px 0 40px 0;
 }

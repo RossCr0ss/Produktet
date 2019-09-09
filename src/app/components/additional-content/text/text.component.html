@@ -1,5 +1,5 @@
-<section class="container">
-  <div class="row">
-    <div [innerHTML]="content?.markup"></div>
+<section [ngClass]="'ad-comp' + bgColClass + fontColClass">
+  <div [ngClass]="containerClass">
+      <div [innerHTML]="content?.markup"></div>
   </div>
 </section>

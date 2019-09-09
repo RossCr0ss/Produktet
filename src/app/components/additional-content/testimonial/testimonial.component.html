@@ -1,11 +1,11 @@
-<div class="testimonial-block" [ngStyle]="{'background-color': bgColor, 'color': textColor}">
-    <div class="container">
+<section [ngClass]="'testimonial-block' + bgColClass">
+    <div [ngClass]="containerClass">
         <div class="two-blocks">
             <div class="image-wrap" [ngStyle]="{'background-image': 'url('+ content.src + ')', 'order': orderSecond}">
             </div>
-            <div class="text-block" [ngStyle]="{'background-color': textBlockBg, 'border-bottom': borderBottom}">
-                <blockquote>
-                    <q><span class="material-icons" [ngStyle]="{'color':iconColor}">format_quote</span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et nobis quam sapiente sequi eligendi. Assumenda cumque esse reiciendis laudantium praesentium.</q>
+            <div [ngClass]="'text-block' + iconBorderColClass" [ngStyle]="{'border-bottom': borderBottom}">
+                <blockquote [ngClass]="fontColClass">
+                    <q><span [ngClass]="'material-icons'+ iconBorderColClass">format_quote</span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et nobis quam sapiente sequi eligendi. Assumenda cumque esse reiciendis laudantium praesentium.</q>
                     <cite>
                         <strong class="name">Test name</strong>
                         <span class="designation">Manager</span>
@@ -14,4 +14,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>
