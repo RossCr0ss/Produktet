@@ -20,7 +20,7 @@ export class TestimonialComponent implements OnInit {
   public iconBorderColClass = this.fontColClass;
 
   public containerClass = " container"; // or ""
-  public borderBottom = '3px solid'; // Will NOT be dynamic for now
+  public borderBottom = '3px solid'; // Will NOT be dynamic for nowy
   public iconSize = '35px'; // Will not be dynamic for now
 
   public orderSecond = '0'; // 1 or 0
