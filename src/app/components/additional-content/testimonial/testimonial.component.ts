@@ -12,14 +12,12 @@ export class TestimonialComponent implements OnInit {
   public textColor = '#302c2f';
   public textBlockBg = '#fff';
   public iconSize = '35px';
-  public iconColor = '#b40095';
   public borderBottom = '3px solid #b40095';
 
   constructor() {
   }
 
   ngOnInit() {
-
   }
 
 }
