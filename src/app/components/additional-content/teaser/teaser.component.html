@@ -1,14 +1,12 @@
-<div class="banner-block" *ngIf="content.src">
-    <div class="teaser-wrap">
-        <div class="image-wrap" [ngStyle]="{'background-image': 'url('+ content.src + ')', 'order': orderSecond}">
-        </div>
-        <div class="caption" [ngStyle]="{'order': orderFirst}" >
-            <div [innerHTML]="content.markup">
-
+<section [ngClass]="containerClass + cccBg('blue-grey', isWhite) + cccText('blue-grey', isWhite)">
+    <div class="banner-block" *ngIf="content.src">
+        <div class="teaser-wrap">
+            <div class="image-wrap" [ngStyle]="{'background-image': 'url('+ content.src + ')', 'order': orderSecond}">
             </div>
-            
-            <!-- <a href="#" class="btn">view more</a> -->
-           
+            <div class="caption" [ngStyle]="{'order': orderFirst}" >
+                <div [innerHTML]="replaceButtonClass(content.markup)">
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</section>

@@ -1,6 +1,6 @@
-<section [ngClass]="'testimonial-block' + bgColClass">
-    <div [ngClass]="containerClass">
-        <div class="two-blocks">
+<section [ngClass]="bgColClass">
+    <div class="testimonial-block container">
+        <div [ngClass]="'two-blocks'">
             <div class="image-wrap" [ngStyle]="{'background-image': 'url('+ content.src + ')', 'order': orderSecond}">
             </div>
             <div [ngClass]="'text-block' + iconBorderColClass" [ngStyle]="{'border-bottom': borderBottom}">

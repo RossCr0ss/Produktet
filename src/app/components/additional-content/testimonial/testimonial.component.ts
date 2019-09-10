@@ -10,7 +10,6 @@ export class TestimonialComponent implements OnInit {
   // From here we will be able to set some simple values from API
   // The colClass - (Site "base color")
   // revertCol - Will it be white background or the "base color" as background
-  // Setting If there will be container
 
   public colClass = "blue-grey"; // "base colors" class from materilize css
   public revertCol = false;
@@ -19,7 +18,6 @@ export class TestimonialComponent implements OnInit {
   public fontColClass = " " + this.colClass + "-text text-lighten-5";
   public iconBorderColClass = this.fontColClass;
 
-  public containerClass = " container"; // or ""
   public borderBottom = '3px solid'; // Will NOT be dynamic for nowy
   public iconSize = '35px'; // Will not be dynamic for now
 

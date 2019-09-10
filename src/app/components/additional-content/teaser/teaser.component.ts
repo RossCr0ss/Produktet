@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, Pipe  } from '@angular/core';
 import { Teaser } from 'src/app/shared/models/additional-contenet-model/teaser.model';
 
 @Component({
@@ -6,12 +6,18 @@ import { Teaser } from 'src/app/shared/models/additional-contenet-model/teaser.m
   templateUrl: './teaser.component.html',
   styleUrls: ['./teaser.component.css']
 })
+
 export class TeaserComponent implements OnInit {
+
+  content: Teaser;
+  //Will be dynamix from API
+  public isWhite = false;
+  public containerClass = "";
+
 
   public orderFirst = '0';
   public orderSecond = '1';
-  content: Teaser;
-
+  
   constructor() {
   }
 
@@ -22,4 +28,40 @@ export class TeaserComponent implements OnInit {
     }
   }
 
+  //Please show how to make this a general function we can use on all components + is it okay approch?
+  replaceButtonClass(s:string) {
+    return s && s.replace('btn-large','btn-large' + this.cccBtn("blue-grey", this.isWhite)).replace('btn','btn' + this.cccBtn("blue-grey", this.isWhite)).replace('btn-small','btn-small' + this.cccBtn("blue-grey", this.isWhite));
+  }
+
+  public cccBg(basecol:string, isWhite: Boolean){
+      
+      if(isWhite){
+        return "";
+      }
+      else{
+        return " " + basecol + " darken-1";
+      }
+  }
+
+  public cccText(basecol:string, isWhite: Boolean){
+    if(isWhite){
+      return " text-" + basecol + " darken-2"
+    }
+    else{
+      return " " + basecol + "-text text-lighten-5";
+    }
+  }
+
+  public cccBtn(basecol:string, isWhite: Boolean){
+    if(isWhite){
+      return " " + basecol + " lighten-1";
+    }
+    else {
+      return " " + basecol + " darken-3";
+    }
+  }
+
+
 }
+
+
