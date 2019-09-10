@@ -1,4 +1,4 @@
-<section [ngClass]="containerClass + cccBg('blue-grey', isWhite) + cccText('blue-grey', isWhite)">
+<section [ngClass]="'ad-comp comp-' + content.name + containerClass + cccBg(colClass, isWhite) + cccText(colClass, isWhite)">
     <div class="banner-block" *ngIf="content.src">
         <div class="teaser-wrap">
             <div class="image-wrap" [ngStyle]="{'background-image': 'url('+ content.src + ')', 'order': orderSecond}">

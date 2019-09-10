@@ -5,14 +5,11 @@ a.link-inherit {
 
 /* colors: https://materializecss.com/color.html */
 
-
 /* component special combination rules.... */
 body.menu-basic-menu  {
     padding-left: 60px;
 }
 
-
 .ad-comp {
-    margin-bottom: 20px;
-    padding: 20px 0 40px 0;
+    margin-bottom: 40px;
 }

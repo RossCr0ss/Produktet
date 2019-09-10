@@ -14,6 +14,10 @@ export class VideoComponent implements OnInit {
   id: string;
   content: Video;
 
+  public colClass = "blue-grey";
+  public isWhite = false;
+  public containerClass = "container";
+
   @ViewChild('player', { static: false }) player: ElementRef<HTMLMediaElement>;
 
   constructor() {
@@ -36,6 +40,40 @@ export class VideoComponent implements OnInit {
         muted: this.content.isMuted,
         loop: { active: this.content.isLoop }
       }
+    }
+  }
+
+  public cccBg(basecol:string, isWhite: Boolean){
+    if(isWhite){
+      return "";
+    }
+    else{
+      return " " + basecol + " darken-1";
+    }
+  }
+  public cccText(basecol:string, isWhite: Boolean){
+    if(isWhite){
+      return " " + basecol + "-text text-darken-2"
+    }
+    else{
+      return " " + basecol + "-text text-lighten-5";
+    }
+  }
+  public cccBtn(basecol:string, isWhite: Boolean){
+    if(isWhite){
+      return " " + basecol + " lighten-1";
+    }
+    else {
+      return " " + basecol + " darken-3";
+    }
+  }
+  
+  public cccIcon(basecol:string, isWhite: Boolean){
+    if(isWhite){
+      return " " + basecol + "-text text-darken-2"
+    }
+    else {
+      return " " + basecol + "-text text-darken-3";
     }
   }
 

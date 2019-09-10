@@ -1,4 +1,4 @@
-<section [ngClass]="'ad-comp' + bgColClass + fontColClass">
+<section [ngClass]="'ad-comp comp-' + content.name + bgColClass + fontColClass">
   <div [ngClass]="containerClass">
       <div [innerHTML]="content?.markup"></div>
   </div>

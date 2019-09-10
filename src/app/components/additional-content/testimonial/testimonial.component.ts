@@ -7,33 +7,53 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class TestimonialComponent implements OnInit {
 
-  // From here we will be able to set some simple values from API
-  // The colClass - (Site "base color")
-  // revertCol - Will it be white background or the "base color" as background
-
   public colClass = "blue-grey"; // "base colors" class from materilize css
-  public revertCol = false;
+  public isWhite = false;
 
-  public bgColClass  = " " + this.colClass + " darken-1";
-  public fontColClass = " " + this.colClass + "-text text-lighten-5";
-  public iconBorderColClass = this.fontColClass;
+  public orderSecond = '0'; // 1 or 0
 
   public borderBottom = '3px solid'; // Will NOT be dynamic for nowy
   public iconSize = '35px'; // Will not be dynamic for now
 
-  public orderSecond = '0'; // 1 or 0
 
   constructor() {
   }
 
   ngOnInit() {
 
-    if(this.revertCol){
-      this.bgColClass  = "";
-      this.fontColClass = " " + this.colClass + "-text";
-      this.iconBorderColClass = " " + this.colClass + "-text text-darken-3";
-    }
-
   }
 
+  public cccBg(basecol:string, isWhite: Boolean){
+    if(isWhite){
+      return "";
+    }
+    else{
+      return " " + basecol + " darken-1";
+    }
+  }
+  public cccText(basecol:string, isWhite: Boolean){
+    if(isWhite){
+      return " " + basecol + "-text text-darken-2"
+    }
+    else{
+      return " " + basecol + "-text text-lighten-5";
+    }
+  }
+  public cccBtn(basecol:string, isWhite: Boolean){
+    if(isWhite){
+      return " " + basecol + " lighten-1";
+    }
+    else {
+      return " " + basecol + " darken-3";
+    }
+  }
+
+  public cccIcon(basecol:string, isWhite: Boolean){
+    if(isWhite){
+      return " " + basecol + "-text text-darken-2"
+    }
+    else {
+      return " " + basecol + "-text text-darken-3";
+    }
+  }
 }

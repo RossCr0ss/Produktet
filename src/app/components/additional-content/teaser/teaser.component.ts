@@ -11,6 +11,7 @@ export class TeaserComponent implements OnInit {
 
   content: Teaser;
   //Will be dynamix from API
+  public colClass = "blue-grey";
   public isWhite = false;
   public containerClass = "";
 
@@ -30,28 +31,25 @@ export class TeaserComponent implements OnInit {
 
   //Please show how to make this a general function we can use on all components + is it okay approch?
   replaceButtonClass(s:string) {
-    return s && s.replace('btn-large','btn-large' + this.cccBtn("blue-grey", this.isWhite)).replace('btn','btn' + this.cccBtn("blue-grey", this.isWhite)).replace('btn-small','btn-small' + this.cccBtn("blue-grey", this.isWhite));
+    return s && s.replace('btn-large','btn-large' + this.cccBtn(this.colClass, this.isWhite)).replace('btn','btn' + this.cccBtn(this.colClass, this.isWhite)).replace('btn-small','btn-small' + this.cccBtn(this.colClass, this.isWhite));
   }
 
   public cccBg(basecol:string, isWhite: Boolean){
-      
-      if(isWhite){
-        return "";
-      }
-      else{
-        return " " + basecol + " darken-1";
-      }
+    if(isWhite){
+      return "";
+    }
+    else{
+      return " " + basecol + " darken-1";
+    }
   }
-
   public cccText(basecol:string, isWhite: Boolean){
     if(isWhite){
-      return " text-" + basecol + " darken-2"
+      return " " + basecol + "-text text-darken-2"
     }
     else{
       return " " + basecol + "-text text-lighten-5";
     }
   }
-
   public cccBtn(basecol:string, isWhite: Boolean){
     if(isWhite){
       return " " + basecol + " lighten-1";
@@ -60,7 +58,15 @@ export class TeaserComponent implements OnInit {
       return " " + basecol + " darken-3";
     }
   }
-
+  
+  public cccIcon(basecol:string, isWhite: Boolean){
+    if(isWhite){
+      return " " + basecol + "-text text-darken-2"
+    }
+    else {
+      return " " + basecol + "-text text-darken-3";
+    }
+  }
 
 }
 
