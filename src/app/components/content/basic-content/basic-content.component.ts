@@ -19,4 +19,7 @@ export class BasicContentComponent implements OnInit {
     this.configuration = this.siteConfigurationService.configuration.mainComponents;
   }
 
+  trackByFn(index, item) {
+    return item.key
+  }
 }

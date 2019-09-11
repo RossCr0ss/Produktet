@@ -16,20 +16,20 @@ export class RouteService {
     menus.forEach((firstLevelMenu: Menu) => {
       this.router.config.push({
         path: firstLevelMenu.path, component: DynamicLoaderComponent,
-        data: {moduleName: contentModuleName, content: firstLevelMenu.content}
+        data: {moduleName: contentModuleName, content: firstLevelMenu.content, animation: firstLevelMenu.path}
       });
       if (firstLevelMenu.subMenu) {
         firstLevelMenu.subMenu.forEach((secondLevelMenu: Menu) => {
           this.router.config.push({
             path: `${firstLevelMenu.path}/${secondLevelMenu.path}`, component: DynamicLoaderComponent,
-            data: {moduleName: contentModuleName, content: secondLevelMenu.content}
+            data: {moduleName: contentModuleName, content: secondLevelMenu.content, animation: secondLevelMenu.path}
           });
           if (secondLevelMenu.subMenu) {
             secondLevelMenu.subMenu.forEach((thirdLevelMenu: Menu) => {
               this.router.config.push({
                 path: `${firstLevelMenu.path}/${secondLevelMenu.path}/${thirdLevelMenu.path}`,
                 component: DynamicLoaderComponent,
-                data: {moduleName: contentModuleName, content: thirdLevelMenu.content}
+                data: {moduleName: contentModuleName, content: thirdLevelMenu.content, animation: thirdLevelMenu.path}
               });
             });
           }

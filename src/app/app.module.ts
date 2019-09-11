@@ -8,12 +8,14 @@ import {SharedModule} from './shared/shared.module';
 import {RouterModule} from '@angular/router';
 
 import {SlickCarouselModule} from 'ngx-slick-carousel';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     CoreModule,
     SharedModule,
