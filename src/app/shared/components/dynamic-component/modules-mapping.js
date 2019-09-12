@@ -18,7 +18,9 @@ export default {
 
   'basic-footer': 'footer/basic-footer/basic-footer.module',
   
-  'banner': 'additional-content/testimonial/testimonial.module',
+  'banner': 'additional-content/banner/banner.module',
+  'testimonial': 'additional-content/testimonial/testimonial.module',
+  'feature': 'additional-content/feature/feature.module',
   'teaser': 'additional-content/teaser/teaser.module',
   'text': 'additional-content/text/text.module',
   'image': 'additional-content/image/image.module',
@@ -31,3 +33,9 @@ export default {
 
   
 }
+
+
+/*
+Additional: 
+youtubevideo and grid not there yet!
+*/
