@@ -4,9 +4,10 @@
 
 <!-- we need to add nav tag-->
 <dynamic-loader [moduleName]="configuration.menu.name"></dynamic-loader>
-
 <main>
-  <router-outlet></router-outlet>
+  <div [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
 </main>
 
 <footer>

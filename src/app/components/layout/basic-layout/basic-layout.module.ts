@@ -8,7 +8,7 @@ import {RouterModule} from '@angular/router';
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
   ],
   declarations: [BasicLayoutComponent],
   exports: [BasicLayoutComponent],

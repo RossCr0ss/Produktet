@@ -1,11 +1,11 @@
 <ng-container *ngIf="configuration.content && configuration.content.content">
-  <ng-container *ngFor="let module of configuration.content.content">
+  <ng-container *ngFor="let module of configuration.content.content; trackBy: trackByFn">
     <dynamic-loader [module]="module"></dynamic-loader>
   </ng-container>
 </ng-container>
 
 <ng-container *ngIf="additionalContent && additionalContent">
-  <ng-container *ngFor="let module of additionalContent">
+  <ng-container *ngFor="let module of additionalContent; trackBy: trackByFn">
     <dynamic-loader [module]="module"></dynamic-loader>
   </ng-container>
 </ng-container>
