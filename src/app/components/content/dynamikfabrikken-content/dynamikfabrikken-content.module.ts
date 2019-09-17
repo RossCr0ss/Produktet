@@ -2,14 +2,12 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {PageScrollContentComponent} from './dynamikfabrikken-content.component';
 import {SharedModule} from "../../../shared/shared.module";
-import { InViewportModule } from '@thisissoon/angular-inviewport';
 
 
 @NgModule({
   declarations: [PageScrollContentComponent],
   imports: [
     CommonModule,
-    InViewportModule,
     SharedModule
   ], exports: [PageScrollContentComponent],
   entryComponents: [PageScrollContentComponent]
