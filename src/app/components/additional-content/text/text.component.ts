@@ -13,6 +13,7 @@ export class TextComponent implements OnInit {
   
   public containerClass = " container";
 
+
   constructor(private http: HttpClient) {
   }
 

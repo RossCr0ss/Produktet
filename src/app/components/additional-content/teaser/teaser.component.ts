@@ -1,10 +1,11 @@
-import { Component, OnInit, Pipe  } from '@angular/core';
+import {Component, OnInit, Pipe, ViewEncapsulation} from '@angular/core';
 import { Teaser } from 'src/app/shared/models/additional-contenet-model/teaser.model';
 
 @Component({
   selector: 'app-teaser',
   templateUrl: './teaser.component.html',
-  styleUrls: ['./teaser.component.css']
+  styleUrls: ['./teaser.component.css'],
+  encapsulation: ViewEncapsulation.ShadowDom,
 })
 
 export class TeaserComponent implements OnInit {
@@ -18,7 +19,9 @@ export class TeaserComponent implements OnInit {
 
   public orderFirst = '0';
   public orderSecond = '1';
-  
+
+  deleteMeLater = '<p class="deleteMeClass">This is innerText with style</p>';
+
   constructor() {
   }
 

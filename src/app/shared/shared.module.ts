@@ -4,6 +4,7 @@ import {ScriptLoaderDirective} from './directives/script-loader.directive';
 import {StyleLoaderDirective} from './directives/style-loader.directive';
 import {DynamicLoaderComponent} from './components/dynamic-component/dynamic-loader.component';
 import {ErrorLayoutComponent} from './components/error-layout/error-layout.component';
+import {SafeHtmlPipe} from "./directives/safe-html.pipe";
 
 @NgModule({
   imports: [
@@ -13,13 +14,15 @@ import {ErrorLayoutComponent} from './components/error-layout/error-layout.compo
     ScriptLoaderDirective,
     StyleLoaderDirective,
     DynamicLoaderComponent,
-    ErrorLayoutComponent
+    ErrorLayoutComponent,
+    SafeHtmlPipe
   ],
   exports: [
     ScriptLoaderDirective,
     StyleLoaderDirective,
     DynamicLoaderComponent,
-    ErrorLayoutComponent
+    ErrorLayoutComponent,
+    SafeHtmlPipe
   ],
   entryComponents: [
     ErrorLayoutComponent,
