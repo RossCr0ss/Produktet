@@ -1,0 +1,18 @@
+swiper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;  
+    width: 1000px;
+    height: 600px;
+    background: rgb(255, 255, 255);
+    margin: 0 auto;
+  }
+  .item {
+    box-sizing: border-box;
+  }
+   
+  .swiper-wrapper {
+    background: rgba(0,0,0,0.6);
+  } 
+  
