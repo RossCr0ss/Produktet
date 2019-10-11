@@ -10,15 +10,20 @@ import {RouterModule} from '@angular/router';
 import {SlickCarouselModule} from 'ngx-slick-carousel';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
+import { SliderModule } from './components/additional-content/slider/slider.module';
+// import { SliderModule } from './components/additional-content/slider/swiper/swiper.module';
+
 @NgModule({
   declarations: [
     AppComponent
+    
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
     CoreModule,
     SharedModule,
+    SliderModule,
     RouterModule.forRoot([], {
       scrollPositionRestoration: 'enabled',
       anchorScrolling: 'enabled',
