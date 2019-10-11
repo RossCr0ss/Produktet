@@ -57,11 +57,12 @@ export const slideAnimation =
         position: 'absolute',
         top: 0,
         left: '-100%',
-        width: '100%' })
+        width: '100%' 
+        })
       ], { optional: true }),
 
-      query(':leave', animate('000ms ease-out', style({ left: '100%'})), { optional: true }),
-      query(':self', animate('2000ms ease-out', style({ left: '0%'})), { optional: true }),
+      query(':leave', animate('000ms ease-in', style({ left: '100%'})), { optional: true }),
+      query(':self', animate('1200ms ease-in', style({ left: '0%'})), { optional: true }),
 
       // query(':self', animateChild(), { optional: true }),
       // group([
