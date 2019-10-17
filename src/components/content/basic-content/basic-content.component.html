@@ -1,0 +1,169 @@
+<ng-container *ngIf="configuration.content && configuration.content.content">
+    <ng-container *ngFor="let module of configuration.content.content; trackBy: trackByFn">
+      <dynamic-loader [module]="module"></dynamic-loader>
+    </ng-container>
+  </ng-container>
+  
+  <ng-container *ngIf="additionalContent && additionalContent">
+    <ng-container *ngFor="let module of additionalContent; trackBy: trackByFn">
+      <dynamic-loader [module]="module"></dynamic-loader>
+    </ng-container>
+  </ng-container>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!--
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <br><br>
+        <h1 class="header center orange-text">{{componentPath}}</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">All content is hardcoded. Will end up being dynamic
+            soon!</h5>
+        </div>
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button"
+             class="btn-large waves-effect waves-light orange">Get Started</a>
+        </div>
+        <br><br>
+  
+        <div style="border: 1px solid red" *ngIf="additionalContent">
+          <h1>This is dynamic content loaded from menu</h1>
+  
+        </div>
+  
+        <ng-container *ngFor="let contentComponent of configuration.content.additional">
+          <dynamic-loader [moduleName]="contentComponent.name"></dynamic-loader>
+        </ng-container>
+  
+  
+      </div>
+    </div>
+  -->
+  
+  
+  <!--
+  <div class="video-banner">
+  
+  </div>
+  
+  <div class="paper">
+  
+  
+    <article>
+  
+      <h1>
+        DYNAMIKFABRIKKEN
+      </h1>
+      <p>
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+        recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+  
+  
+      <div class="img-deco">
+        <img src="https://dynamikfabrikken.com/img/anders_schmidt.jpg" alt="Anders Schmidt" />
+        <div class="img-overlay"></div>
+      </div>
+  
+  
+      <div id='player'>
+        <video id='video-element' autoplay="autoplay" loop="loop">
+          <source src='../assets/dummyimages/h264_1080_best.mp4' type='video/mp4'>
+          <source src='https://www.w3schools.com/html/mov_bbb.ogg' type='video/ogg'>
+        </video>
+        <div id='controls'>
+         <ul>
+           <li>
+              <progress id='progress-bar' min='0' max='100' value='0'>0% played</progress>
+           </li>
+           <li style="display: none;">
+              <button id='btnReplay' class='replay' title='replay' accesskey="R" onclick='replayVideo();'>Replay</button>
+           </li>
+           <li style="display: none;">
+              <button id='btnStop' class='stop' title='stop' accesskey="X" onclick='stopVideo();'>Stop</button>
+           </li>
+           <li style="display: none;">
+              <input type="range" id="volume-bar" title="volume" min="0" max="1" step="0.1" value="1">
+           </li>
+           <li style="display: none;">
+              <button id='btnMute' class='mute' title='mute' onclick='muteVolume();'>Mute</button>
+           </li>
+           <li>
+              <button id='btnPlayPause' class='play' title='play' accesskey="P" onclick='playPauseVideo();'>PAUSE</button>
+              <button id='btnFullScreen' class='fullscreen' title='toggle full screen' accesskey="T" onclick='toggleFullScreen();'>[&nbsp;&nbsp;]</button>
+           </li>
+         </ul>
+        </div>
+      </div>
+  
+      <h1>
+          DYNAMIKFABRIKKEN
+        </h1>
+        <p>
+          It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+          recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+  
+        <h1>
+            DYNAMIKFABRIKKEN
+          </h1>
+          <p>
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+            recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </p>    <h1>
+              DYNAMIKFABRIKKEN
+            </h1>
+            <p>
+              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+              recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>    <h1>
+                DYNAMIKFABRIKKEN
+              </h1>
+              <p>
+                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </p>    <h1>
+                  DYNAMIKFABRIKKEN
+                </h1>
+                <p>
+                  It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                  recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>    <h1>
+                    DYNAMIKFABRIKKEN
+                  </h1>
+                  <p>
+                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                    recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                  </p>
+  
+    </article>
+  
+  
+  
+  </div>
+  -->
+  

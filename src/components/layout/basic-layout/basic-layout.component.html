@@ -1,0 +1,17 @@
+
+<!-- We need to add header tag -->
+<dynamic-loader [moduleName]="configuration.header.name"></dynamic-loader>
+
+<!-- we need to add nav tag-->
+<dynamic-loader [moduleName]="configuration.menu.name"></dynamic-loader>
+<main>
+  <div [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
+</main>
+
+<footer>
+    <dynamic-loader [moduleName]="configuration.footer.name"></dynamic-loader>
+</footer>
+
+

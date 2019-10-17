@@ -1,0 +1,24 @@
+<aside class="sidebar">
+    <div class="sidebar__elevator-top"></div>
+    <div class="sidebar__elevator-rope"></div>
+    <div #menuButton class="hamb sidebar__hamb js-hamb" (click)="menuSideToggle()">
+      <div class="hamb-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <p>menu</p>
+    </div>
+    <div #elevator id="elevator" class="sidebar__elevator js-elevator" [ngClass]="{'shake':shakeElevator}">
+      <figure class="sidebar__figure">
+        <img src="/assets/graphics/dynamikfabrikken/elevator(cropped).svg" alt="">
+      </figure>
+      <nav #sideBarNav class="sidebar-nav">
+        <span *ngFor="let menu of menus">
+          <a pageScroll (pageScrollFinish)="dingAction($event,menu)" [routerLink]="['/']" [fragment]="menu.path"
+            [href]="'#'+menu.path" *ngIf="!menu.navigationHide" class="sidebar-nav__item  js-navItem"
+            [ngClass]="{'current':menu.name === activeMenuItem}" (click)="toggleShakeElevator(menu.name)">{{menu.name}}</a>
+        </span>
+      </nav>
+    </div>
+  </aside>

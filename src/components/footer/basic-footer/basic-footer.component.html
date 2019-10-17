@@ -1,0 +1,37 @@
+<div [ngClass]="'page-footer' + BgColor + FontColor">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5>{{CompanyName}}</h5>
+          <p>
+            {{CompanyDescription}}
+          </p>
+        </div>
+        <div class="col l3 s12">
+          <h5>Sociale medier</h5>
+          <ul> 
+            <li></li>
+            <li *ngIf="CompanyFacebook"><a class="link-inherit" [href]="CompanyFacebook" target="_blank">Facebook</a></li>
+            <li *ngIf="CompanyLinkedin"><a class="link-inherit" [href]="CompanyLinkedin" target="_blank">Linkedin</a></li>
+            <li *ngIf="CompanyInstagram"><a class="link-inherit" [href]="CompanyInstagram" target="_blank">Instagram</a></li>
+            <li *ngIf="CompanyTwitter"><a class="link-inherit" [href]="CompanyTwitter" target="_blank">Twitter</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5>Links</h5>
+          <ul>
+            <li *ngFor="let footerlink of FooterLinks"><a [href]="footerlink.Url" class="link-inherit" [target]="footerlink.Target">{{footerlink.Name}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div [ngClass]="'footer-copyright' + FontColor">
+      <div class="container center-align">
+          <span *ngIf="CompanyName">{{CompanyName}} · </span> 
+          <span *ngIf="CompanyAddress">{{CompanyAddress}} · </span> 
+          <span *ngIf="CompanyAddress2">{{CompanyAddress2}} · </span> 
+          <span *ngIf="CompanyPhone"><a class="link-inherit" [href]="'tel:' + CompanyPhone">{{CompanyPhone}}</a> · </span> 
+          <span *ngIf="CompanyEmail"><a class="link-inherit" [href]="'mailto:' + CompanyEmail">{{CompanyEmail}}</a></span>
+      </div>
+    </div>
+  </div>

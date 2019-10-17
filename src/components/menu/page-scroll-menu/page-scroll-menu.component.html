@@ -1,0 +1,6 @@
+<div *ngFor="let menu of menus">
+    <a pageScroll (pageScrollFinish)="dingAction($event,menu)" [routerLink]="['/']" [fragment]="menu.path"
+      [href]="'#'+menu.path" *ngIf="!menu.navigationHide" class="sidebar-nav__item  js-navItem"
+      [ngClass]="{'current':menu.name === activeMenuItem}" (click)="toggleShakeElevator(menu.name)">{{menu.name}}</a>
+  </div>
+  

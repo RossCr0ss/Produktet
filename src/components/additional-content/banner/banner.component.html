@@ -1,0 +1,26 @@
+<div class="background-container" [ngStyle]="{'padding-left' : bannerPaddingLeft , 'padding-right' : bannerPaddingRight }">
+    <div class="overlay-container">
+      
+      <div class="video-background" plyr [plyrOptions]="plyrOptions" [plyrSources]="content.mp4Url || content.oggUrl" *ngIf="content.mp4Url || content.oggUrl">
+      </div>
+  
+      <div class="image-background" *ngIf="content.src && !content.mp4Url && !content.oggUrl">
+          <img [src]="content.src">
+      </div>
+  
+      <div *ngIf="!content.src && !content.mp4Url && !content.oggUrl" [ngStyle]="{'background-color' : content.bgColor }" class="color-background"></div>
+      
+      <div class="overlay-content-fullsize" *ngIf="content.fullOverlay && !content.displayOverlay">
+        <span [ngClass]="'text ' + FontColor" [innerHTML]="content.overlayMarkup"></span>
+        
+        <div [ngClass]="'overlay ' + BgColor"></div>
+      </div>
+  
+      <div class="overlay-content-small" *ngIf="!content.fullOverlay && !content.displayOverlay">
+        <span [ngClass]="'text ' + FontColor" [innerHTML]="content.overlayMarkup"></span>
+        <div [ngClass]="'overlay ' + BgColor"></div>
+      </div>
+  
+    </div>
+  </div>
+  

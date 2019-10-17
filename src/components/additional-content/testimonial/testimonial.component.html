@@ -1,0 +1,17 @@
+<section [ngClass]="'ad-comp comp-' + content.name + cccBg(colClass, isWhite)">
+    <div class="testimonial-block container">
+        <div [ngClass]="'two-blocks'">
+            <div class="image-wrap" [ngStyle]="{'background-image': 'url('+ content.src + ')', 'order': orderSecond}">
+            </div>
+            <div [ngClass]="'text-block' + cccIcon(colClass, isWhite)" [ngStyle]="{'border-bottom': borderBottom}">
+                <blockquote [ngClass]="cccText(colClass, isWhite)">
+                    <q><span [ngClass]="'material-icons'+ cccIcon(colClass, isWhite)">format_quote</span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et nobis quam sapiente sequi eligendi. Assumenda cumque esse reiciendis laudantium praesentium.</q>
+                    <cite>
+                        <strong class="name">Test name</strong>
+                        <span class="designation">Manager</span>
+                    </cite>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>

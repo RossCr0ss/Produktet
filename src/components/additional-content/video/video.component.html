@@ -1,0 +1,6 @@
+<section [ngClass]="'ad-comp comp-'+ content.name + cccBg(colClass, isWhite)">
+  <div [id]="id" [ngClass]="containerClass" *ngIf="content?.mp4Url || content?.oggUrl">  
+    <div plyr [plyrOptions]="plyrOptions" [plyrSources]="content?.mp4Url || content?.oggUrl">
+    </div>
+  </div>
+</section>

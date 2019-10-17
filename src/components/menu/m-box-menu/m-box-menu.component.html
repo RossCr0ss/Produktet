@@ -1,0 +1,25 @@
+
+<nav>
+    <div *ngFor="let menu of menus; let i = index" [className]="'menuitem item' + (i+1)">
+      <a [routerLink]="menu.path" *ngIf="!menu.navigationHide">
+        <div class="inner">
+          
+          <video [poster]="menu.menuImg" playsinline autoplay muted loop *ngIf="menu.menuMp4">
+            <source [src]="menu.menuMp4" type="video/mp4" *ngIf="menu.menuMp4">
+            <source [src]="menu.menuWebm" type="video/webm" *ngIf="menu.menuWebm">
+          </video>
+          
+          <img [src]="menu.menuImg" alt="imagetest" *ngIf="menu.menuImg && !menu.menuMp4" />
+        
+          <p *ngIf="menu.name" class="menu-item-heading">{{menu.name}}</p>
+          <p class="menu-item-sub-heading">{{menu.subname}}</p>
+          
+        </div>
+        <div class="border1"></div>
+        <div class="border2"></div>
+        <div class="border3"></div>
+        <div class="border4"></div>
+      </a> 
+    </div>
+  </nav>
+  

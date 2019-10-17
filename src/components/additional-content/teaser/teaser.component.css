@@ -1,0 +1,57 @@
+.banner-block .image-wrap {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 100%;
+}
+
+.banner-block .caption {
+    padding: 25px;
+}
+
+.banner-block h2 {
+    font-size: 30px;
+    margin: 0 0 20px;
+}
+
+.banner-block .btn {
+    height: auto;
+    padding: 7px 20px;
+    min-width: 200px;
+}
+
+@media (min-width: 1024px) {
+    
+    .banner-block .teaser-wrap{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .banner-block .image-wrap {    
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: auto;
+        width: 40%;
+    }
+
+    .banner-block .caption {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 80px 50px;
+        width: 60%;
+    }
+
+    .banner-block h2 {
+        font-size: 40px;
+    }
+}
+
+.deleteMeClass {
+  border: 1px solid red;
+}

@@ -1,0 +1,115 @@
+.testimonial-block {
+    padding: 60px 0;
+}
+
+.testimonial-block .container {
+    max-width: 90%;
+    width: 100%;
+}
+
+.testimonial-block .image-wrap{
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin: 0 auto 25px;
+}
+
+.text-block {
+    padding: 25px 25px 25px 75px;
+}
+
+blockquote {
+    border:none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+blockquote q {
+    display:block;
+    quotes: none;
+    font-style: italic;
+    font-size: 18px;
+    position: relative;
+    margin: 0 0 25px;
+    z-index: 1;
+}
+
+blockquote q .material-icons {
+    position: absolute;
+    top: -25px;
+    left: -80px;
+     -webkit-transform: rotate(180deg); 
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+          font-size: 85px;
+          z-index: -1;
+}
+
+blockquote cite {
+    display: block;
+    font-style: normal;
+    font-size: 18px;
+}
+
+blockquote cite .title {
+    font-weight: 700;
+}
+
+blockquote cite .designation{
+    font-style: italic;
+    display: block;
+}
+
+@media (min-width: 1024px) {
+    .testimonial-block {
+        padding: 100px 0;
+    }
+
+    .text-block {
+        width: calc(100% - 250px);
+    }
+
+    .testimonial-block .image-wrap{
+        margin: 0;    
+        width: 250px;
+        height: 300px;
+    }
+
+    blockquote {
+        text-align: left;
+    }
+
+    .two-blocks {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align:center;
+        -ms-flex-align:center;
+        align-items: center;
+    }
+
+   .text-block {
+        width: calc(100% - 250px);
+        padding: 25px 25px 25px 75px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .testimonial-block .image-wrap{
+        width: 350px;
+        height: 400px;
+    }
+    
+    blockquote {
+        font-size: 20px;
+    }
+
+   .text-block {
+        width: calc(100% - 350px);
+    }
+}

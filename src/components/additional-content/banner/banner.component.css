@@ -1,0 +1,95 @@
+.background-container {
+    position: relative;
+    max-width: 100% !important;
+    height: 60vh !important;
+  }
+  
+  .background-container ::ng-deep .plyr video {
+    height: 60vh !important;
+    width: 100% !important;
+    object-fit: cover;
+  }
+  
+  .image-background {
+    width: 100% !important;
+  }
+  
+  .image-background img {
+    height: 60vh !important;
+    width: 100% !important;
+    object-fit: cover;
+  }
+  
+  .color-background {
+    height: 60vh !important;
+    width: 100% !important;
+  }
+  
+  .overlay-content-small {
+    width: 700px;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    display: table;
+  }
+  
+  .overlay-content-fullsize {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: table;
+  }
+  
+  .overlay-content-small .overlay {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+  }
+  
+  .overlay-content-fullsize .overlay {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .text {
+    display: table-cell;
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+    z-index: 2;
+  }
+  
+  .text p {
+    color: #fff;
+  }
+  
+  .overlay-content-fullsize .text {
+    text-align: center;
+  }
+  
+  .overlay-content-small .text {
+    padding: 20px
+  }
+  
+  
+  .overlay-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media screen and (max-width:600px) {
+  
+    .overlay-content-small {
+      width: 200px;
+      left: calc(100% - 200px);
+    }
+  }

@@ -1,0 +1,13 @@
+div {
+    
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img.responsive-img.ng-lazyload, img.responsive-img.ng-failed-lazyloaded {
+    width: 40px;
+    height: 40px;
+}

@@ -1,0 +1,15 @@
+/* helpers */
+a.link-inherit {
+    color: inherit
+}
+
+/* colors: https://materializecss.com/color.html */
+
+/* component special combination rules.... */
+body.menu-basic-menu  {
+    padding-left: 60px;
+}
+
+.ad-comp {
+    margin-bottom: 40px;
+}

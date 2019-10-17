@@ -1,0 +1,25 @@
+<ng-container *ngIf="configuration.content && configuration.content.content">
+    <ng-container *ngFor="let module of configuration.content.content">
+      <dynamic-loader [module]="module"></dynamic-loader>
+    </ng-container>
+  </ng-container>
+  
+  
+  <ng-container *ngFor="let menu of menus">
+    <section [id]="menu.path" style="height: 100%; border: 1px solid red;">
+        <ng-container *ngIf="menu.content;else noContent">
+          <h1 class="headline">{{menu.name}}</h1>
+          <div *ngFor="let content of menu.content">
+            <ng-container *ngIf="content.name">
+                <dynamic-loader [module]="content"></dynamic-loader>
+            </ng-container>
+          </div>
+        </ng-container>
+  
+        <ng-template #noContent>
+          <h1>No content!</h1>
+        </ng-template>
+  
+    </section>
+  </ng-container>
+  
